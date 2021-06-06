@@ -1,1 +1,1112 @@
-Hello World
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Baskervville|Cinzel|Great+Vibes|Marck+Script|Parisienne|Sacramento&display=swap" rel="stylesheet">  
+    <link href="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/doge.png" rel="icon" type="image/x-icon" />
+	<title>Great Opportunities Ahead!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+        /* Nice red: #721734 */
+
+        /* href link style */
+        a {
+            text-decoration: none; 
+            color: white;
+        }
+
+        a.two {
+            padding-left: 35px;
+        }
+
+        p {
+            margin: 0;
+            text-align: center !important;
+        }
+
+        a:hover, a:active {
+            color: lightgreen;
+        }
+
+        hr {
+            border-color: green;
+        }
+
+        button {
+            padding: 0;
+        }
+
+        h3 {
+            padding-left: 35px;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        h1 {
+            position: relative;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /*
+        iframe {
+            display: block;
+            margin: auto;
+            width: 100%; 
+            height: auto; 
+        }
+        */
+
+        figure {
+            float: left;
+            margin: 10px 10px 10px 0;
+            width: 250px;
+            height: 250px;
+            display: table;
+            text-align: center !important;
+        }
+
+        figure img {
+            display: block;
+            width: 100%;
+        }
+
+        figcaption {
+            font-size: 12px;
+            display: table-caption;
+            caption-side: bottom;
+            text-align: center !important;
+        }
+
+        #box {
+            /*position: relative;*/
+            width: auto;
+            height: auto;
+            text-align: center;
+        }
+
+        #anchor {
+            position: relative;
+            top: -50px;
+        }
+
+        .dot {
+            height: 16px;
+            width: 16px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dotb {
+            height: 16px;
+            width: 16px;
+            background-color: black;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        table td, table td * {
+            vertical-align: top;
+            text-align: left; /* justify */
+        }
+
+        td.one {
+            width: 5%;
+        }
+        td.two {
+            width: 30%;
+        }
+        td.three {
+            width: 60%;
+        }
+        td.four {
+            width: 40%;
+        }
+        td.five {
+            width: 90%;
+        }
+        td.six {
+            width: 20%;
+        }
+
+        /* back to top button */
+        /* Not needed for now
+        #myBtn {
+            display: none;
+            cursor: pointer;
+            background-color: black;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 4px;
+            border-color: white;
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            opacity: 50;
+            z-index: 99;
+        }
+        #myBtn:hover {
+            background-color: black;
+        }
+        #myBtn::after {
+            content: "^";
+            font-size: 3vh;
+            color: #fff;
+        }
+        */
+
+        /* website box style */
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth !important;
+        }
+
+        body {
+            font-family: "Arial";
+            height: 100%; 
+            width: 100%;
+            overflow: auto;
+            margin: 0px;
+            padding: 0px;
+            /*background-image: url('https://wallpaperaccess.com/full/1567736.png');*/
+            background-color: #29292d;  
+            background-attachment: fixed;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Style the header */
+        #header {
+            position: fixed;
+            float: left;
+            font-family: "Baskervville";
+            text-align: center;
+            font-size: 30px;
+            background-color: #29292d;
+            top: 0px; 
+            left: 0px; 
+            right: 0px;
+            color: white;
+            overflow: hidden;
+            height: auto; 
+            width: 100%;
+            transition: 0.3s;
+            z-index: 1000;
+            border-bottom: 2px solid white;
+        }
+
+        #textdefault {
+            opacity: 1;
+        }
+
+        #textscroll {
+            opacity: 0;
+            position: absolute;
+            top:0;
+            left: 0;
+            right:0;
+            bottom: 0;
+        }
+
+        /* Create three columns/boxes that float next to each other */
+        #nav {
+            float: left;
+            width: 20%;
+            color: white;
+            top: 130px;
+            position: sticky;
+            text-align: right;
+            font-size: 16px;
+            padding: 2rem;
+            transition: 0.3s;
+            z-index: 100;
+        }
+        #nav:hover { 
+            transform: translateX(-15px) translateY(10px) scale(1.1);
+            transform-origin: center center;
+        }
+        #article {
+            float: left;
+            width: 60%;
+            background-color: white;
+            font-size: 14px;
+            min-height: 100vh;
+            transition: 0.3s;
+            padding-top: 130px;
+            z-index: 10;
+            /*border-left: 2px solid white;
+            border-right: 2px solid white;*/
+        }
+        #text {
+            /*position: relative;*/
+            padding: 2.5rem;
+            width: auto;
+            height: auto;
+            background-color: #b3cde01a;
+            text-align: left; /* justify */
+            bottom: 2.5rem;
+        }
+        /* height of 150vh has to be adapted to height of article box - change background color of social box to see | "position: sticky" will interfere with the idea of sticky logos and always bottom at mobile. Remove "position: sticky" and change "top" to "6.5rem" if solution is found. For now, z-index for "social" should stay slow, so the "article" will overlap and be visible on scroll with mobile. */
+        /* Old social container within nav container
+        social {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: right;
+            width: 100%;
+            vertical-align: center;
+            padding: 2rem;
+        }
+        */
+        social {
+            float: left;
+            width: 20%;
+            color: white;
+            top: 0;
+            min-height: 100vh;
+            position: sticky;
+            text-align: left;
+            vertical-align: bottom;
+            font-size: 16px;
+            padding-top: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 2rem;
+        }
+        bottom { 
+            position: absolute;                  
+            bottom: 3rem;                          
+            left: 2rem;
+            transition: 0.3s;                          
+        } 
+        bottom:hover {
+            transform: translateX(5px) translateY(-10px) scale(1.1);
+            transform-origin: center center;
+        }
+        /* Needed for mobile */
+        bottommedia { 
+            position: absolute;                  
+            bottom: 3rem;                          
+            left: 2rem;
+            display: none;                          
+        } 
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            font-size: 12px; 
+            text-align: center; 
+            background: lightgrey;
+            color: green;
+        }
+        /* Needed for mobile */
+        footermedia {
+            display: none;
+        }
+
+        .accordion {
+            background-color: transparent;
+            color: black;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            transition: 0.4s;
+            font-family:"Arial";
+            margin-top: 5px;
+        }
+        .active {
+            background-color: transparent;
+        }
+        .accordion:hover {
+            background-color: rgba(151, 226, 151, 0.493); 
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: transparent;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-out;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 800px) {
+
+            a.two {
+                padding-left: 20px !important;
+            }
+
+            figure {
+                width: 200px !important;
+                height: 200px !important;
+                text-align: center !important;
+            }
+            figcaption {
+                text-align: center !important;
+            }
+
+            #nav {
+                width: 100% !important;
+                text-align: center !important;
+                position: relative !important;
+                top: 140px !important;
+                min-height: auto !important;
+                height: auto !important;
+            }
+            #nav:hover { 
+                transform: none !important; 
+                transform-origin: none !important;
+            }
+            bottom:hover {
+                transform: none !important; 
+                transform-origin: none !important;
+            }
+            #article{
+                width: 100% !important;
+                min-height: 0 !important;
+                padding-top: 0 !important;
+                margin-top: 145px;
+            }
+            #text {
+                width: 100% !important;
+                height: auto;
+                padding: 0.75rem !important;
+            }
+            social {
+                position: relative !important;
+                min-height: auto !important;
+                width: 100% !important;
+                height: auto;
+                text-align: center !important;
+                background-color: #F6F9FB;
+                padding-top: 0 !important;
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+                padding-bottom: 2rem !important;
+            }
+            footer {
+                display: none !important;
+            }
+            footermedia {
+                display: block !important;
+                font-size: 10px; 
+                text-align: center; 
+                background: lightgrey;
+                color: green;
+            }
+            bottom {
+                display: none; 
+            }
+            bottommedia {
+                display: block !important;
+                position: relative;              
+                bottom: 0;                          
+                left: 0;    
+                top: 0;  
+                right: 0; 
+            }
+            h3 {
+                padding-left: 20px !important;
+            }
+            table td, table td * {
+                text-align: left !important;
+            }
+
+            td.one {
+                width: 0% !important;
+            }
+            td.three {
+                width: 70% !important;
+            }
+            td.four {
+                width: 50% !important;
+            }
+            td.five {
+                width: 100% !important;
+            }
+
+            p {
+                margin: 0 !important;
+                text-align: center !important;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Back to top button not needed for now -->
+    <!--
+    <button onclick = "topFunction()" id = "myBtn" title = "Go to top"><b></b></button>
+    -->
+
+    <!-- Accordion menu styles -->
+
+    <section>
+
+        <div id = "header">
+            <h1>
+                <div id = "textdefault">&nbsp;W&nbsp;E&nbsp;L&nbsp;C&nbsp;O&nbsp;M&nbsp;E&nbsp;</div>
+                <div id = "textscroll">&nbsp;W&nbsp;E&nbsp;L&nbsp;C&nbsp;O&nbsp;M&nbsp;E&nbsp;·&nbsp;www.bojanlukic.com&nbsp;</div>
+            </h1>
+        </div>
+
+        <div id = "nav">
+            <a href="#Vita">Vita</a><br><br>
+            <a href="#Projects">Projects</a><br><br>
+            <a href="#Discussion">Discussion</a><br><br>
+            <a href="#Other">Other</a>
+        </div>
+
+
+        <div id = "article">
+
+            <div id="text">
+                
+                <!-- <video id = "video" src = "http://192.168.1.12:8080" autoplay = "autoplay" width = "704" height = "480">
+                </video> -->
+
+                <img src="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/DSC02302.JPG" style = "width: auto; height: 190px; margin-right: 20px; border-radius: 5%; border: 1px solid black" align = "left"/>
+                
+
+                Hello and welcome! I am happy to see you on my personal website.<br><br>
+                My name is Bojan, I am currently studying Business Information Systems and I am fascinated by science, technology, and everything computer-related. 
+                I have always been interested in technology and obsessed with computers. In my younger days I spent a lot of time with Messenger services and computer games. 
+                As the years passed my interests shifted and I started experimenting with Windows scripts and system settings, until one day I had the idea of developing my own 
+                website. As a stepping stone into the world of computer science, I turned to HTML and CSS scripting when I purchased this domain during my Bachelor study. 
+                The website became a side project that I am working on since 2017. Since then I have increased my experience in computer science by learning new programming 
+                languages and working on projects in different domains. The main purpose of this website is to introduce myself with my vita, experiences, and current projects 
+                I am working on. Also, further down you can find some topics and papers regarding economics, business, and technology that I like discussing.<br><br>
+                Have fun browsing and please feel free to leave a comment at the end of the website! Also, check out my GitHub repository and ResearchGate account, 
+                which I have linked at the bottom.<br><br><br><br>
+
+                <div id = "anchor"><a name="Vita"></a></div>
+        
+                <h2 style = "color: green">Vita</h2><hr>
+
+                </br>
+                <a class = "two" href="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/Bojan_Lukic_CV.pdf" title = "Consolidated CV" target = "_blank" rel = "noopener noreferrer"><b style = "color: green"><u>Link to consolidated CV</u></b></a>
+                </br></br>
+
+                <button class="accordion"><h3>Education</h3></button>
+                <div class="panel">
+                    <table style="width:100%; text-align: left !important">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">Since 10/2019</td>
+                            <td class="three">Business Information Systems<br>
+                                <i>Clausthal University of Technology</i></td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">09/2020 – 12/2020</td>
+                            <td class="three">Semester abroad<br>
+                                <i>Tallinn University of Technology</i></td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">10/2015 – 02/2019</td>
+                            <td class="three">International Retail Management<br>
+                                <i>Ingolstadt University of Technology</i></td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">09/2017 – 12/2017</td>
+                            <td class="three">Semester abroad<br>
+                                <i>Universidad Nebrija Madrid</i></td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">2005 – 2014</td>
+                            <td class="three">Graduation in A level<br>
+                                <i>Donau-Gymnasium-Kelheim</i></td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+        
+                <button class="accordion"><h3>Internships and Jobs</h3></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">Since 04/2021</td>
+                            <td class="three"><b>Student Research Assistant for artificial intelligence and machine learning</b><br>
+                                Applying methods of machine learning and artificial intelligence in software systems at the 
+                                <i>Clausthal University of Technology</i></td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">10/2019 – 04/2021</td>
+                            <td class="three"><b>Student Research Assistant for IT Support and web development</b><br>
+                                Administration of the Campus Management Systems and development of web interfaces of the
+                                <i>Clausthal University of Technology</i></td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">09/2018 – 09/2019</td>
+                            <td class="three"><b>Internship store planning</b><br>
+                                Internship at the <i>Nike European headquarter</i> 
+                                in Hilversum with projects in the fields of controlling and planning</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">03/2018 – 09/2018</td>
+                            <td class="three"><b>Internship retail concepts · engineering & sourcing</b><br>
+                                Internship at the <i>adidas headquarter</i> in Herzogenaurach with projects in the fields of 
+                                financing, sustainability and sourcing for engineering articles</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two">04/2016 – 09/2016</td>
+                            <td class="three"><b>Internship consultant sales and sales strategy</b><br>
+                                Internship at <i>Tommy Hilfiger</i> in Ingolstadt Village</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                    </table><br><br>
+                </div>
+
+                <button class="accordion"><h3>Interests and skills</h4></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"><b>Interests</b></td>
+                            <td class="three">Endurance/athletic sports and nutrition<br> 
+                                Playing instruments, painting pictures<br>
+                                Scientific papers (mainly in computer science)</td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br>
+        
+                    <table style="width:100%">
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"><b>Linguistic proficiency</b></td>
+                            <td class="six">German</td>
+                            <td class="four">C2 (native language)</td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">Croatian</td>
+                            <td class="four">C2 (native language)</td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">English</td>
+                            <td class="four">C1 (daily use)</td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">French</td>
+                            <td class="four">B1 (7 years of French class in school and student exchange)</td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">Spanish</td>
+                            <td class="four">B1 (4 semesters of Spanish class and semester abroad in Madrid)</td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">Russian</td>
+                            <td class="four">A1 (1 semester of Russian class)</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"><b>Computer languages</b></td>
+                            <td class="six">Python</td>
+                            <td class="four"><span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dot"></span></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">R</td>
+                            <td class="four"><span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">Java/Kotlin</td>
+                            <td class="four"><span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">Visual Basic</td>
+                            <td class="four"><span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dot"></span></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">Angular/JS</td>
+                            <td class="four"><span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="two"></td>
+                            <td class="six">Rust</td>
+                            <td class="four"><span class="dotb"></span>
+                                <span class="dotb"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span></td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+
+            </div>
+
+
+            <div id="text">
+
+                <div id = "anchor"><a name="Projects"></a></div>
+
+                <h2 style = "color: green">Projects</h2><hr>
+                
+                <button class="accordion"><h3>Mobile application</h3></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">During my bachelor, I discussed ideas for mobile applications with a couple of fellow students. 
+                                Eventually, we realized that whenever we visited new cities, we had difficulties finding good bars and clubs
+                                that suited our tastes. It is possible to search for clubs via Google search and get a list of bars, restaurants,
+                                and clubs in the surrounding. However, in some cases smaller venues are masked by the bigger ones or would not
+                                show up at all in the search results. Furthermore, it is fairly difficult to search for places with a particular
+                                theme (such as venues playing alternative music). Many of these clubs and bars are known to locals through 
+                                word of mouth. Other apps exist, that list local events in bigger cities. However, it is not possible to directly 
+                                search for bars, clubs or restaurants on these apps. <br>
+                                The idea of an app displaying local nightclubs seems to cover a niche that has not been explored yet. Ideally, 
+                                the app will keep entries of all relevant venues worlwide and offer a centralized solution for people that are 
+                                looking for places in unfamiliar cities.<br>
+                                </td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+
+                <button class="accordion"><h3>Wireless WiFi extender using Raspberry Pi</h3></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">One summer night when I was visiting my brother, my brother and I came across a challenge: At that 
+                                time, my brother was using the network of his university for WiFi access. Unfortunately, he was far away from 
+                                the closest access point, which led to an inconsistent Internet connection and a weak signal. He was using a USB 
+                                WiFi amplifier which was designed in a way that it receives (weak) WiFi signals and amplifies them, providing  
+                                a strong output signal to a device via the USB connection. 
+                                <figure>
+                                    <img src="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/TL-WN822N_EU_5.0_01_large_1507615225760s.jpg" title = "USB WiFi amplifier"/>
+                                    <figcaption>Fig.1 - Example of a TP-Link USB WiFi amplifier.</figcaption>
+                                </figure>
+                                The problem was that the amplifier had to be connected 
+                                to his laptop at all times to ensure a good Internet connection. Also, the amplified signal was only available to
+                                the device the amplifier was connected to, meaning it did not act as an access point for multiple devices. After 
+                                discussing this issue with him, I was determined to help him and I was convinced that there are products online, 
+                                offering a wireless extensions of a WiFi signal. Many people are familiar with WiFi repeaters, which receive a 
+                                WiFi signal and "repeat" that signal for an increased signal range. These repeaters have one downfall: They 
+                                require an Ethernet connection to the main access point, which sends the WiFi signal. And even when there were 
+                                offers for wireless repeaters that did not require an ethernet connection to the main access point, they required 
+                                a setup with the main network which is not possible if one does not have the access rights to that network. After 
+                                some research, my brother and I found a solution to this problem which involves using a Raspberry Pi in combination 
+                                with the aforementioned WiFi amplifier. Thankfully, there are quite a few tutorials online, discussing the setup 
+                                of a Raspberry Pi for wireless WiFi extension.<br> 
+                                In <a href="https://pimylifeup.com/raspberry-pi-wifi-extender/" title = "Simple Raspberry Pi WiFi Extender" target = "_blank" rel = "noopener noreferrer"><b style = "color: green"><u>this</u></b></a>
+                                tutorial, Gus from "pimylifeup" demonstrates how to set up a Raspberry Pi for wireless WiFi extension. The 
+                                walkthrough provided here will mainly refer to the tutorial from pimylifeup. 
+                                <!--
+                                    <img src="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/Biz_Buy_High_Sell_Low.png" style = "width: auto; height: 250px;" title = "USB WiFi amplifier"/>
+                                -->
+                                </td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+
+                <button class="accordion"><h3>Investing</h3></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">
+                                Notice: The information given in the following paragraph is not financial advice! Always DYOR before commiting to 
+                                an investment!<br>
+                                A while back I opened an account at an online stock broker (DeGiro). For the first year, I didn't really make any moves
+                                but in early 2020 I decided to do some research on companies that could be worth investing in. At that time the global 
+                                Covid pandemic started and, as many can recall, with the lockdowns the market took a severe beating. Like many others, 
+                                I recognized the great potential of investing in companies that were shaken up by the pandemic and were undervalued. 
+                                Fortunately, I opened the account with my stock broker the year prior which meant that I didn't have the trouble of waiting
+                                for account verification, as many others had to. Due to the increased interest of people in investing, many brokers had 
+                                issues verifying the increasing amount of newly opened accounts on their platforms.<br>
+                                I fairly quickly deposited some money to my account and started buying stocks: For the beginning, I wanted to focus on 
+                                medium to big German companies, as I am most familiar with the German market. After a quick search I found my first 
+                                company: Lufthansa AG. Lufthansa is a German is the largest German airline and the second-largest airline in Europe 
+                                in terms of passengers carried. 
+                                
+                                </td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+
+            </div>
+
+
+            <div id="text">
+
+                <div id = "anchor"><a name="Discussion"></a></div>
+
+                <h2 style = "color: green">Discussion</h2><hr>
+
+                <button class="accordion"><h3>Is the next financial Crisis imminent?</h3></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test</td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+
+                <button class="accordion"><h3>Is a vegan diet detrimental to endurance and muscle strength?</h3></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test</td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+
+                <button class="accordion"><h3>Thoughts on climate and environmental changes.</h3></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test</td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+
+            </div>
+
+
+            <div id="text">
+
+                <div id = "anchor"><a name="Other"></a></div>
+
+                <h2 style = "color: green">Other</h2><hr>
+
+                <button class="accordion"><h3>Papers</h3></button>
+                <div class="panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Recently, I started reading papers from different domains. Following is a list of papers that could also be interesting 
+                                for you:</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                    </table>
+                    <table style="width:100%">
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five"><b>Bitcoin white paper</b></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test<br><br>
+                                <div class="video-container">
+                                    <iframe width = "560" height = "315" src="https://www.youtube.com/embed/zVqczFZr124" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div><br><br>
+                                Test</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five"><b>Bat origin of human coronaviruses</b></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five"><b>McCulloch and Pitts 1943</b></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test<br><br>
+                                <div class="video-container">
+                                    <iframe width = "560" height = "315" src = "https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf#zoom=90"></iframe>
+                                </div>
+                                <p style = "text-align: center !important;"><i>Source: <a href="https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf" title = "A Logical Calculus of the Ideas Immanent In Nervous Activity"><b style = "color: green">Carnegie Mellon University</b></a></i></p><br><br>
+                                Test</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five"><b>Turing Machine</b></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                    </table>
+                </div><br>
+
+                <h3>Comments</h3>
+
+                <table style="width:100%; padding: 18px">
+                    <tr>
+                        <td class="one"></td>
+                        <td class="five">If you wish to leave a comment or start a discussion please feel free to enter your message below. You can edit your username before sending the message. 
+                            Big thanks to <a href="https://www.remarkbox.com/#about" title = "About Remarkbox" target = "_blank" rel = "noopener noreferrer"><b style = "color: green"><u>Russell</u></b></a> for hosting the comment section!</td>
+                        <td class="one"></td>
+                    </tr>
+                </table><br><br>
+
+                <!-- Remarkbox - Your readers want to communicate with you -->
+                <div id = "box">
+                    <div id = "remarkbox-div">
+                        <noscript>
+                            <iframe id = remarkbox-iframe src = "https://my.remarkbox.com/embed?nojs=true" style = "height: 30%; width: 75%; border: none !important" tabindex=0></iframe>
+                        </noscript>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer>
+                © 2021 www.bojanlukic.com
+            </footer>
+
+        </div>
+
+        <social>
+            <bottom>
+                <a href="https://github.com/Bojan-Lukic" title = "GitLab repository" target = "_blank" rel = "noopener noreferrer"><img src="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/github_PNG202.png" style = "width: 50px; height: auto"></a><br><br>
+                <a href="https://www.researchgate.net/profile/Bojan_Lukic2" title = "ResearchGate" target = "_blank" rel = "noopener noreferrer"><img src="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/download.jpg" style = "width: 50px; height: auto"></a>   
+            </bottom>
+
+            <bottommedia>
+                <a href="https://github.com/Bojan-Lukic" title = "GitHub repository" target = "_blank" rel = "noopener noreferrer"><img src="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/github_PNG202.png" style = "width: auto; height: 40px; padding-left: 5px; padding-right: 5px;"></a>
+                <a href="https://www.researchgate.net/profile/Bojan_Lukic2" title = "ResearchGate" target = "_blank" rel = "noopener noreferrer"><img src="http://dreamcloud.spfz1z7y5jpcwmep.myfritz.net/web_images/download.jpg" style = "width: auto; height: 40px; padding-left: 5px; padding-right: 5px;"></a>   
+            </bottommedia>
+        </social>  
+
+    </section>
+
+    <!-- Only shows on mobile -->
+    <footermedia>
+        © 2021 www.bojanlukic.com
+    </footermedia>
+
+    <!-- Accordion menu script -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
+    </script>
+
+    <!-- Comment box script -->
+    <script 
+        src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js">
+    </script>
+    <script>
+        var rb_owner_key = "1b94e84a-8979-11eb-9664-040140774501";
+        var thread_uri = window.location.href;
+        var thread_title = window.document.title;
+        var thread_fragment = window.location.hash;
+    
+        // rb owner was here.
+        var rb_src = "https://my.remarkbox.com/embed" + 
+            "?rb_owner_key=" + rb_owner_key +
+            "&thread_title=" + encodeURI(thread_title) +
+            "&thread_uri=" + encodeURIComponent(thread_uri) + 
+            thread_fragment;
+    
+        function create_remarkbox_iframe() {
+            var ifrm = document.createElement("iframe");
+            ifrm.setAttribute("id", "remarkbox-iframe");
+            ifrm.setAttribute("scrolling", "no");
+            ifrm.setAttribute("src", rb_src);
+            ifrm.setAttribute("frameborder", "0");
+            ifrm.setAttribute("tabindex", "0");
+            ifrm.setAttribute("title", "Remarkbox");
+            ifrm.style.width = "75%";
+            document.getElementById("remarkbox-div").appendChild(ifrm);
+        }
+        create_remarkbox_iframe();
+        iFrameResize(
+        {
+            checkOrigin: ["https://my.remarkbox.com"],
+            inPageLinks: true,
+            initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+        },
+        document.getElementById("remarkbox-iframe")
+        );
+    </script>
+
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {
+            scrollFunction()
+            scrollFunction2()
+        };
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+                document.getElementById("header").style.fontSize = "10px";
+                document.getElementById("nav").style.top = "40px";
+                document.getElementById("article").style.paddingTop = "40px";
+            } else {
+                document.getElementById("header").style.fontSize = "30px";
+                document.getElementById("nav").style.top = "130px";
+                document.getElementById("article").style.paddingTop = "130px";
+            }
+        }
+
+        function scrollFunction2() {
+            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+                document.getElementById("textdefault").style.opacity = "0";
+                document.getElementById("textscroll").style.opacity = "1";
+            } else {
+                document.getElementById("textdefault").style.opacity = "1";
+                document.getElementById("textscroll").style.opacity = "0";
+            }
+        }
+    </script>
+
+    <!-- Back to top button script not needed for now 
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    -->
+    
+</body>
+</html>
