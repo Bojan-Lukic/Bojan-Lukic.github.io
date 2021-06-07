@@ -1,0 +1,449 @@
+
+<style>
+
+	/* Nice red: #721734 */
+
+	/* href link style */
+	a {
+		text-decoration: none; 
+		color: white;
+	}
+
+	a.two {
+		padding-left: 35px;
+	}
+
+	p {
+		margin: 0;
+		text-align: center !important;
+	}
+
+	a:hover, a:active {
+		color: lightgreen;
+	}
+
+	hr {
+		border-color: green;
+	}
+
+	button {
+		padding: 0;
+	}
+
+	h3 {
+		padding-left: 35px;
+		font-size: 16px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+
+	h1 {
+		position: relative;
+	}
+
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		height: 0;
+	}
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	/*
+	iframe {
+		display: block;
+		margin: auto;
+		width: 100%; 
+		height: auto; 
+	}
+	*/
+
+	figure {
+		float: left;
+		margin: 10px 10px 10px 0;
+		width: 250px;
+		height: 250px;
+		display: table;
+		text-align: center !important;
+	}
+
+	figure img {
+		display: block;
+		width: 100%;
+	}
+
+	figcaption {
+		font-size: 12px;
+		display: table-caption;
+		caption-side: bottom;
+		text-align: center !important;
+	}
+
+	#box {
+		/*position: relative;*/
+		width: auto;
+		height: auto;
+		text-align: center;
+	}
+
+	#anchor {
+		position: relative;
+		top: -50px;
+	}
+
+	.dot {
+		height: 16px;
+		width: 16px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+	}
+	.dotb {
+		height: 16px;
+		width: 16px;
+		background-color: black;
+		border-radius: 50%;
+		display: inline-block;
+	}
+
+	table td, table td * {
+		vertical-align: top;
+		text-align: left; /* justify */
+	}
+
+	td.one {
+		width: 5%;
+	}
+	td.two {
+		width: 30%;
+	}
+	td.three {
+		width: 60%;
+	}
+	td.four {
+		width: 40%;
+	}
+	td.five {
+		width: 90%;
+	}
+	td.six {
+		width: 20%;
+	}
+
+	/* back to top button */
+	/* Not needed for now
+	#myBtn {
+		display: none;
+		cursor: pointer;
+		background-color: black;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		border-radius: 4px;
+		border-color: white;
+		position: fixed;
+		bottom: 70px;
+		right: 20px;
+		opacity: 50;
+		z-index: 99;
+	}
+	#myBtn:hover {
+		background-color: black;
+	}
+	#myBtn::after {
+		content: "^";
+		font-size: 3vh;
+		color: #fff;
+	}
+	*/
+
+	/* website box style */
+	* {
+		box-sizing: border-box;
+		scroll-behavior: smooth !important;
+	}
+
+	body {
+		font-family: "Arial";
+		height: 100%; 
+		width: 100%;
+		overflow: auto;
+		margin: 0px;
+		padding: 0px;
+		/*background-image: url('https://wallpaperaccess.com/full/1567736.png');*/
+		background-color: #29292d;  
+		background-attachment: fixed;
+		position: relative;
+		min-height: 100vh;
+	}
+
+	/* Style the header */
+	#header {
+		position: fixed;
+		float: left;
+		font-family: "Baskervville";
+		text-align: center;
+		font-size: 30px;
+		background-color: #29292d;
+		top: 0px; 
+		left: 0px; 
+		right: 0px;
+		color: white;
+		overflow: hidden;
+		height: auto; 
+		width: 100%;
+		transition: 0.3s;
+		z-index: 1000;
+		border-bottom: 2px solid white;
+	}
+
+	#textdefault {
+		opacity: 1;
+	}
+
+	#textscroll {
+		opacity: 0;
+		position: absolute;
+		top:0;
+		left: 0;
+		right:0;
+		bottom: 0;
+	}
+
+	/* Create three columns/boxes that float next to each other */
+	#nav {
+		float: left;
+		width: 20%;
+		color: white;
+		top: 130px;
+		position: sticky;
+		text-align: right;
+		font-size: 16px;
+		padding: 2rem;
+		transition: 0.3s;
+		z-index: 100;
+	}
+	#nav:hover { 
+		transform: translateX(-15px) translateY(10px) scale(1.1);
+		transform-origin: center center;
+	}
+	#article {
+		float: left;
+		width: 60%;
+		background-color: white;
+		font-size: 14px;
+		min-height: 100vh;
+		transition: 0.3s;
+		padding-top: 130px;
+		z-index: 10;
+		/*border-left: 2px solid white;
+		border-right: 2px solid white;*/
+	}
+	#text {
+		/*position: relative;*/
+		padding: 2.5rem;
+		width: auto;
+		height: auto;
+		background-color: #b3cde01a;
+		text-align: left; /* justify */
+		bottom: 2.5rem;
+	}
+	/* height of 150vh has to be adapted to height of article box - change background color of social box to see | "position: sticky" will interfere with the idea of sticky logos and always bottom at mobile. Remove "position: sticky" and change "top" to "6.5rem" if solution is found. For now, z-index for "social" should stay slow, so the "article" will overlap and be visible on scroll with mobile. */
+	/* Old social container within nav container
+	social {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		text-align: right;
+		width: 100%;
+		vertical-align: center;
+		padding: 2rem;
+	}
+	*/
+	social {
+		float: left;
+		width: 20%;
+		color: white;
+		top: 0;
+		min-height: 100vh;
+		position: sticky;
+		text-align: left;
+		vertical-align: bottom;
+		font-size: 16px;
+		padding-top: 2rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-bottom: 2rem;
+	}
+	bottom { 
+		position: absolute;                  
+		bottom: 3rem;                          
+		left: 2rem;
+		transition: 0.3s;                          
+	} 
+	bottom:hover {
+		transform: translateX(5px) translateY(-10px) scale(1.1);
+		transform-origin: center center;
+	}
+	/* Needed for mobile */
+	bottommedia { 
+		position: absolute;                  
+		bottom: 3rem;                          
+		left: 2rem;
+		display: none;                          
+	} 
+
+	/* Clear floats after the columns */
+	section:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	footer {
+		font-size: 12px; 
+		text-align: center; 
+		background: lightgrey;
+		color: green;
+	}
+	/* Needed for mobile */
+	footermedia {
+		display: none;
+	}
+
+	.accordion {
+		background-color: transparent;
+		color: black;
+		cursor: pointer;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		transition: 0.4s;
+		font-family:"Arial";
+		margin-top: 5px;
+	}
+	.active {
+		background-color: transparent;
+	}
+	.accordion:hover {
+		background-color: rgba(151, 226, 151, 0.493); 
+	}
+	.panel {
+		padding: 0 18px;
+		background-color: transparent;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.35s ease-out;
+	}
+
+	/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+	@media (max-width: 800px) {
+
+		a.two {
+			padding-left: 20px !important;
+		}
+
+		figure {
+			width: 200px !important;
+			height: 200px !important;
+			text-align: center !important;
+		}
+		figcaption {
+			text-align: center !important;
+		}
+
+		#nav {
+			width: 100% !important;
+			text-align: center !important;
+			position: relative !important;
+			top: 140px !important;
+			min-height: auto !important;
+			height: auto !important;
+		}
+		#nav:hover { 
+			transform: none !important; 
+			transform-origin: none !important;
+		}
+		bottom:hover {
+			transform: none !important; 
+			transform-origin: none !important;
+		}
+		#article{
+			width: 100% !important;
+			min-height: 0 !important;
+			padding-top: 0 !important;
+			margin-top: 145px;
+		}
+		#text {
+			width: 100% !important;
+			height: auto;
+			padding: 0.75rem !important;
+		}
+		social {
+			position: relative !important;
+			min-height: auto !important;
+			width: 100% !important;
+			height: auto;
+			text-align: center !important;
+			background-color: #F6F9FB;
+			padding-top: 0 !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+			padding-bottom: 2rem !important;
+		}
+		footer {
+			display: none !important;
+		}
+		footermedia {
+			display: block !important;
+			font-size: 10px; 
+			text-align: center; 
+			background: lightgrey;
+			color: green;
+		}
+		bottom {
+			display: none; 
+		}
+		bottommedia {
+			display: block !important;
+			position: relative;              
+			bottom: 0;                          
+			left: 0;    
+			top: 0;  
+			right: 0; 
+		}
+		h3 {
+			padding-left: 20px !important;
+		}
+		table td, table td * {
+			text-align: left !important;
+		}
+
+		td.one {
+			width: 0% !important;
+		}
+		td.three {
+			width: 70% !important;
+		}
+		td.four {
+			width: 50% !important;
+		}
+		td.five {
+			width: 100% !important;
+		}
+
+		p {
+			margin: 0 !important;
+			text-align: center !important;
+		}
+	}
+
+</style>
