@@ -56,15 +56,6 @@
 		height: 100%;
 	}
 
-	/*
-	iframe {
-		display: block;
-		margin: auto;
-		width: 100%; 
-		height: auto; 
-	}
-	*/
-
 	figure {
 		float: left;
 		margin: 10px 10px 10px 0;
@@ -91,11 +82,6 @@
 		width: auto;
 		height: auto;
 		text-align: center;
-	}
-
-	#anchor {
-		position: relative;
-		top: -50px;
 	}
 
 	.dot {
@@ -136,33 +122,6 @@
 	td.six {
 		width: 20%;
 	}
-
-	/* back to top button */
-	/* Not needed for now
-	#myBtn {
-		display: none;
-		cursor: pointer;
-		background-color: black;
-		width: 40px;
-		height: 40px;
-		text-align: center;
-		border-radius: 4px;
-		border-color: white;
-		position: fixed;
-		bottom: 70px;
-		right: 20px;
-		opacity: 50;
-		z-index: 99;
-	}
-	#myBtn:hover {
-		background-color: black;
-	}
-	#myBtn::after {
-		content: "^";
-		font-size: 3vh;
-		color: #fff;
-	}
-	*/
 
 	/* website box style */
 	* {
@@ -255,18 +214,7 @@
 		text-align: left; /* justify */
 		bottom: 2.5rem;
 	}
-	/* height of 150vh has to be adapted to height of article box - change background color of social box to see | "position: sticky" will interfere with the idea of sticky logos and always bottom at mobile. Remove "position: sticky" and change "top" to "6.5rem" if solution is found. For now, z-index for "social" should stay slow, so the "article" will overlap and be visible on scroll with mobile. */
-	/* Old social container within nav container
-	social {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		text-align: right;
-		width: 100%;
-		vertical-align: center;
-		padding: 2rem;
-	}
-	*/
+
 	social {
 		float: left;
 		width: 20%;
@@ -282,16 +230,19 @@
 		padding-right: 2rem;
 		padding-bottom: 2rem;
 	}
+	
 	bottom { 
 		position: absolute;                  
 		bottom: 3rem;                          
 		left: 2rem;
 		transition: 0.3s;                          
 	} 
+	
 	bottom:hover {
 		transform: translateX(5px) translateY(-10px) scale(1.1);
 		transform-origin: center center;
 	}
+	
 	/* Needed for mobile */
 	bottommedia { 
 		position: absolute;                  
@@ -299,7 +250,7 @@
 		left: 2rem;
 		display: none;                          
 	} 
-
+	
 	/* Clear floats after the columns */
 	section:after {
 		content: "";
@@ -308,11 +259,19 @@
 	}
 
 	footer {
+		position: absolute;
+		bottom: 0;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		width: 60%;
 		font-size: 12px; 
 		text-align: center; 
 		background: lightgrey;
 		color: green;
 	}
+	
 	/* Needed for mobile */
 	footermedia {
 		display: none;
@@ -342,6 +301,11 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.35s ease-out;
+	}
+	
+	a {
+		text-decoration: none; 
+		color: white;
 	}
 
 	/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
@@ -403,6 +367,7 @@
 			display: none !important;
 		}
 		footermedia {
+			width: 100% !important;
 			display: block !important;
 			font-size: 10px; 
 			text-align: center; 
