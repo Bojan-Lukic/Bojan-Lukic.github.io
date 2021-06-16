@@ -104,20 +104,20 @@
         };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
                 document.getElementById("header").style.fontSize = "10px";
-                document.getElementById("nav").style.top = "30px";
-                document.getElementById("article").style.paddingTop = "30px";
+                document.getElementById("nav").style.top = "40px";
+                document.getElementById("article").style.paddingTop = "40px";
             } 
             else {
-                document.getElementById("header").style.fontSize = "30px";
+                document.getElementById("header").style.fontSize = "26px";
                 document.getElementById("nav").style.top = "70px";
                 document.getElementById("article").style.paddingTop = "70px";
             }
         }
 
         function scrollFunction2() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
                 document.getElementById("textdefault").style.opacity = "0";
                 document.getElementById("textscroll").style.opacity = "1";
             } 
@@ -125,7 +125,7 @@
                 document.getElementById("textdefault").style.opacity = "1";
                 document.getElementById("textscroll").style.opacity = "0";
             }
-        }                               
+        }                  
     </script>
 	
 </body>

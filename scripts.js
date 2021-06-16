@@ -29,8 +29,8 @@ window.onscroll = function() {
 function scrollFunction() {
 	if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
 		document.getElementById("header").style.fontSize = "10px";
-		document.getElementById("nav").style.top = "30px";
-		document.getElementById("article").style.paddingTop = "30px";
+		document.getElementById("nav").style.top = "40px";
+		document.getElementById("article").style.paddingTop = "40px";
 	} 
 	else {
 		document.getElementById("header").style.fontSize = "26px";
