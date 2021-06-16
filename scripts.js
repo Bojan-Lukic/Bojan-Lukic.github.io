@@ -3,17 +3,19 @@
 
 var acc = document.getElementsByClassName("accordion");
 var i;
+acc[0].nextElementSibling.style.maxHeight = acc[0].nextElementSibling.scrollHeight + "px";
 
 for (i = 0; i < acc.length; i++) {
-acc[i].addEventListener("click", function() {
-	this.classList.toggle("active");
-	var panel = this.nextElementSibling;
-	if (panel.style.maxHeight) {
-	panel.style.maxHeight = null;
-	} else {
-	panel.style.maxHeight = panel.scrollHeight + "px";
-	} 
-});
+	acc[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} 
+		else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		} 
+	});
 }
 
 
@@ -25,22 +27,24 @@ window.onscroll = function() {
 };
 
 function scrollFunction() {
-	if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 		document.getElementById("header").style.fontSize = "10px";
-		document.getElementById("nav").style.top = "40px";
-		document.getElementById("article").style.paddingTop = "40px";
-	} else {
+		document.getElementById("nav").style.top = "30px";
+		document.getElementById("article").style.paddingTop = "30px";
+	} 
+	else {
 		document.getElementById("header").style.fontSize = "30px";
-		document.getElementById("nav").style.top = "130px";
-		document.getElementById("article").style.paddingTop = "130px";
+		document.getElementById("nav").style.top = "70px";
+		document.getElementById("article").style.paddingTop = "70px";
 	}
 }
 
 function scrollFunction2() {
-	if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
 		document.getElementById("textdefault").style.opacity = "0";
 		document.getElementById("textscroll").style.opacity = "1";
-	} else {
+	} 
+	else {
 		document.getElementById("textdefault").style.opacity = "1";
 		document.getElementById("textscroll").style.opacity = "0";
 	}
