@@ -33,7 +33,7 @@ function scrollFunction() {
 		document.getElementById("article").style.paddingTop = "30px";
 	} 
 	else {
-		document.getElementById("header").style.fontSize = "30px";
+		document.getElementById("header").style.fontSize = "26px";
 		document.getElementById("nav").style.top = "70px";
 		document.getElementById("article").style.paddingTop = "70px";
 	}
