@@ -29,13 +29,13 @@ window.onscroll = function() {
 function scrollFunction() {
 	if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
 		document.getElementById("header").style.fontSize = "10px";
-		document.getElementById("nav").style.top = "40px";
-		document.getElementById("article").style.paddingTop = "40px";
+		document.getElementById("nav").style.top = "35px";
+		document.getElementById("article").style.paddingTop = "35px";
 	} 
 	else {
 		document.getElementById("header").style.fontSize = "26px";
-		document.getElementById("nav").style.top = "70px";
-		document.getElementById("article").style.paddingTop = "70px";
+		document.getElementById("nav").style.top = "65px";
+		document.getElementById("article").style.paddingTop = "65px";
 	}
 }
 
