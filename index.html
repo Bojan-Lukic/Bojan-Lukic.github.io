@@ -11,7 +11,7 @@
 	<title>Great Opportunities Ahead!</title>
     <meta charset = "utf-8">
     <meta name = "viewport" content = "width=device-width, initial-scale = 1">
-	<script src = "../scripts.js"></script>
+	<script src = "scripts.js"></script>
 	
 </head>
 
@@ -94,8 +94,39 @@
     <footermedia>
         © 2021 www.bojanlukic.com
     </footermedia>
-    
-	<script src = "scripts.js"></script>
+
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+
+        window.onscroll = function() {
+            scrollFunction()
+            scrollFunction2()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("header").style.fontSize = "10px";
+                document.getElementById("nav").style.top = "30px";
+                document.getElementById("article").style.paddingTop = "30px";
+            } 
+            else {
+                document.getElementById("header").style.fontSize = "30px";
+                document.getElementById("nav").style.top = "70px";
+                document.getElementById("article").style.paddingTop = "70px";
+            }
+        }
+
+        function scrollFunction2() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("textdefault").style.opacity = "0";
+                document.getElementById("textscroll").style.opacity = "1";
+            } 
+            else {
+                document.getElementById("textdefault").style.opacity = "1";
+                document.getElementById("textscroll").style.opacity = "0";
+            }
+        }                               
+    </script>
 	
 </body>
 </html>
