@@ -134,6 +134,9 @@ td.six {
 	scroll-behavior: smooth !important;
 }
 
+html {
+	min-height: 100%;
+}
 body {
 	font-family: "Arial";
 	height: 100%; 
@@ -144,7 +147,7 @@ body {
 	background-color: #151517;  
 	background-attachment: fixed;
 	position: relative;
-	min-height: 100vh;
+	min-height: 100%;
 	overflow-y: scroll;
 }
 
