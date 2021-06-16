@@ -1,6 +1,6 @@
 
 /* Nice red: #721734 */
-/* Nice bue: #02356a*/
+/* Nice blue: #02356a*/
 
 /* href link style */
 a {
@@ -106,7 +106,7 @@ figcaption {
 
 table td, table td * {
 	vertical-align: top;
-	text-align: left; /* justify */
+	text-align: left;
 }
 
 td.one {
@@ -141,7 +141,6 @@ body {
 	overflow: auto;
 	margin: 0px;
 	padding: 0px;
-	/*background-image: url('https://wallpaperaccess.com/full/1567736.png');*/
 	background-color: #151517;  
 	background-attachment: fixed;
 	position: relative;
@@ -320,12 +319,7 @@ footermedia {
 	transition: max-height 0.35s ease-out;
 }
 
-a {
-	text-decoration: none; 
-	color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+/* Mobile layout */
 @media (max-width: 800px) {
 
 	a.two {
