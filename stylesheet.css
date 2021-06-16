@@ -136,7 +136,7 @@ td.six {
 
 body {
 	font-family: "Arial";
-	height: calc(100%);
+	height: 100%; 
 	width: 100%;
 	overflow: auto;
 	margin: 0px;
@@ -144,7 +144,7 @@ body {
 	background-color: #151517;  
 	background-attachment: fixed;
 	position: relative;
-	min-height: calc(100%);
+	min-height: 100vh;
 	overflow-y: scroll;
 }
 
