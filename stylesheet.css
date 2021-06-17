@@ -185,6 +185,7 @@ body {
 	position: absolute;
 }
 
+/*
 #textscroll {
 	opacity: 0;
 	top: 0;
@@ -194,6 +195,7 @@ body {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+*/
 
 /* Create three columns/boxes that float next to each other */
 #nav {

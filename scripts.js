@@ -39,6 +39,7 @@ function scrollFunction() {
 	}
 }
 
+/*
 function scrollFunction2() {
 	if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
 		document.getElementById("textdefault").style.opacity = "0";
@@ -49,6 +50,8 @@ function scrollFunction2() {
 		document.getElementById("textscroll").style.opacity = "0";
 	}
 }
+*/
+
 
 /* 
 //Back to top button script not needed for now 
