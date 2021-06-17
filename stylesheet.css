@@ -175,14 +175,14 @@ body {
 }
 
 #textdefault {
-	opacity: 1;
+	/*opacity: 1;*/
 	margin-top: 10px;
 	margin-bottom: 10px;
 	top: 0;
 	left: 0;
 	right:0;
 	bottom: 0;
-	position: absolute;
+	/*position: absolute;*/
 }
 
 /*

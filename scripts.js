@@ -23,7 +23,7 @@ for (i = 0; i < acc.length; i++) {
 
 window.onscroll = function() {
 	scrollFunction()
-	scrollFunction2()
+	/*scrollFunction2()*/
 };
 
 function scrollFunction() {
