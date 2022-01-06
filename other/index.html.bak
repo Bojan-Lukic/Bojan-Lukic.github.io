@@ -22,8 +22,8 @@
 
         <div id = "header">
             <h1>
-                <div id = "textdefault">&nbsp;D&nbsp;I&nbsp;S&nbsp;C&nbsp;U&nbsp;S&nbsp;S&nbsp;I&nbsp;O&nbsp;N&nbsp;</div>
-                <!-- <div id = "textscroll">&nbsp;D&nbsp;I&nbsp;S&nbsp;C&nbsp;U&nbsp;S&nbsp;S&nbsp;I&nbsp;O&nbsp;N&nbsp;</div> -->
+                <div id = "textdefault">&nbsp;O&nbsp;T&nbsp;H&nbsp;E&nbsp;R&nbsp;</div>
+                <!-- <div id = "textscroll">&nbsp;O&nbsp;T&nbsp;H&nbsp;E&nbsp;R&nbsp;</div> -->
             </h1>
         </div>
 
@@ -40,39 +40,67 @@
 
             <div id="text"></br>
 
-                <button class="accordion"><h3>Is the next financial Crisis imminent?</h3></button>
+                <button class="accordion"><h3>Papers</h3></button>
                 <div class="panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
-                            <td class="five">To be updated...</td>
+                            <td class="five">Recently, I started reading papers from different domains. Following is a list of papers that could also be interesting 
+                                for you:</td>
                             <td class="one"></td>
-                        </tr>
-                    </table><br><br>
-                </div>
-
-                <button class="accordion"><h3>Is a vegan diet detrimental to endurance and muscle strength?</h3></button>
-                <div class="panel">
+                        </tr><tr><td><br></td></tr>
+                    </table>
                     <table style="width:100%">
-                        <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
-                            <td class="five">To be updated...</td>
+                            <td class="five"><b>Bitcoin white paper</b></td>
                             <td class="one"></td>
                         </tr>
-                    </table><br><br>
-                </div>
-
-                <button class="accordion"><h3>Thoughts on climate and environmental changes.</h3></button>
-                <div class="panel">
-                    <table style="width:100%">
-                        <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
-                            <td class="five">To be updated...</td>
+                            <td class="five">Test<br><br>
+                                <div class="video-container">
+                                    <iframe width = "560" height = "315" src="https://www.youtube.com/embed/zVqczFZr124" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div><br><br>
+                                Test</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five"><b>Bat origin of human coronaviruses</b></td>
                             <td class="one"></td>
                         </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five"><b>McCulloch and Pitts 1943</b></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test<br><br>
+                                <div class="video-container">
+                                    <iframe width = "560" height = "315" src = "https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf#zoom=90"></iframe>
+                                </div>
+                                <p style = "text-align: center !important;"><i>Source: <a href="https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf" title = "A Logical Calculus of the Ideas Immanent In Nervous Activity"><b style = "color: #02356a">Carnegie Mellon University</b></a></i></p><br><br>
+                                Test</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five"><b>Turing Machine</b></td>
+                            <td class="one"></td>
+                        </tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="five">Test</td>
+                            <td class="one"></td>
+                        </tr><tr><td><br></td></tr>
                     </table><br><br>
                 </div><br><br>
 
