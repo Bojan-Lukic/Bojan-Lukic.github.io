@@ -90,16 +90,16 @@ figcaption {
 }
 
 .dot {
-	height: 16px;
-	width: 16px;
+	height: 13px;
+	width: 13px;
 	background-color: #bbb;
 	border-radius: 50%;
 	display: inline-block;
 }
 .dotb {
-	height: 16px;
-	width: 16px;
-	background-color: black;
+	height: 13px;
+	width: 13px;
+	background-color: blue;
 	border-radius: 50%;
 	display: inline-block;
 }
@@ -113,10 +113,10 @@ td.one {
 	width: 5%;
 }
 td.two {
-	width: 30%;
+	width: 25%;
 }
 td.three {
-	width: 60%;
+	width: 65%;
 }
 td.four {
 	width: 40%;
@@ -126,6 +126,12 @@ td.five {
 }
 td.six {
 	width: 20%;
+}
+td.seven {
+	width: 12.5%;
+}
+td.eight {
+	width: 52.5%;
 }
 
 /* website box style */
@@ -212,7 +218,7 @@ body {
 	z-index: 100;
 }
 #nav:hover { 
-	transform: translateX(-15px) translateY(10px) scale(1.1);
+	transform: translateX(-7px) translateY(3.75px) scale(1.05);
 	transform-origin: center center;
 }
 #article {
@@ -261,7 +267,7 @@ bottom {
 } 
 
 bottom:hover {
-	transform: translateX(5px) translateY(-10px) scale(1.1);
+	transform: translateX(1px) translateY(-2.75px) scale(1.05);
 	transform-origin: center center;
 }
 

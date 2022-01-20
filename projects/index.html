@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +16,6 @@
 
 
 <body>
-
     <section>
 
         <div id = "header">
@@ -37,7 +35,6 @@
 
 
         <div id = "article">
-
             <div id="text"></br>
                 
                 <button class="accordion"><h3>Mobile application</h3></button>
@@ -47,53 +44,53 @@
                         <tr>
                             <td class="one"></td>
                             <td class="five">During my bachelor, I discussed ideas for mobile applications with a couple of fellow students. 
-                                Eventually, we realized that whenever we visited new cities, we had difficulties finding good bars and clubs
+                                Eventually, we realized that whenever we visited new cities, we had difficulties finding good venues
                                 that suited our tastes. It is possible to search for clubs via Google search and get a list of bars, restaurants,
-                                and clubs in the surrounding. However, in some cases smaller venues are masked by the bigger ones or would not
+                                and clubs in the surrounding area. However, in some cases smaller venues are masked by the bigger ones or would not
                                 show up at all in the search results. Furthermore, it is fairly difficult to search for places with a particular
                                 theme (such as venues playing alternative music). Many of these clubs and bars are known to locals through 
-                                word of mouth. Other apps exist, that list local events in bigger cities. However, it is not possible to directly 
+                                word of mouth. Other apps that list local events in bigger cities exist. However, it is not possible to directly 
                                 search for bars, clubs or restaurants on these apps. <br>
-                                The idea of an app displaying local nightclubs seems to cover a niche that has not been explored yet. Ideally, 
+                                The idea of an app displaying local venues seems to cover a niche that has not been explored yet. Ideally, 
                                 the app will keep entries of all relevant venues worlwide and offer a centralized solution for people that are 
-                                looking for places in unfamiliar cities.<br>
-                                </td>
+                                looking for places in unfamiliar cities. To implement aforementioned idea, I created a project in Android Studio
+								which I will be working on in the next weeks to months. The goal is to have a first draft of an app which can 
+								display local venues with the use of Google maps and a list, showing the most importnat information. The repository 
+								containing the project files can be found on my GitHub. More updates to follow.<br>
+                            </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
                 </div>
 
-                <button class="accordion"><h3>Wireless WiFi extender using Raspberry Pi</h3></button>
+                <button class="accordion"><h3>Wireless WPA2-Enterprise/802.1x WiFi extender using Raspberry Pi</h3></button>
                 <div class="panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
-                            <td class="five">One summer night when I was visiting my brother, my brother and I came across a challenge: At that 
-                                time, my brother was using the network of his university for WiFi access. Unfortunately, he was far away from 
-                                the closest access point, which led to an inconsistent Internet connection and a weak signal. He was using a USB 
-                                WiFi amplifier which was designed in a way that it receives (weak) WiFi signals and amplifies them, providing  
-                                a strong output signal to a device via the USB connection. 
+                            <td class="five">One summer night when I was visiting my brother, him and I came across a challenge: At that 
+                                time my brother was utilizing the campus network of his university which was transmitted from one of the neighboring 
+								buildings. Unfortunately, the signal strength was low, which led to an inconsistent Internet connection. He was using 
+								a USB WiFi amplifier to amplify the WiFi signal, providing a stronger signal for the device the amplifier was 
+								connected to with the drawback of lower network speeds. 
                                 <figure>
                                     <img src="../resources/TL-WN822N_EU_5.0_01_large_1507615225760s.jpg" title = "USB WiFi amplifier"/>
                                     <figcaption>Fig.1 - Example of a TP-Link USB WiFi amplifier.</figcaption>
                                 </figure>
-                                The problem was that the amplifier had to be connected 
-                                to his laptop at all times to ensure a good Internet connection. Also, the amplified signal was only available to
-                                the device the amplifier was connected to, meaning it did not act as an access point for multiple devices. After 
-                                discussing this issue with him, I was determined to help him and I was convinced that there are products online, 
-                                offering a wireless extensions of a WiFi signal. Many people are familiar with WiFi repeaters, which receive a 
-                                WiFi signal and "repeat" that signal for an increased signal range. These repeaters have one downfall: They 
-                                require an Ethernet connection to the main access point, which sends the WiFi signal. And even when there were 
-                                offers for wireless repeaters that did not require an ethernet connection to the main access point, they required 
-                                a setup with the main network which is not possible if one does not have the access rights to that network. After 
-                                some research, my brother and I found a solution to this problem which involves using a Raspberry Pi in combination 
-                                with the aforementioned WiFi amplifier. Thankfully, there are quite a few tutorials online, discussing the setup 
-                                of a Raspberry Pi for wireless WiFi extension.<br> 
-                                In <a href="https://pimylifeup.com/raspberry-pi-wifi-extender/" title = "Simple Raspberry Pi WiFi Extender" target = "_blank" rel = "noopener noreferrer"><b style = "color: #02356a"><u>this</u></b></a>
-                                tutorial, Gus from "pimylifeup" demonstrates how to set up a Raspberry Pi for wireless WiFi extension. The 
-                                walkthrough provided here will mainly refer to the tutorial from pimylifeup. 
-                                </td>
+								Figure one depicts such a WiFi amplifier that my brother was using.
+                                The problem was that the amplifier could only be used with one device at a time, meaning it did not act as an access 
+								point for multiple devices.
+								One might ask why we didn't use a router which can be used in range extender mode to receive the signal and create a 
+								new private network. Unfortunately, the network access control standard for the WiFi network was 802.1x, a standard 
+								often used in universities and public sector institutions in general. This standard involves a sign in with username 
+								and password. The access standards used in regular WiFi routers do not comply with the 802.1x standard, which is why 
+								the use of a common WiFi extender was not possible in that case. 
+								Nevertheless, I was determined to find a way for extending WiFi signals using 802.1x access standards and quickly I 
+								came across multiple websites describing possibilities of extending these types of networks using a Raspberry Pi and 
+								some scripting. Right now I am looking into the capabilities of these tools and ways to implement them. More updates 
+								will follow in the next weeks. 
+                            </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
@@ -108,36 +105,45 @@
                             <td class="five">
                                 Notice: The information given in the following paragraph is not financial advice! Always DYOR before commiting to 
                                 an investment!<br>
-                                A while back I opened an account at an online stock broker (DeGiro). For the first year, I didn't really make any moves
-                                but in early 2020 I decided to do some research on companies that could be worth investing in. At that time the global 
-                                Covid pandemic started and, as many can recall, with the lockdowns the market took a severe beating. Like many others, 
-                                I recognized the great potential of investing in companies that were shaken up by the pandemic and were undervalued. 
-                                Fortunately, I opened the account with my stock broker the year prior which meant that I didn't have the trouble of waiting
-                                for account verification, as many others had to. Due to the increased interest of people in investing, many brokers had 
-                                issues verifying the increasing amount of newly opened accounts on their platforms.<br>
-                                I fairly quickly deposited some money to my account and started buying stocks: For the beginning, I wanted to focus on 
-                                medium to big German companies, as I am most familiar with the German market. After a quick search I found my first 
-                                company: Lufthansa AG. Lufthansa is a German is the largest German airline and the second-largest airline in Europe 
-                                in terms of passengers carried. 
-                                
-                                </td>
+                                A while back I opened an account at an online stock broker (DeGiro) with the aim of investimg some of my savings in 
+								order to get regular dividends and combat inflation (i.e. the depreciation of savings). In the first year, I didn't 
+								make any significant moves but in early 2020 I decided to do some research on companies that could be worth investing 
+								in. At that time the Covid pandemic started and, as many can recall, the market took a severe beating with the 
+								accompanied lockdowns. Like many others I recognized the great potential of investing in companies that were shaken 
+								up by the pandemic and became undervalued with the big dip. 
+                                Fortunately, I opened the account with my stock broker the year prior which meant that I didn't have the trouble of 
+								waiting for account verification, as many others had to. Due to the increased interest of people in investing, many 
+								brokers had issues verifying the increasing amount of newly opened accounts on their platforms.<br>
+                                I fairly quickly started buying stocks: For the beginning, I wanted to focus on medium-sized to big German companies, 
+								as I am most familiar with the German market. After some quick research I found the first company I became interested 
+								in: Lufthansa AG. Lufthansa is the largest German airline and the second-largest airline in Europe in terms of 
+								passengers carried. Just like many other companies, Lufthansa took a hit in spring of 2020 and in my eyes was 
+								undervalued. I was convinced that the German government wouldn't let such a big player fall into bankruptcy, which is 
+								why the risk of myking losses was very low. I bought around 100 shares and kept them for for months before selling 
+								them. Just like I sensed it, the German government issued financial aid for companies hit badly by the small crash 
+								caused by the Covid pandemic, one of them being Lufthansa. The stock recovered and stabilized at a decent price. 
+								I sold my stocks just before the price dropped again, due to some more local Covid outbreaks shaking the aviation 
+								industry and some devastating quarterly earnings report by Lufthansa. All in one it's been a decent gain and a 
+								satisfying entry into the world of investing. <br>
+								Since then I have invested in other companies and in different markets. Details about these investments will follow 
+								in the next weeks.
+                            </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
                 </div><br><br>
 
             </div>
-
         </div>
 
         <social>
             <bottom>
-                <a href="https://github.com/Bojan-Lukic" title = "GitLab repository" target = "_blank" rel = "noopener noreferrer"><img src="../resources/github_PNG202.png" style = "width: 50px; height: auto"></a><br><br>
+                <a href="https://github.com/Bojan-Lukic" title = "GitHub" target = "_blank" rel = "noopener noreferrer"><img src="../resources/github_PNG202.png" style = "width: 50px; height: auto"></a><br><br>
                 <a href="https://www.researchgate.net/profile/Bojan_Lukic2" title = "ResearchGate" target = "_blank" rel = "noopener noreferrer"><img src="../resources/download.jpg" style = "width: 50px; height: auto"></a>   
             </bottom>
 
             <bottommedia>
-                <a href="https://github.com/Bojan-Lukic" title = "GitHub repository" target = "_blank" rel = "noopener noreferrer"><img src="../resources/github_PNG202.png" style = "width: auto; height: 40px; padding-left: 5px; padding-right: 5px;"></a>
+                <a href="https://github.com/Bojan-Lukic" title = "GitHub" target = "_blank" rel = "noopener noreferrer"><img src="../resources/github_PNG202.png" style = "width: auto; height: 40px; padding-left: 5px; padding-right: 5px;"></a>
                 <a href="https://www.researchgate.net/profile/Bojan_Lukic2" title = "ResearchGate" target = "_blank" rel = "noopener noreferrer"><img src="../resources/download.jpg" style = "width: auto; height: 40px; padding-left: 5px; padding-right: 5px;"></a>   
             </bottommedia>
         </social>  
