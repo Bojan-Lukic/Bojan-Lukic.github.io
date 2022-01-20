@@ -135,7 +135,8 @@ td.six {
 }
 
 html {
-	height: 100%;
+	min-height: 100%;
+	position: relative;
 }
 body {
 	font-family: "Arial";
@@ -290,6 +291,7 @@ footer {
 	text-align: center; 
 	background: lightgrey;
 	color: #02356a;
+	position: absolute;
 }
 
 /* Needed for mobile */
