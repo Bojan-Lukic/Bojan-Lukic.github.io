@@ -4,21 +4,23 @@
 
 /* href link style */
 a {
-	text-decoration: none; 
+	text-decoration: none; 	
 	color: white;
+	margin-left: 13px;
+	margin-right: 13px;
 }
 
 a.two {
 	padding-left: 35px;
 }
 
-p {
+/* p {
 	margin: 0;
 	text-align: center !important;
-}
+} */
 
 a:hover, a:active {
-	color: rgba(137, 144, 153, 0.9);
+	color: rgba(137, 144, 153, 0.9); 
 }
 
 hr {
@@ -46,6 +48,8 @@ h2 {
 h1 {
 	position: relative;
 	margin: 0;
+	width: 100%;
+	font-weight: normal;
 }
 
 .video-container {
@@ -157,13 +161,13 @@ html {
 	position: relative;
 }
 body {
-	font-family: "Arial";
+	font-family: "Poppins"; 
 	height: 100%; 
 	width: 100%;
 	overflow: auto;
 	margin: 0px;
 	padding: 0px;
-	background-color: #151517;  
+	background-color: #000000;  
 	background-attachment: fixed;
 	position: relative;
 	min-height: 100%;
@@ -174,10 +178,10 @@ body {
 #header {
 	position: fixed;
 	float: left;
-	font-family: "Baskervville";
-	text-align: center;
-	font-size: 26px;
-	background-color: #151517;
+	font-family: "Poppins";
+	/* text-align: center; */
+	font-size: 16px;
+	background-color: #000000;
 	top: 0px; 
 	left: 0px; 
 	right: 0px;
@@ -187,21 +191,48 @@ body {
 	width: 100%;
 	transition: 0.3s;
 	z-index: 1000;
-	border-bottom: 2px solid white;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	box-shadow: 0px -3px 15px 1px #333333;
 }
 
 #textdefault {
 	/*opacity: 1;*/
 	margin-top: 10px;
 	margin-bottom: 10px;
+	margin-left: 10px;
+	float: left;
 	top: 0;
 	left: 0;
 	right:0;
 	bottom: 0;
 	/*position: absolute;*/
+}
+
+#textdefault2 {
+	/*opacity: 1;*/
+	margin-top: 10px;
+	margin-right: 10px;
+	top: 0;
+	left: 0;
+	right:0;
+	bottom: 0;
+	text-align: right; 
+	/*position: absolute;*/
+}
+
+.soc {
+	width: 40px; 
+	height: auto; 
+	margin-left: -6px;
+	margin-right: -6px;
+	border-radius: 15%;
+	transition: 0.3s;
+	z-index: 1000;
+}
+
+.soc:hover, .soc:active {
+	background-color: red;
+	transition: 0s !important; 
 }
 
 /*
@@ -236,7 +267,7 @@ body {
 #article {
 	float: left;
 	width: 60%;
-	background-color: white;
+	background-color: #cbccba;
 	font-size: 14px;
 	min-height: 100vh;
 	transition: 0.3s;
@@ -248,9 +279,10 @@ body {
 #text {
 	/*position: relative;*/
 	padding: 1rem;
+	font-size: 16px;
 	width: auto;
 	height: auto;
-	background-color: #b3cde01a;
+	background-color: #cbccba;
 	text-align: left; /* justify */
 	bottom: 2.5rem;
 }
@@ -326,7 +358,7 @@ footermedia {
 	text-align: left;
 	outline: none;
 	transition: 0.4s;
-	font-family:"Arial";
+	font-family:"Poppins";
 	margin-top: 5px;
 }
 .active {
@@ -351,6 +383,10 @@ footermedia {
 		padding-right: 10px !important;
 	}
 
+	body {
+		background-color: #cbccba;  
+	}
+
 	figure {
 		width: 200px !important;
 		height: 200px !important;
@@ -358,20 +394,6 @@ footermedia {
 	}
 	figcaption {
 		text-align: center !important;
-	}
-
-	#nav {
-		width: 100% !important;
-		text-align: center !important;
-		position: relative !important;
-		top: 110px !important;
-		padding: 0 !important;
-		min-height: auto !important;
-		height: auto !important;
-	}
-	#nav:hover { 
-		transform: none !important; 
-		transform-origin: none !important;
 	}
 	bottom:hover {
 		transform: none !important; 
@@ -381,24 +403,12 @@ footermedia {
 		width: 100% !important;
 		min-height: 0 !important;
 		padding-top: 0 !important;
-		margin-top: 145px;
+		margin-top: 165px;
 	}
 	#text {
 		width: 100% !important;
 		height: auto;
 		padding: 0.25rem !important;
-	}
-	social {
-		position: relative !important;
-		min-height: auto !important;
-		width: 100% !important;
-		height: auto;
-		text-align: center !important;
-		background-color: #F6F9FB;
-		padding-top: 0 !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-		padding-bottom: 2rem !important;
 	}
 	footer {
 		display: none !important;
@@ -411,9 +421,33 @@ footermedia {
 		background: lightgrey;
 		color: #02356a;
 	}
-	bottom {
-		display: none; 
+	#nav {
+		display: none !important; 
 	}
+	social {
+		display: none !important; 
+	}
+	bottom {
+		display: none !important; 
+	}
+
+	#textdefault {
+		margin-bottom: 15px !important;
+		margin-left: 0px !important;
+		width: 100%;
+		text-align: center !important;
+		float: right !important;
+	}
+	
+	#textdefault2 {
+		margin-top: 0px !important;
+		margin-bottom: 10px;
+		margin-right: 0px !important;
+		width: 100%;
+		text-align: center !important;
+		float: right !important;
+	}
+
 	bottommedia {
 		display: block !important;
 		position: relative;              
@@ -464,10 +498,10 @@ footermedia {
 		width: 30% !important;
 	}
 
-	p {
+	/* p {
 		margin: 0 !important;
 		text-align: center !important;
-	}
+	} */
 	
 	.panel {
 		padding-left: 10px !important;

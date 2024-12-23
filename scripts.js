@@ -26,16 +26,25 @@ window.onscroll = function() {
 	/*scrollFunction2()*/
 };
 
+var socs = document.getElementsByClassName("soc");
+
 function scrollFunction() {
 	if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
 		document.getElementById("header").style.fontSize = "10px";
-		document.getElementById("nav").style.top = "35px";
+		//document.getElementById("nav").style.top = "35px";
 		document.getElementById("article").style.paddingTop = "35px";
+		document.getElementsByClassName("soc")[0].style.width = '25px';
+		for (var i = 0; i < socs.length; i++) {
+			socs[i].style.width = '25px';
+		}
 	} 
 	else {
-		document.getElementById("header").style.fontSize = "26px";
-		document.getElementById("nav").style.top = "65px";
+		document.getElementById("header").style.fontSize = "16px";
+		//document.getElementById("nav").style.top = "65px";
 		document.getElementById("article").style.paddingTop = "65px";
+		for (var i = 0; i < socs.length; i++) {
+			socs[i].style.width = '40px';
+		}
 	}
 }
 
