@@ -33,7 +33,9 @@ button {
 
 h3 {
 	padding-left: 35px;
-	font-size: 16px;
+	font-size: 18px; 
+	margin-top: 12px; 
+	margin-bottom: 12px; 
 }
 
 h3.two {
@@ -366,6 +368,14 @@ footermedia {
 }
 .accordion:hover {
 	background-color: rgba(2, 53, 106, 0.3); 
+	/*background-image: 
+	linear-gradient(
+		to bottom,
+		rgba(2, 53, 106, 0) 0%,
+		rgba(2, 53, 106, 0.3) 20%,
+		rgba(2, 53, 106, 0.3) 80%,
+		rgba(2, 53, 106, 0) 100%
+	);*/
 }
 .panel {
 	padding: 0 18px;
