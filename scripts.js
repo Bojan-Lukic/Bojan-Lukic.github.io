@@ -39,11 +39,17 @@ function scrollFunction() {
 		}
 	} 
 	else {
-		document.getElementById("header").style.fontSize = "16px";
+		/*if ($(window).width() <= 800) {
+			document.getElementById("header").style.fontSize = "14px";
+		}
+		else {
+			document.getElementById("header").style.fontSize = "16px";
+		}*/
+		document.getElementById("header").style.fontSize = "14px";
 		//document.getElementById("nav").style.top = "65px";
-		document.getElementById("article").style.paddingTop = "65px";
+		document.getElementById("article").style.paddingTop = "60px";
 		for (var i = 0; i < socs.length; i++) {
-			socs[i].style.width = '40px';
+			socs[i].style.width = '35px';
 		}
 	}
 }
