@@ -53,7 +53,7 @@
                             <img src = "resources/DSC02302.JPG" style = "width: auto; height: 190px; margin-right: 20px; border-radius: 50%;"/>
                         </div>
                         <div style="text-align: left; display: inline-block; vertical-align: middle;">
-                            <p style="font-size: 24px; margin:0;">Bojan Lukic</p>
+                            <p style="font-size: 21px; margin:0;">Bojan Lukic</p>
                             <p style="color: rgb(87, 87, 87); margin:0; margin-bottom:-5px;">Master of Science</p>
                             <p style="color: rgb(87, 87, 87); margin:0; margin-bottom:-5px;">German Aerospace Center (DLR)</p>
                             <p style="color: rgb(87, 87, 87); margin:0;">Institute of Flight Systems</p>
@@ -122,11 +122,17 @@
                 }
             } 
             else {
-                document.getElementById("header").style.fontSize = "16px";
+                /*if ($(window).width() <= 800) {
+                    document.getElementById("header").style.fontSize = "14px";
+                }
+                else {
+                    document.getElementById("header").style.fontSize = "16px";
+                }*/
+                document.getElementById("header").style.fontSize = "14px";
                 //document.getElementById("nav").style.top = "65px";
-                document.getElementById("article").style.paddingTop = "65px";
+                document.getElementById("article").style.paddingTop = "60px";
                 for (var i = 0; i < socs.length; i++) {
-                    socs[i].style.width = '40px';
+                    socs[i].style.width = '35px';
                 }
             }
         }
