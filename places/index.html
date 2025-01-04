@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+
+<head>
+	
+	<link rel = "stylesheet" type = "text/css" href = "../stylesheet.css" media = "screen"/>
+	<!-- <link href = "https://fonts.googleapis.com/css?family=Baskervville|Cinzel|Great+Vibes|Marck+Script|Parisienne|Sacramento&display=swap" rel = "stylesheet"> --> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href = "../resources/doge.png" rel = "icon" type = "image/x-icon" />
+	<title>Great Opportunities Ahead!</title>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1">
+	<script src = "../scripts.js"></script>
+    <script src="d3/d3.v3.min.js"></script>
+    <script src="d3/topojson.v1.min.js"></script>
+    <script src="datamaps/datamaps.world.min.js"></script>
+	
+</head>
+
+
+<body style = "background-color: #000000 !important;">
+    <section>
+        <div id = "header">
+            <h1>
+                <div id = "textdefault">
+                    <a href = "https://www.bojanlukic.com">Home</a>
+                    <a href = "https://www.bojanlukic.com/vita">Vita</a>
+                    <a href = "https://www.bojanlukic.com/projects">Projects</a>
+                </div>
+                <div id = "textdefault" style = "margin-left: 0px !important;">
+                    <a href = "https://www.bojanlukic.com/discussion">Discussion</a>
+                    <a style = "text-decoration: overline !important;" href = "https://www.bojanlukic.com/places">Places</a>
+                </div>
+                <div id = "textdefault2">
+                    <a href="https://github.com/Bojan-Lukic" title = "GitHub" target = "_blank" rel = "noopener noreferrer"><img style="border-radius: 50% !important;" class = "soc" src="../resources/gh.svg"></a>
+                    <a href="https://www.researchgate.net/profile/Bojan_Lukic2" title = "ResearchGate" target = "_blank" rel = "noopener noreferrer"><img class = "soc" src="../resources/rg.svg"></a>
+                    <a href="https://www.linkedin.com/in/bojan-lukic-53b306275/" title = "LinkedIn" target = "_blank" rel = "noopener noreferrer"><img class = "soc" src="../resources/li.svg"></a>
+                    <!-- &nbsp;&nbsp;W&nbsp;E&nbsp;L&nbsp;C&nbsp;O&nbsp;M&nbsp;E&nbsp;&nbsp; -->
+                    <!-- <div id = "textscroll">&nbsp;W&nbsp;E&nbsp;L&nbsp;C&nbsp;O&nbsp;M&nbsp;E&nbsp;</div> -->
+                </div>
+            </h1>
+        </div>
+
+        <div id = "article" style = "float: none !important; width: 100% !important; background-color: #000000 !important;">
+            <div id="map1" style="position: relative;"></div>
+        </div>
+        
+        </br></br> 
+    
+    </section>
+
+    <footer style = "width: 100%">
+        © 2025 www.bojanlukic.com
+    </footer>
+
+    <!-- Only shows on mobile -->
+    <footermedia style = "width: 100%">
+        © 2025 www.bojanlukic.com
+    </footermedia>
+
+    <script src="countries.js"></script>
+    <script src="cities.js"></script>
+
+    <script>
+
+    var map = new Datamap({
+        scope: 'world',
+        element: document.getElementById('map1'),
+        projection: 'mercator',
+        responsive: true,
+        height: 700,
+        fills: {
+            defaultFill: '#D0D0D0',
+            visited: '#B0B0B0',
+            city: '#FC8050'
+        },
+        geographyConfig: {
+            highlightOnHover: true,
+            highlightFillColor: '#A0C0A0',
+            highlightBorderColor: '#F0F0F0',
+            popupOnHover: true,
+            popupTemplate: function(geography, data) {
+                return '<div class="hoverinfo"><b>' + geography.properties.name + '</b></div>';
+            },
+        },
+        bubblesConfig: {
+            borderWidth: 1,
+            borderColor: '#FFFFFF',
+            highlightOnHover: true,
+            popupOnHover: true,
+            popupTemplate: function(geo, data) {
+                return "<div class='hoverinfo'>" + data.name + ":<br>" + data.date + "</div>";
+            }
+        },
+
+        data: COUNTRIES
+    });
+
+    map.bubbles(CITIES);
+
+    window.addEventListener('resize', function() {
+        map.resize();
+    });
+
+    </script>
+
+    <script src = "../scripts.js"></script>
+
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+
+        window.onscroll = function() {
+            scrollFunction()
+            /*scrollFunction2()*/
+        };
+
+        var socs = document.getElementsByClassName("soc");
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
+                document.getElementById("header").style.fontSize = "12px";
+                //document.getElementById("nav").style.top = "35px";
+                document.getElementById("article").style.paddingTop = "35px";
+                document.getElementsByClassName("soc")[0].style.width = '28px';
+                for (var i = 0; i < socs.length; i++) {
+                    socs[i].style.width = '28px';
+                }
+            } 
+            else {
+                /*if ($(window).width() <= 800) {
+                    document.getElementById("header").style.fontSize = "14px";
+                }
+                else {
+                    document.getElementById("header").style.fontSize = "16px";
+                }*/
+                document.getElementById("header").style.fontSize = "15px";
+                //document.getElementById("nav").style.top = "65px";
+                document.getElementById("article").style.paddingTop = "60px";
+                for (var i = 0; i < socs.length; i++) {
+                    socs[i].style.width = '38px';
+                }
+            }
+        }            
+    </script>
+
+</body>
+</html>

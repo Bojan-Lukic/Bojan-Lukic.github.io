@@ -30,12 +30,12 @@ var socs = document.getElementsByClassName("soc");
 
 function scrollFunction() {
 	if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
-		document.getElementById("header").style.fontSize = "10px";
+		document.getElementById("header").style.fontSize = "12px";
 		//document.getElementById("nav").style.top = "35px";
 		document.getElementById("article").style.paddingTop = "35px";
-		document.getElementsByClassName("soc")[0].style.width = '25px';
+		document.getElementsByClassName("soc")[0].style.width = '28px';
 		for (var i = 0; i < socs.length; i++) {
-			socs[i].style.width = '25px';
+			socs[i].style.width = '28px';
 		}
 	} 
 	else {
@@ -45,11 +45,11 @@ function scrollFunction() {
 		else {
 			document.getElementById("header").style.fontSize = "16px";
 		}*/
-		document.getElementById("header").style.fontSize = "14px";
+		document.getElementById("header").style.fontSize = "15px";
 		//document.getElementById("nav").style.top = "65px";
 		document.getElementById("article").style.paddingTop = "60px";
 		for (var i = 0; i < socs.length; i++) {
-			socs[i].style.width = '35px';
+			socs[i].style.width = '38px';
 		}
 	}
 }
