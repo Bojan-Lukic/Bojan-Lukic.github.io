@@ -67,6 +67,33 @@ h1 {
 	height: 100%;
 }
 
+#container {
+    margin-bottom: 5px;
+}
+
+.zoom-button {
+    width: 35px;
+    height: 35px;
+	border-radius: 5px;
+	background-color: black; 
+	border-color: black; 
+	border: solid black; 
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    z-index: 100; 
+	top: 80px; 
+}
+
+#zoom-info {
+    display: block;
+    position: fixed;
+	color: darkcyan; 
+    z-index: 100; 
+    padding: 10px;
+	top: 76px; 
+}
+
 figure {
 	float: left;
 	margin: 10px 10px 10px 0;
@@ -529,5 +556,13 @@ footermedia {
 	.panel {
 		padding-left: 10px !important;
 		padding-right: 10px !important;
+	}
+
+	.zoom-button {
+		top: 165px !important; 
+	}
+
+	.zoom-info {
+		top: 161px !important; 
 	}
 }
