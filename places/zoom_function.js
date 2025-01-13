@@ -15,7 +15,10 @@ Zoom.prototype.init = function() {
 		subunits = this.datamap.svg.selectAll(".datamaps-subunit");
 
 	// preserve stroke thickness
-	paths.style("vector-effect", "non-scaling-stroke");
+	paths.style("vector-effect", "non-scaling-stroke"); 
+	// preserve bubble size?
+	//this.datamap.svg.selectAll(".bubbles")
+	//	.attr("transform", "translate(" + 1 + ")scale(" + 1 + ")"); 
 
 	// disable click on drag end
 	subunits.call(
@@ -34,9 +37,11 @@ Zoom.prototype.init = function() {
 Zoom.prototype.listen = function() {
 	this.$buttons.off("click").on("click", this._handleClick.bind(this));
 
-	this.datamap.svg
-		.call(this.d3Zoom.on("zoom", this._handleScroll.bind(this)))
-		.on("dblclick.zoom", null); // disable zoom on double-click
+	//if (d3.event.ctrlKey) { 
+		this.datamap.svg
+			.call(this.d3Zoom.on("zoom", this._handleScroll.bind(this)))
+			//.on("dblclick.zoom", null); // uncomment this line to disable zoom on double-click
+	//}
 };
 
 Zoom.prototype.reset = function() {
@@ -113,7 +118,7 @@ Zoom.prototype._update = function(translate, scale) {
 		.attr("transform", "translate(" + translate + ")scale(" + scale + ")");
 
 	this._displayPercentage(scale);
-};
+}; 
 
 Zoom.prototype._animate = function(translate, scale) {
 	var _this = this,

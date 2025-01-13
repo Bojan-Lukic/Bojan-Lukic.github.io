@@ -75,12 +75,14 @@
 
     <script>
 
-        function Datamap() {
+function Datamap() {
             this.$container = $("#container");
             this.instance = new Datamaps({
                 scope: 'world',
                 element: this.$container.get(0),
-                projection: 'mercator',
+                projection: 'mercator', 
+                // Remove responsiveness as this messes with the zoom feature. 
+                // Below is a workaround which makes the map responsive regardless of this setting here.
                 //responsive: true, 
                 // Make container wrap around map rather than setting a fixed height for the map
                 //height: 700,
@@ -99,34 +101,40 @@
                     },
                 },
                 bubblesConfig: {
-                    borderWidth: 1,
+                    borderWidth: 1, 
+                    radius: 75, 
                     borderColor: '#FFFFFF',
                     highlightOnHover: true,
-                    popupOnHover: true,
+                    popupOnHover: true, 
                     popupTemplate: function(geo, data) {
                         return "<div class='hoverinfo'>" + data.name + ":<br>" + data.date + "</div>";
                     }
                 },
+                data: COUNTRIES, 
                 done: this._handleMapReady.bind(this), 
-                data: COUNTRIES
             });
-
-            this.instance.bubbles(CITIES);
-            //map = this.instance;
-        }
+            //this.instance.bubbles(CITIES); 
+        } 
 
         Datamap.prototype._handleMapReady = function(datamap) {
+            datamap.bubbles(CITIES); 
             this.zoom = new Zoom({
                 $container: this.$container,
                 datamap: datamap
-            });
+            }); 
         }
 
         new Datamap();
 
-        //window.addEventListener('resize', function() {
-        //    map.resize(); 
-        //}); 
+        // Edit the EventListener to remove the container's content and create a new Datamap instance upon resize events. 
+        // This gives the map its responsiveness regardless of the parameter setting in the Datamap instance. 
+        // Consider finding a cleaner solution as this here feels kind of hacky. 
+        // For instance, features such as bubbles are redrawn everytime the window size changes. This is not ideal. 
+        // Reference: https://stackoverflow.com/a/43498530 
+        window.addEventListener('resize', function() {
+            $('#container').empty();
+            new Datamap(); 
+        }); 
 
     </script>
 
