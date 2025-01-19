@@ -1,0 +1,5 @@
+discussion/*.html linguist-vendored
+#other/*.html linguist-vendored
+places/*.html linguist-vendored
+projects/*.html linguist-vendored
+vita/*.html linguist-vendored
