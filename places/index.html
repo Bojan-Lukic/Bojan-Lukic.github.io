@@ -102,7 +102,6 @@ function Datamap() {
                 },
                 bubblesConfig: {
                     borderWidth: 1, 
-                    radius: 75, 
                     borderColor: '#FFFFFF',
                     highlightOnHover: true,
                     popupOnHover: true, 
@@ -134,6 +133,7 @@ function Datamap() {
         window.addEventListener('resize', function() {
             $('#container').empty();
             new Datamap(); 
+            datamap.bubbles(CITIES); 
         }); 
 
     </script>
