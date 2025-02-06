@@ -95,17 +95,16 @@ h1 {
 }
 
 figure {
-	float: left;
-	margin: 10px 10px 10px 0;
-	width: 250px;
-	height: 250px;
+	margin: auto;
+	width: 100%;
 	display: table;
-	text-align: center !important;
 }
 
 figure img {
-	display: block;
-	width: 100%;
+	width: 90%; 
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto;
 }
 
 figcaption {
