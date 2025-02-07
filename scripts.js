@@ -49,7 +49,7 @@ function scrollFunction() {
 		//document.getElementById("nav").style.top = "65px";
 		document.getElementById("article").style.paddingTop = "60px";
 		for (var i = 0; i < socs.length; i++) {
-			socs[i].style.width = '38px';
+			socs[i].style.width = '35px';
 		}
 	}
 }
