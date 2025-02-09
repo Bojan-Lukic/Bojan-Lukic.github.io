@@ -363,6 +363,13 @@
     </footermedia>
     
 	<script src = "../scripts.js"></script>
+
+    <script>
+        if(!localStorage.getItem("firstTime")){
+            window.location.reload(); 
+            localStorage.setItem("firstTime", "true");
+        }
+    </script>
 	
 </body>
 </html>

@@ -138,7 +138,14 @@
         © 2025 www.bojanlukic.com
     </footermedia>
     
-	<script src = "../scripts.js"></script>
+	<script src = "../scripts.js"></script> 
+
+    <script>
+        if(!localStorage.getItem("firstTime")){
+            window.location.reload(); 
+            localStorage.setItem("firstTime", "true");
+        }
+    </script>
 	
 </body>
 </html>
