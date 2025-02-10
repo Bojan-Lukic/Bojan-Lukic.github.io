@@ -100,7 +100,6 @@ figure {
 	width: 100%;
 	display: table;
 }
-
 @property --_w {
 	syntax: '<length>';
 	inherits: true;
@@ -116,7 +115,6 @@ figure {
 	--h: tan(atan2(var(--_h),1px)); /* screen height*/
 	/* The result is an integer without unit  */
 }
-
 figure img {
 	max-width: 90%; 
 	max-height: calc(pow((768 / var(--h)), 1.1) * 100vh);

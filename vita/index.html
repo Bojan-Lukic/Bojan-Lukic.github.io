@@ -352,6 +352,34 @@
         © 2025 www.bojanlukic.com
     </footermedia>
     
+    <script>
+        // Accordion menu script
+        var acc = document.getElementsByClassName("accordion");
+        
+        // Get elements and sub elements from html 
+        //var accImgs = document.getElementsByTagName("figure");
+        //var clientHeight = accImgs[0].clientHeight;
+        //window.alert(accImgs.length);
+        //window.alert(clientHeight);
+        
+        var i;
+        // Currently not ideal as there is no animation using percentages (for whatever reason)
+        acc[0].nextElementSibling.style.maxHeight = 100 + "%"; //(acc[0].nextElementSibling.scrollHeight + (accImgs.length * clientHeight)) + "px";
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } 
+                else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                } 
+            });
+        }
+    </script>
+    
 	<script src = "../scripts.js"></script>
 	
 </body>

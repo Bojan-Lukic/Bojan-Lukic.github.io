@@ -1,27 +1,3 @@
-
-// Accordion menu script
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-acc[0].nextElementSibling.style.maxHeight = acc[0].nextElementSibling.scrollHeight + "px";
-
-
-for (i = 0; i < acc.length; i++) {
-	acc[i].addEventListener("click", function() {
-		this.classList.toggle("active");
-		var panel = this.nextElementSibling;
-		if (panel.style.maxHeight) {
-			panel.style.maxHeight = null;
-		} 
-		else {
-			panel.style.maxHeight = panel.scrollHeight + "px";
-		} 
-	});
-}
-
-
-
-
 // When the user scrolls down 50px from the top of the document, resize the header's font size
 
 window.onscroll = function() {
