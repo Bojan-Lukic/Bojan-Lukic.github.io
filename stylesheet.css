@@ -101,8 +101,25 @@ figure {
 	display: table;
 }
 
+@property --_w {
+	syntax: '<length>';
+	inherits: true;
+	initial-value: 100vw; 
+}
+@property --_h {
+	syntax: '<length>';
+	inherits: true;
+	initial-value: 100vh; 
+}
+:root {
+	--w: tan(atan2(var(--_w),1px)); /* screen width */
+	--h: tan(atan2(var(--_h),1px)); /* screen height*/
+	/* The result is an integer without unit  */
+}
+
 figure img {
-	width: 90%; 
+	max-width: 90%; 
+	max-height: calc(pow((768 / var(--h)), 1.1) * 100vh);
 	display: block; 
 	margin-left: auto !important; 
 	margin-right: auto !important;
@@ -506,6 +523,10 @@ footermedia {
 		text-align: right !important;
 		margin-top: 2px !important;
 		margin-bottom: 2px !important;
+	}
+
+	figure img {
+		max-height: 100vh !important;
 	}
 
 	bottommedia {
