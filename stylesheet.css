@@ -460,7 +460,7 @@ footermedia {
 	background-color: transparent;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.35s ease-out;
+	transition: max-height 0.7s ease-in-out;
 }
 
 /* Mobile layout */
