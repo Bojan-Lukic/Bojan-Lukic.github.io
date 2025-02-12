@@ -232,7 +232,13 @@
             // Get elements and sub elements from html 
             var pan = document.getElementsByClassName("panel");
             var accImgs = pan[0].getElementsByTagName("figure");
-            var clientHeight = accImgs[0].clientHeight;
+            if (accImgs.length > 0) {
+                var clientHeight = accImgs[0].clientHeight;
+            }
+            else {
+                var clientHeight = 0;
+            }
+            
             //window.alert(accImgs.length);
             //window.alert(clientHeight);
 
