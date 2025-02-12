@@ -140,9 +140,10 @@
     <script>
         // Accordion menu script
         // Current issues with dynamic figure size inside accordion prevent the accordion to span full content height. 
-        // Current solution is for DOM to finish loading before executing the script. Not optimal, root for issue 
-        // still needs to be explored. 
-        window.addEventListener('DOMContentLoaded', (event) => {
+        // Current solution is for DOM to finish loading before executing the script. A timeout of 30 ms seems to be 
+        // the minimum time here. 
+        // Not optimal, root for issue still needs to be explored. 
+        setTimeout(() => {
             var acc = document.getElementsByClassName("accordion");
             
             // Get elements and sub elements from html 
@@ -151,6 +152,12 @@
             var clientHeight = accImgs[0].clientHeight;
             //window.alert(accImgs.length);
             //window.alert(clientHeight);
+
+            // Another approach is to use the initial calculation of figure height from css. This is not ideal, though, 
+            // as this does not return the true height of the figure, but rather the max height it could have. 
+            //var pan = document.getElementsByClassName("panel");
+            //var accImgs = pan[0].getElementsByTagName("figure");
+            //var clientHeight = ((650 / window.innerHeight) ** 1.1) * window.innerHeight;
             
             var i;
             // Currently not ideal as there is no animation using percentages (for whatever reason)
@@ -168,7 +175,7 @@
                     } 
                 });
             }
-        });
+        }, "30");
     </script>
 
 	<script src = "../scripts.js"></script> 

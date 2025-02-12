@@ -222,30 +222,43 @@
     
     <script>
         // Accordion menu script
-        var acc = document.getElementsByClassName("accordion");
-        
-        // Get elements and sub elements from html 
-        //var accImgs = document.getElementsByTagName("figure");
-        //var clientHeight = accImgs[0].clientHeight;
-        //window.alert(accImgs.length);
-        //window.alert(clientHeight);
-        
-        var i;
-        // Currently not ideal as there is no animation using percentages (for whatever reason)
-        acc[0].nextElementSibling.style.maxHeight = 100 + "%"; //(acc[0].nextElementSibling.scrollHeight + (accImgs.length * clientHeight)) + "px";
+        // Current issues with dynamic figure size inside accordion prevent the accordion to span full content height. 
+        // Current solution is for DOM to finish loading before executing the script. A timeout of 30 ms seems to be 
+        // the minimum time here. 
+        // Not optimal, root for issue still needs to be explored. 
+        setTimeout(() => {
+            var acc = document.getElementsByClassName("accordion");
+            
+            // Get elements and sub elements from html 
+            var pan = document.getElementsByClassName("panel");
+            var accImgs = pan[0].getElementsByTagName("figure");
+            var clientHeight = accImgs[0].clientHeight;
+            //window.alert(accImgs.length);
+            //window.alert(clientHeight);
 
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } 
-                else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                } 
-            });
-        }
+            // Another approach is to use the initial calculation of figure height from css. This is not ideal, though, 
+            // as this does not return the true height of the figure, but rather the max height it could have. 
+            //var pan = document.getElementsByClassName("panel");
+            //var accImgs = pan[0].getElementsByTagName("figure");
+            //var clientHeight = ((650 / window.innerHeight) ** 1.1) * window.innerHeight;
+            
+            var i;
+            // Currently not ideal as there is no animation using percentages (for whatever reason)
+            acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + (accImgs.length * clientHeight)) + "px";
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } 
+                    else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                });
+            }
+        }, "30");
     </script>
 
 	<script src = "../scripts.js"></script>
