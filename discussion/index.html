@@ -239,13 +239,19 @@
             // Get elements and sub elements from html 
             var pan = document.getElementsByClassName("panel");
             var accImgs = pan[0].getElementsByTagName("figure");
+            var accTabs = pan[0].getElementsByTagName("table");
             if (accImgs.length > 0) {
                 var clientHeight = accImgs[0].clientHeight;
             }
             else {
                 var clientHeight = 0;
             }
-            
+            if (accTabs.length > 0) {
+                var clientHeightTabs = accTabs[0].clientHeight;
+            }
+            else {
+                var clientHeightTabs = 0;
+            }
             //window.alert(accImgs.length);
             //window.alert(clientHeight);
 
@@ -257,7 +263,7 @@
             
             var i;
             // Currently not ideal as there is no animation using percentages (for whatever reason)
-            acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + (accImgs.length * clientHeight)) + "px";
+            acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + (accImgs.length * clientHeight) + (accTabs.length * clientHeightTabs)) + "px";
 
             for (i = 0; i < acc.length; i++) {
                 acc[i].addEventListener("click", function() {
