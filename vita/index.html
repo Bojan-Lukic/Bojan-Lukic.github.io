@@ -188,7 +188,7 @@
                     </table><br><br>
                 </div>
 
-                <button class="accordion"><h3 style="font-variant:small-caps">Interests and skills</h3></button>
+                <button class="accordion"><h3 style="font-variant:small-caps">Interests and Skills</h3></button>
                 <div class="panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
@@ -364,13 +364,19 @@
             // Get elements and sub elements from html 
             var pan = document.getElementsByClassName("panel");
             var accImgs = pan[0].getElementsByTagName("figure");
+            var accTabs = pan[0].getElementsByTagName("table");
+            heights = 0;
             if (accImgs.length > 0) {
-                var clientHeight = accImgs[0].clientHeight;
+                for (i = 0; i < accImgs.length; i++) {
+                    heights += accImgs[i].clientHeight;
+                }
             }
-            else {
-                var clientHeight = 0;
+            if (accTabs.length > 0) {
+                for (i = 0; i < accTabs.length; i++) {
+                    heights += accTabs[i].clientHeight;
+                }
             }
-            
+
             //window.alert(accImgs.length);
             //window.alert(clientHeight);
 
@@ -382,7 +388,8 @@
             
             var i;
             // Currently not ideal as there is no animation using percentages (for whatever reason)
-            acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + (accImgs.length * clientHeight)) + "px";
+            acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + heights) + "px";
+            acc[0].classList.toggle("active");
 
             for (i = 0; i < acc.length; i++) {
                 acc[i].addEventListener("click", function() {

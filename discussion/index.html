@@ -181,7 +181,7 @@
                                 to grow our economy sustainably, driven by practicality and pragmatism. Not by hedonism. Investments need to be 
                                 fair and propel quality of life for everyone. I'm getting too philosophical here. 
                                 To conclude, I highly recommend reading Roubini's book about Crisis Economics. You will find many parallels, in the 
-                                context of economic dymanics, between the past and present. And maybe you can profit from them yourself ;-]
+                                context of economic dynanics, between the past and present. And maybe you can profit from them yourself ;-]
                             </td>
                             <td class="one"></td>
                         </tr>
@@ -326,13 +326,38 @@
                     </table><br><br>
                 </div>
 
-                <button class="accordion"><h3 style="font-variant:small-caps">Thoughts on climate and environmental changes.</h3></button>
+                <button class="accordion"><h3 style="font-variant:small-caps">Thoughts on climate and environmental changes</h3></button>
                 <div class="panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
-                            <td class="four">To be updated...</td>
+                            <td class="four">
+                                The topic of climate change and environmental impacts is being discussed more than ever. And for a good reason. News 
+                                about extreme weather phenomena around the globe are accumulating. These seem to be rising steadily and show correlation 
+                                with the increase in the average global temeperature. Let's start with a chart known to all, the annual mean temperature 
+                                trend. This one is taken from 
+                                <a style="display: inline; color:blue" href="https://climate.nasa.gov/vital-signs/global-temperature/?intent=121" title = "Global Temperature" target = "_blank" rel = "noopener noreferrer">NASA</a>: 
+                                </br></br>
+                                <figure>
+                                    <img src="resources/Climate trend.svg" title = "Global Land-Ocean Temperature Index"/>
+                                    <figcaption style = "text-align: center !important;">Fig. 3.1 - Global land-ocean temperature index from 1880 to 2024.</figcaption>
+                                </figure>
+                                </br>
+                                The temperature anomaly in degrees Celsius are plotted on the y-axis over the years 1880 to 2024 on the x-axis. 
+                                "[The] graph shows the change in global surface temperature compared to the long-term average from 1951 to 1980. 
+                                Earth’s average surface temperature in 2024 was the warmest on record since recordkeeping began in 1880." But what 
+                                does that mean? When looking at the plot, some people suggest that earth has had volatile temperature changes before. 
+                                That is true, however, what is alarming is the speed at which we experience the current increase in global temperature.  
+                                <a style="display: inline; color:blue" href="https://doi.org/10.1038/s41586-021-03984-4" title = "Global Surface Temperatures" target = "_blank" rel = "noopener noreferrer">This</a> 
+                                research shows that "[t]he magnitude and rate [of] warming over the last 150 years far surpasses the magnitude and 
+                                rate of changes over the last 24,000 years." Related: 
+                                <a style="display: inline; color:blue" href="https://xkcd.com/1732/" title = "Timeline Average Temperature Comic" target = "_blank" rel = "noopener noreferrer">https://xkcd.com/1732/</a>. 
+                                If we plotted the average global temperature over a longer period, let's say the last billion years, the temperature 
+                                increase we observed over the last few years would look like a vertical wall in our plot. This discontinuous trend  
+                                could be a cause for concern.</br></br> 
+                                <i>To be continued...</i>          
+                            </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
@@ -391,6 +416,7 @@
             var i;
             // Currently not ideal as there is no animation using percentages (for whatever reason)
             acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + heights) + "px";
+            acc[0].classList.toggle("active");
 
             for (i = 0; i < acc.length; i++) {
                 acc[i].addEventListener("click", function() {
