@@ -1,0 +1,255 @@
+[
+  {
+    "role": "main",
+    "year": 2026,
+    "type": "Conference",
+    "title": "Serverless Avionics: A new Architectural Approach",
+    "authors": "Bojan Lukić; Tim Schubert; Sven Friedrich; Cem Önem; Janick Beck; Nora Breitmoser-Widdecke; Alexander Ahlbrecht; Wanja Zaeske; Umut Durak; Harro von Viebahn",
+    "venue": "AIAA SCITECH 2026 Forum",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.2514/6.2026-2264" }
+    ],
+    "tags": ["avionics", "architecture", "serverless"],
+    "bibtex": "@inbook{doi:10.2514/6.2026-2264,\nauthor = {Bojan Lukić and Tim Schubert and Sven Friedrich and Cem Önem and Janick Beck and Nora Breitmoser-Widdecke and Alexander Ahlbrecht and Wanja Zaeske and Umut Durak and Harro von Viebahn},\ntitle = {Serverless Avionics: A new Architectural Approach},\nbooktitle = {AIAA SCITECH 2026 Forum},\nchapter = {},\npages = {},\ndoi = {10.2514/6.2026-2264},\nURL = {https://arc.aiaa.org/doi/abs/10.2514/6.2026-2264},\neprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2026-2264}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2025,
+    "type": "Conference",
+    "title": "Verification and Validation of Dynamic Reconfiguration in Integrated Modular Avionics With a Matlab/Simulink Arinc 653 Blockset",
+    "authors": "Bojan Lukić; Umut Durak; Matthias Klimmek; Neelakanta Erabhovi; Umayr Jahagirdar; Manju Nanda",
+    "venue": "2025 AIAA DATC/IEEE 44th Digital Avionics Systems Conference (DASC)",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.1109/DASC66011.2025.11257382" }
+    ],
+    "tags": ["ima", "dynamic reconfiguration", "simulink", "arinc 653"],
+    "bibtex": "@INPROCEEDINGS{11257382,\n  author={Lukić, Bojan and Durak, Umut and Klimmek, Matthias and Erabhovi, Neelakanta and Jahagirdar, Umayr and Nanda, Manju},\n  booktitle={2025 AIAA DATC/IEEE 44th Digital Avionics Systems Conference (DASC)},\n  title={Verification and Validation of Dynamic Reconfiguration in Integrated Modular Avionics With a Matlab/Simulink Arinc 653 Blockset},\n  year={2025},\n  volume={},\n  number={},\n  pages={1-10},\n  keywords={Adaptation models;Accuracy;Aerospace electronics;Hardware;Mathematical models;Safety;Complexity theory;MATLAB;System analysis and design;Testing;Integrated Modular Avionics (IMA);Rapid Prototyping;Dynamic Reconfiguration;ARINC 653;Simulation;MATLAB/Simulink},\n  doi={10.1109/DASC66011.2025.11257382}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2025,
+    "type": "Journal",
+    "title": "A Streamlined Approach Toward Automated Generation and Validation of ARINC 653–Compliant Avionics Configurations",
+    "authors": "Bojan Lukić; Sven Friedrich; Umut Durak",
+    "venue": "Journal of Aerospace Information Systems, 22(5), 314-324",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.2514/1.I011439" }
+    ],
+    "tags": ["avionics", "arinc 653", "configuration", "automation"],
+    "bibtex": "@article{doi:10.2514/1.I011439,\nauthor = {Luki\\'{c}, Bojan and Friedrich, Sven and Durak, Umut},\ntitle = {A Streamlined Approach Toward Automated Generation and Validation of ARINC 653–Compliant Avionics Configurations},\njournal = {Journal of Aerospace Information Systems},\nvolume = {22},\nnumber = {5},\npages = {314-324},\nyear = {2025},\ndoi = {10.2514/1.I011439},\nURL = {https://doi.org/10.2514/1.I011439},\neprint = {https://doi.org/10.2514/1.I011439}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2025,
+    "type": "Conference",
+    "title": "Unifying Avionics System Configuration: A Concept for Capturing Essential Elements From Computing Resources to Network Topology in a Universal Format",
+    "authors": "Bojan Lukić; Janick W. Beck; Umut Durak",
+    "venue": "AIAA SCITECH 2025 Forum",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.2514/6.2025-2515" }
+    ],
+    "tags": ["avionics", "configuration", "ima", "network topology"],
+    "bibtex": "@inbook{doi:10.2514/6.2025-2515,\nauthor = {Bojan Lukić and Janick W. Beck and Umut Durak},\ntitle = {Unifying Avionics System Configuration: A Concept for Capturing Essential Elements From Computing Resources to Network Topology in a Universal Format},\nbooktitle = {AIAA SCITECH 2025 Forum},\nchapter = {},\npages = {},\ndoi = {10.2514/6.2025-2515},\nURL = {https://arc.aiaa.org/doi/abs/10.2514/6.2025-2515},\neprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2025-2515}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2025,
+    "type": "Preprint",
+    "title": "Analysis of Patterns in Recorded Signals of Software Systems With a Variance Based Segmentation Algorithm",
+    "authors": "Bojan Lukić; Thorben Knust; Andreas Rausch",
+    "venue": "arXiv",
+    "note": "arXiv:2503.06290",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2503.06290" },
+      { "label": "DOI", "url": "https://doi.org/10.48550/arXiv.2503.06290" }
+    ],
+    "tags": ["signals", "segmentation", "software systems", "arxiv"],
+    "bibtex": "@misc{lukić2025analysispatternsrecordedsignals,\n      title={Analysis of Patterns in Recorded Signals of Software Systems With a Variance Based Segmentation Algorithm}, \n      author={Bojan Lukić and Thorben Knust and Andreas Rausch},\n      year={2025},\n      eprint={2503.06290},\n      archivePrefix={arXiv},\n      primaryClass={stat.AP},\n      url={https://arxiv.org/abs/2503.06290}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2025,
+    "type": "Preprint",
+    "title": "Applied Machine Learning Methods with Long-Short Term Memory Based Recurrent Neural Networks for Multivariate Temperature Prediction",
+    "authors": "Bojan Lukić",
+    "venue": "arXiv",
+    "note": "arXiv:2503.06278",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2503.06278" },
+      { "label": "DOI", "url": "https://doi.org/10.48550/arXiv.2503.06278" }
+    ],
+    "tags": ["machine learning", "lstm", "temperature prediction", "arxiv"],
+    "bibtex": "@misc{lukić2025appliedmachinelearningmethods,\n      title={Applied Machine Learning Methods with Long-Short Term Memory Based Recurrent Neural Networks for Multivariate Temperature Prediction}, \n      author={Bojan Lukić},\n      year={2025},\n      eprint={2503.06278},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG},\n      url={https://arxiv.org/abs/2503.06278}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2024,
+    "type": "Conference",
+    "title": "From Architecture Models to a Target Platform: A Systematic Approach to Model-Driven Development of Dynamically Reconfigurable Avionics Systems",
+    "authors": "Bojan Lukić; Phillip Nöldeke; Umut Durak; Matthias Klimmek; Simon Jakob; Martin Gläser",
+    "venue": "2024 AIAA DATC/IEEE 43rd Digital Avionics Systems Conference (DASC)",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.1109/DASC62030.2024.10749454" }
+    ],
+    "tags": ["avionics", "model-driven development", "dynamic reconfiguration", "dasc"],
+    "bibtex": "@INPROCEEDINGS{10749454,\n  author={Lukić, Bojan and Nöldeke, Phillip and Durak, Umut and Klimmek, Matthias and Jakob, Simon and Gläser, Martin},\n  booktitle={2024 AIAA DATC/IEEE 43rd Digital Avionics Systems Conference (DASC)}, \n  title={From Architecture Models to a Target Platform: A Systematic Approach to Model-Driven Development of Dynamically Reconfigurable Avionics Systems}, \n  year={2024},\n  volume={},\n  number={},\n  pages={1-10},\n  keywords={Industries;Technological innovation;Systematics;Runtime;Software packages;Aerospace electronics;Safety;Modeling;Standards;Model-driven development;Avionics;Dynamic Reconfiguration;ARINC 653;Model-Driven Development;RTOS;Hypervisor},\n  doi={10.1109/DASC62030.2024.10749454}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2024,
+    "type": "Conference",
+    "title": "Automated Configuration of ARINC 653-Compliant Avionics Architectures",
+    "authors": "Bojan Lukić; Sven Friedrich; Tim Schubert; Umut Durak",
+    "venue": "AIAA SCITECH 2024 Forum",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.2514/6.2024-1856" }
+    ],
+    "tags": ["avionics", "arinc 653", "automation", "validation"],
+    "bibtex": "@inbook{doi:10.2514/6.2024-1856,\nauthor = {Bojan Lukić and Sven Friedrich and Tim Schubert and Umut Durak},\ntitle = {Automated Configuration of ARINC 653-Compliant Avionics Architectures},\nbooktitle = {AIAA SCITECH 2024 Forum},\nchapter = {},\npages = {},\ndoi = {10.2514/6.2024-1856},\nURL = {https://arc.aiaa.org/doi/abs/10.2514/6.2024-1856},\neprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2024-1856}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2023,
+    "type": "Conference",
+    "title": "Technology Requirements for the Development of Aircraft for Urban Air Mobility - Status Quo",
+    "authors": "Bojan Lukić; Umut Durak",
+    "venue": "European Rotorcraft Forum",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.25967/590061" }
+    ],
+    "tags": ["uam", "urban air mobility", "aircraft development"],
+    "bibtex": "@inbook{inbook,\nauthor = {Lukić, Bojan and Durak, Umut},\nyear = {2023},\nmonth = {10},\npages = {1-10},\ntitle = {Technology Requirements for the Development of Aircraft for Urban Air Mobility - Status Quo},\nisbn = {978-3-932182-92-1},\ndoi = {10.25967/590061}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2023,
+    "type": "Conference",
+    "title": "State-of-the-Art Technologies for Integrated Modular Avionics and the Way Ahead",
+    "authors": "Bojan Lukić; Alexander Ahlbrecht; Sven Friedrich; Umut Durak",
+    "venue": "2023 IEEE/AIAA 42nd Digital Avionics Systems Conference (DASC)",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.1109/DASC58513.2023.10311229" }
+    ],
+    "tags": ["ima", "avionics", "dasc", "architecture"],
+    "bibtex": "@INPROCEEDINGS{10311229,\n  author={Lukić, Bojan and Ahlbrecht, Alexander and Friedrich, Sven and Durak, Umut},\n  booktitle={2023 IEEE/AIAA 42nd Digital Avionics Systems Conference (DASC)}, \n  title={State-of-the-Art Technologies for Integrated Modular Avionics and the Way Ahead}, \n  year={2023},\n  volume={},\n  number={},\n  pages={1-10},\n  keywords={Industries;Wireless networks;Computer architecture;Aerospace electronics;Hardware;Safety;Vehicle dynamics;Integrated Modular Avionics;space and time partitioning;avionics full-duplex switched ethernet;ARINC 653 dynamic reconfiguration;avionics wireless network},\n  doi={10.1109/DASC58513.2023.10311229}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2023,
+    "type": "Journal",
+    "title": "Iterative Scenario-Based Testing in an Operational Design Domain for Artificial Intelligence Based Systems in Aviation",
+    "authors": "Bojan Lukić; Jasper Sprockhoff; Alexander Ahlbrecht; Siddhartha Gupta; Umut Durak",
+    "venue": "SNE Simulation Notes Europe, 33, 183-190",
+    "note": "Journal version",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.11128/sne.33.tn.10666" }
+    ],
+    "tags": ["aviation", "ai", "testing", "operational design domain"],
+    "bibtex": "@article{article,\nauthor = {Lukić, Bojan and Sprockhoff, Jasper and Ahlbrecht, Alexander and Gupta, Siddhartha and Durak, Umut},\nyear = {2023},\nmonth = {12},\npages = {183-190},\ntitle = {Iterative Scenario-Based Testing in an Operational Design Domain for Artiﬁcial Intelligence Based Systems in Aviation},\nvolume = {33},\njournal = {SNE Simulation Notes Europe},\ndoi = {10.11128/sne.33.tn.10666}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2023,
+    "type": "Conference",
+    "title": "Iterative Scenario-Based Testing in an Operational Design Domain for Artificial Intelligence Based Systems in Aviation",
+    "authors": "Bojan Lukić; Jasper Sprockhoff; Alexander Ahlbrecht; Siddhartha Gupta; Umut Durak",
+    "venue": "ARGESIM Report 21",
+    "note": "Conference version",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.11128/arep.21.a2108" }
+    ],
+    "tags": ["aviation", "ai", "testing", "operational design domain"],
+    "bibtex": "@inproceedings{inproceedings,\nauthor = {Lukić, Bojan and Sprockhoff, Jasper and Ahlbrecht, Alexander and Gupta, Siddhartha and Durak, Umut},\nyear = {2023},\nmonth = {01},\npages = {95-102},\ntitle = {Iterative Scenario-Based Testing in an Operational Design Domain for Artiﬁcial Intelligence Based Systems in Aviation},\ndoi = {10.11128/arep.21.a2108}\n}"
+  },
+  {
+    "role": "main",
+    "year": 2022,
+    "type": "Report",
+    "title": "Literature study - The application and added value of artificial intelligence (AI) using the example of an oil field.",
+    "authors": "Bojan Lukić; Andreas Rausch; Philip Jaeger; Stefan Wittek; Ramez Abdalla",
+    "venue": "Literature study",
+    "note": "No public link added yet",
+    "links": [],
+    "tags": ["ai", "literature study", "oil field"],
+    "bibtex": "@unknown{unknown,\nauthor = {Lukić, Bojan and Rausch, Andreas and Jaeger, Philip and Wittek, Stefan and Abdalla, Ramez},\nyear = {2022},\nmonth = {04},\npages = {},\ntitle = {Literature study - The application and added value of artificial intelligence (AI) using the example of an oil field.}\n}"
+  },
+
+  {
+    "role": "co",
+    "year": 2024,
+    "type": "Conference",
+    "title": "Exploring SysML v2 for Model-Based Engineering of Safety-Critical Avionics Systems",
+    "authors": "Alexander Ahlbrecht; Bojan Lukić; Wanja Zaeske; Umut Durak",
+    "venue": "2024 AIAA DATC/IEEE 43rd Digital Avionics Systems Conference (DASC)",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.1109/DASC62030.2024.10749311" }
+    ],
+    "tags": ["sysml v2", "mbse", "avionics", "safety-critical systems"],
+    "bibtex": "@INPROCEEDINGS{10749311,\n  author={Ahlbrecht, Alexander and Lukić, Bojan and Zaeske, Wanja and Durak, Umut},\n  booktitle={2024 AIAA DATC/IEEE 43rd Digital Avionics Systems Conference (DASC)}, \n  title={Exploring SysML v2 for Model-Based Engineering of Safety-Critical Avionics Systems}, \n  year={2024},\n  volume={},\n  number={},\n  pages={1-8},\n  keywords={Virtual machine monitors;Linux;Collaboration;Aerospace electronics;Systems Modeling Language;DSL;Modeling;Interoperability;Information exchange;Application programming interfaces;Avionics;MBSE;SysML v2;API;CI/CD},\n  doi={10.1109/DASC62030.2024.10749311}\n}"
+  },
+  {
+    "role": "co",
+    "year": 2024,
+    "type": "Conference",
+    "title": "FPGA-Based Fault Tolerance Framework for Avionics Systems",
+    "authors": "Phillip Nöldeke; Bojan Lukić; Umut Durak",
+    "venue": "2024 AIAA DATC/IEEE 43rd Digital Avionics Systems Conference (DASC)",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.1109/DASC62030.2024.10749033" }
+    ],
+    "tags": ["fpga", "fault tolerance", "avionics"],
+    "bibtex": "@INPROCEEDINGS{10749033,\n  author={Nöldeke, Phillip and Lukić, Bojan and Durak, Umut},\n  booktitle={2024 AIAA DATC/IEEE 43rd Digital Avionics Systems Conference (DASC)}, \n  title={FPGA-Based Fault Tolerance Framework for Avionics Systems}, \n  year={2024},\n  volume={},\n  number={},\n  pages={1-7},\n  keywords={Computers;Systematics;Fault tolerant systems;Redundancy;Aerospace electronics;Hardware;Software reliability;Safety;Synchronization;Aircraft;FPGA;Fault Tolerance;Pattern;Reconfiguration;Integrated Modular Avionics},\n  doi={10.1109/DASC62030.2024.10749033}\n}"
+  },
+  {
+    "role": "co",
+    "year": 2024,
+    "type": "Report",
+    "title": "Military Scientific Research Annual Report 2023 — Next-generation avionics architectures",
+    "authors": "Umut Durak; Wanja Zaeske; Sven Friedrich; Bojan Lukić",
+    "venue": "Military Scientific Research Annual Report 2023",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.48701/opus4-438" }
+    ],
+    "tags": ["annual report", "avionics", "research"],
+    "bibtex": "@unknown{unknown,\nauthor = {Durak, Umut and Zaeske, Wanja and Friedrich, Sven and Lukić, Bojan},\nyear = {2024},\nmonth = {01},\npages = {},\ntitle = {Military Scientific Research Annual Report 2023 — Next-generation avionics architectures},\ndoi = {10.48701/opus4-438}\n}"
+  },
+  {
+    "role": "co",
+    "year": 2024,
+    "type": "White paper",
+    "title": "WHITE PAPER — SMART4ALL Project Task Forces in Action: Overview, Achievements & Impact in South & Eastern Europe",
+    "authors": "Nikolaos Voros; Christos Antonopoulos; Bojan Lukić; Katerina Lamprakopoulou; Alberto Fernandez; Tjark Schütte; Adrian Besimi; Xhemal Zenuni",
+    "venue": "SMART4ALL",
+    "note": "",
+    "links": [
+      { "label": "PDF", "url": "https://d3cu503q7ulvs.cloudfront.net/info_kit/SMART4ALL+Whitepaper_v9.pdf" }
+    ],
+    "tags": ["white paper", "smart4all", "digital innovation"],
+    "bibtex": "@inproceedings{inproceedings,\nauthor = {Voros, Nikolaos and Antonopoulos, Christos and Lukić, Bojan and LAMPRAKOPOULOU, KATERINA and FERNANDEZ, ALBERTO and Schütte, Tjark and Besimi, Adrian and ZENUNI, XHEMAL},\nyear = {2024},\nmonth = {01},\npages = {},\ntitle = {WHITE PAPER — SMART4ALL Project Task Forces in Action: Overview, Achievements & Impact in South & Eastern Europe}\n}"
+  },
+  {
+    "role": "co",
+    "year": 2023,
+    "type": "Conference",
+    "title": "Model-Based Systems Engineering for AI-Based Systems",
+    "authors": "Jasper Sprockhoff; Bojan Lukić; Vincent Janson; Alexander Ahlbrecht; Umut Durak; Siddhartha Gupta; Thomas Krueger",
+    "venue": "AIAA SCITECH 2023 Forum",
+    "note": "",
+    "links": [
+      { "label": "DOI", "url": "https://doi.org/10.2514/6.2023-2587" }
+    ],
+    "tags": ["mbse", "ai-based systems", "systems engineering"],
+    "bibtex": "@inbook{doi:10.2514/6.2023-2587,\nauthor = {Jasper Sprockhoff and Bojan Lukić and Vincent Janson and Alexander Ahlbrecht and Umut Durak and Siddhartha Gupta and Thomas Krueger},\ntitle = {Model-Based Systems Engineering for AI-Based Systems},\nbooktitle = {AIAA SCITECH 2023 Forum},\nchapter = {},\npages = {},\ndoi = {10.2514/6.2023-2587},\nURL = {https://arc.aiaa.org/doi/abs/10.2514/6.2023-2587},\neprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2023-2587}\n}"
+  }
+]

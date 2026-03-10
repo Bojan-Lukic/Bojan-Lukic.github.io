@@ -19,34 +19,7 @@
 
 <body>
     <section>
-        <div id = "header">
-            <h1>
-                <div id = "test">
-                    <div id = "textcontainer">
-                        <div id = "textdefault">
-                            <a style = "text-decoration: overline !important;" href = "https://www.bojanlukic.com">Home</a>
-                            <a href = "https://www.bojanlukic.com/vita">Vita</a>
-                            <a href = "https://www.bojanlukic.com/projects">Projects</a>
-                        </div>
-                        <div id = "textdefault" style = "margin-left: 0px !important;">
-                            <a href = "https://www.bojanlukic.com/discussion">Discussion</a>
-                            <a href = "https://www.bojanlukic.com/places">Places</a>
-                        </div>
-                    </div>
-                    <div id = "textcontainer2">
-                        <div id = "textdefault2">
-                            <a href="https://github.com/Bojan-Lukic" title = "GitHub" target = "_blank" rel = "noopener noreferrer"><img style="border-radius: 50% !important;" class = "soc" src="../resources/gh.svg"></a>
-                        </div>
-                        <div id = "textdefault2">    
-                            <a href="https://www.researchgate.net/profile/Bojan_Lukic2" title = "ResearchGate" target = "_blank" rel = "noopener noreferrer"><img class = "soc" src="../resources/rg.svg"></a>
-                            <a href="https://www.linkedin.com/in/bojan-lukic1" title = "LinkedIn" target = "_blank" rel = "noopener noreferrer"><img class = "soc" src="../resources/li.svg"></a>
-                            <!-- &nbsp;&nbsp;W&nbsp;E&nbsp;L&nbsp;C&nbsp;O&nbsp;M&nbsp;E&nbsp;&nbsp; -->
-                            <!-- <div id = "textscroll">&nbsp;W&nbsp;E&nbsp;L&nbsp;C&nbsp;O&nbsp;M&nbsp;E&nbsp;</div> -->
-                        </div>
-                    </div>
-                </div>
-            </h1>
-        </div>
+        <div id="header-placeholder"></div>
 
         <div id = "nav"></div>
 
@@ -71,14 +44,20 @@
                         </div>
                     </div>
 					
-                    Welcome, and thank you for visiting my personal website.<br><br>
-                    My name is Bojan, and I currently work at the German Aerospace Center (DLR). I am deeply passionate about science, technology, and all aspects of computing. My fascination with technology and computers has been a constant throughout my life. In my earlier years, I spent a great deal of time engaging with messaging platforms and computer games. Over time, my interests evolved, leading me to explore scripting across various operating systems before I began developing my own website.
-                    As part of my journey into computer science, I first delved into HTML and CSS during my undergraduate studies, at which point I acquired this domain. What initially began as a side project in 2017 has since grown into a platform for showcasing my work and ongoing learning. Throughout the years, I have expanded my technical expertise by acquiring new programming skills and working on a diverse range of projects.
-                    The primary goal of this website is to present my professional background, share my experiences, and provide insights into the projects I am currently pursuing. Additionally, the <i>Discussion</i> section features topics and papers related to economics, business, and technology &mdash; fields I am particularly passionate about.<br><br>
-                    I hope you enjoy exploring the site. Please feel free to leave a comment or connect with me. Additionally, you can find links to my GitHub and ResearchGate profiles at the top.<br><br><br><br>
+                    Hi — I’m Bojan.<br><br>
+
+                    I work at the German Aerospace Center (DLR), where I spend most of my time thinking about software, avionics systems, and how complex technical systems are built and verified. More generally, I enjoy exploring the intersection of computing, engineering, and science.<br><br>
+
+                    My interest in computers started early. Like many people, I spent plenty of time on messaging platforms and computer games when I was younger. Over time the curiosity shifted from using software to understanding how it works — operating systems, scripting, programming, and eventually building things myself.<br><br>
+
+                    This website began as a small side project around 2017 when I first learned HTML and CSS during my undergraduate studies. Since then it has gradually evolved into a place where I keep track of projects, experiments, and things I find interesting.<br><br>
+
+                    Here you will find a mix of professional work, technical projects, and some of the topics I like to explore in my spare time. The <i>Discussion</i> section contains notes and papers related to economics, technology, and systems thinking — subjects I enjoy reading and writing about outside my main field.<br><br>
+                    
+                    Feel free to look around!<br><br>
 
 					<h3 class = "two">Comments</h3><br>
-					If you wish to leave a comment or start a discussion please feel free to enter your message below via your GitHub account.<br><br>
+					If you wish to leave a comment or start a discussion please feel to do so below, via your GitHub account.<br><br>
 
 					<script src = "https://utteranc.es/client.js"
 						repo = "Bojan-Lukic/Bojan-Lukic.github.io"
@@ -97,52 +76,15 @@
     </section>
 
     <footer>
-        © 2025 www.bojanlukic.com
+        © 2026 www.bojanlukic.com
     </footer>
 
     <!-- Only shows on mobile -->
     <footermedia>
-        © 2025 www.bojanlukic.com
+        © 2026 www.bojanlukic.com
     </footermedia>
 
     <script src = "scripts.js"></script>
-
-    <script>
-        // When the user scrolls down 50px from the top of the document, resize the header's font size
-
-        window.onscroll = function() {
-            scrollFunction()
-            /*scrollFunction2()*/
-        };
-
-        var socs = document.getElementsByClassName("soc");
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
-                document.getElementById("header").style.fontSize = "12px";
-                //document.getElementById("nav").style.top = "35px";
-                document.getElementById("article").style.paddingTop = "35px";
-                document.getElementsByClassName("soc")[0].style.width = '28px';
-                for (var i = 0; i < socs.length; i++) {
-                    socs[i].style.width = '28px';
-                }
-            } 
-            else {
-                /*if ($(window).width() <= 800) {
-                    document.getElementById("header").style.fontSize = "14px";
-                }
-                else {
-                    document.getElementById("header").style.fontSize = "16px";
-                }*/
-                document.getElementById("header").style.fontSize = "15px";
-                //document.getElementById("nav").style.top = "65px";
-                document.getElementById("article").style.paddingTop = "60px";
-                for (var i = 0; i < socs.length; i++) {
-                    socs[i].style.width = '35px';
-                }
-            }
-        }      
-    </script>
-	
+    
 </body>
 </html>

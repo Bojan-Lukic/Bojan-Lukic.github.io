@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="../stylesheet.css" media="screen" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="../resources/doge.png" rel="icon" type="image/x-icon" />
+  <title>Publications — Bojan Lukić</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Publications by Bojan Lukić, including main-author and co-author works in avionics, model-based engineering, AI-based systems, and related topics.">
+</head>
+
+<body>
+  <section>
+    <div id="header-placeholder"></div> 
+
+    <div id="nav"></div>
+
+    <div id="article">
+      <div style="padding: .5rem; background-color: #b3cde01a;">
+        <div id="text" style="padding: 1rem; background-color: transparent;">
+          <h2 style="margin-top: 0;">Publications</h2>
+
+          <p style="margin-top: 0.25rem;">
+            A selection of publications as main author and co-author.
+          </p>
+
+          <div class="pub-toolbar">
+            <input id="pub-search" class="pub-search" type="search" placeholder="Search title, authors, venue, tags..." autocomplete="off">
+            <select id="pub-role" class="pub-select">
+              <option value="">All roles</option>
+              <option value="main">Lead author</option>
+              <option value="co">Co-author</option>
+            </select>
+            <select id="pub-type" class="pub-select">
+              <option value="">All types</option>
+            </select>
+            <select id="pub-year" class="pub-select">
+              <option value="">All years</option>
+            </select>
+          </div>
+
+          <div id="pub-stats" class="pub-stats"></div>
+
+          <h3 class="two">Lead author</h3>
+          <div id="pub-list-main" class="pub-list"></div>
+
+          <h3 class="two" style="margin-top: 1.5rem;">Co-author</h3>
+          <div id="pub-list-co" class="pub-list"></div>
+
+          <noscript>
+            <p>
+              This page uses JavaScript to render publication data from JSON.
+            </p>
+          </noscript>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <footer>
+        © 2026 www.bojanlukic.com
+    </footer>
+
+    <!-- Only shows on mobile -->
+    <footermedia>
+        © 2026 www.bojanlukic.com
+    </footermedia>
+
+  <script src="../scripts.js"></script>
+  <script src="publications.js"></script>
+</body>
+</html>
