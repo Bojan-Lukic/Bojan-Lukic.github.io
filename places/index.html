@@ -49,6 +49,7 @@
 
     <script>
         let currentMap = null;
+        let resizeTimer = null;
 
         function DatamapView() {
             this.$container = $("#container");
@@ -100,7 +101,10 @@
         renderMap();
 
         window.addEventListener('resize', function() {
-            renderMap();
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                renderMap();
+            }, 150);
         });
     </script>
 </body>

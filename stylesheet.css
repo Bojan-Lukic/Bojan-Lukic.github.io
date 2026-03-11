@@ -675,6 +675,18 @@ footermedia {
   color: rgba(0, 0, 0, 0.92);
 } 
 
+.panel td.three,
+.panel td.four,
+.panel td.six {
+  line-height: 1.6;
+} 
+
+.vita-subsection-title {
+  padding-bottom: 6px !important;
+  font-weight: 600;
+  color: rgba(2, 53, 106, 0.95) !important;
+} 
+
 
 /* Discussion / article-style accordions */
 .article-accordion {
@@ -753,6 +765,25 @@ footermedia {
 .article-panel a:active {
   color: rgba(2, 53, 106, 0.75);
 } 
+
+.article-panel table {
+  border-collapse: collapse;
+  margin: 0.75rem 0 1rem 0;
+}
+
+.article-panel th,
+.article-panel td {
+  padding: 6px 8px;
+}
+
+.article-panel th {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-weight: 600;
+}
+
+.article-panel tr:not(:last-child) td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
 
 /* Projects / project-style accordions */
 .project-accordion {
@@ -1154,7 +1185,58 @@ body.header-small #map-shell {
 body.header-small #container {
   width: min(112vw, calc((100vh - 35px) * 2.15));
   height: calc(100vh - 35px);
+} 
+
+
+/* Homepage intro block */
+.home-intro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
+
+.home-intro-photo-wrap {
+  flex: 0 0 auto; 
+}
+
+.home-intro-photo {
+  display: block;
+  width: auto;
+  height: 190px;
+  border-radius: 50%;
+}
+
+.home-intro-meta {
+  flex: 0 1 auto;
+  min-width: 240px; 
+}
+
+.home-intro-name {
+  font-size: 21px;
+  margin: 0;
+}
+
+.home-intro-subline {
+  color: rgb(87, 87, 87);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.home-intro-note {
+  margin: 0.35rem 0 0 0;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.home-comments-callout {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 
 /* ==========================================================================
    11) Mobile layout
@@ -1185,13 +1267,13 @@ body.header-small #container {
 
   #tilt {
     display: inline-block;
-    height: 100vh;
-    width: 100vw;
+    height: calc(100vh - 80px);
+    width: calc(100vw - 17px);
     color: orange;
     text-align: center;
     vertical-align: middle;
     margin-top: 80px;
-    font-size: 26px;
+    font-size: 26px; 
   }
 
   a.two {
@@ -1434,5 +1516,24 @@ body.header-small #container {
   #container {
     width: 115vw;
     height: calc(100vh - var(--mobile-header-offset));
+  } 
+
+
+  .home-intro {
+    gap: 14px;
+    margin-bottom: 1.5rem;
+  }
+
+  .home-intro-photo {
+    height: 150px;
+  }
+
+  .home-intro-meta {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .home-intro-name {
+    font-size: 19px;
   }
 }
