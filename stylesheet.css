@@ -64,9 +64,8 @@ body.header-small .soc {
   width: 24px;
 }
 
-body.header-small #textcontainer,
-body.header-small #textcontainer2 {
-  transform: scale(0.96);
+body.header-small .header-inner {
+  min-height: 36px;
 }
 
 body:not(.header-small) #article {
@@ -285,64 +284,50 @@ td.ten   { width: 25%; }
   font-weight: inherit;
 }
 
-#test {
+.header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  gap: 12px;
+  min-height: 48px;
+  padding: 4px 10px;
+  transition: min-height 0.35s cubic-bezier(.4, 0, .2, 1), padding 0.35s cubic-bezier(.4, 0, .2, 1);
 }
 
 .header-left {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
-#textcontainer {
-  width: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  float: left;
-}
-
-#textcontainer2 {
+.desktop-nav {
   display: flex;
-  align-items: center;   /* vertical centering */
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 6px;
+}
+
+.desktop-nav a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
-  margin-right: 8px;
+  gap: 0;
+  flex: 0 0 auto;
 }
 
-#textcontainer,
-#textcontainer2 {
-  transition: transform 0.35s cubic-bezier(.4, 0, .2, 1);
-}
-
-.textdefault {
-  float: left;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.textdefault2 {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  float: right; 
+.header-right a {
   display: flex;
   align-items: center;
 }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
-}
-
+/* Icons */
 .soc {
   width: 30px;
   height: auto;
@@ -351,6 +336,11 @@ td.ten   { width: 25%; }
   border-radius: 15%;
   transition: width 0.35s cubic-bezier(.4, 0, .2, 1);
   vertical-align: middle;
+  display: block;
+}
+
+.soc-round {
+  border-radius: 50% !important;
 }
 
 .soc:hover,
@@ -368,7 +358,7 @@ td.ten   { width: 25%; }
   border: none;
   background: transparent;
   cursor: pointer;
-  margin-left: 8px;
+  margin-left: 0;
   margin-right: 6px;
 }
 
@@ -537,38 +527,336 @@ footermedia {
 }
 
 /* ==========================================================================
-   7) Accordion
+   7) Page callout + refined accordion cards
    ========================================================================== */
-.accordion {
-  background-color: transparent;
-  border-radius: 25px;
-  color: black;
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: var(--t-accordion);
-  font-family: var(--ff-base);
-  margin-top: 5px;
+
+/* Small intro/callout block, useful on Vita */
+.page-callout {
+  margin: 0.25rem 0 1rem 0;
+  padding: 14px 16px;
+  /*border: 1px solid rgba(2, 53, 106, 0.12);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);*/
 }
 
-.active {
-  background-color: rgba(2, 53, 106, 0.3);
+.page-callout-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(2, 53, 106, 0.95);
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+
+.page-callout-text {
+  color: rgba(0, 0, 0, 0.82);
+  line-height: 1.5;
+}
+
+.page-callout-link {
+  margin-left: 6px;
+  margin-right: 0;
+  color: var(--c-accent);
+  font-weight: 500;
+}
+
+.page-callout-link:hover,
+.page-callout-link:active {
+  color: rgba(2, 53, 106, 0.75);
+}
+
+/* Refined accordion cards */
+.accordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px 18px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.28);
+  color: black;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+  font-family: var(--ff-base);
 }
 
 .accordion:hover {
-  background-color: rgba(2, 53, 106, 0.3);
-  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.38);
+  border-color: rgba(2, 53, 106, 0.20);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.accordion:active {
+  transform: translateY(1px);
+}
+
+.accordion.active {
+  background-color: rgba(2, 53, 106, 0.10);
+  border-color: rgba(2, 53, 106, 0.25);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.accordion h3 {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 17px;
+  line-height: 1.3;
+  font-variant: small-caps;
+}
+
+.accordion::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 22px;
+  line-height: 1;
+  color: rgba(2, 53, 106, 0.9);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.accordion.active::after {
+  content: "−";
 }
 
 .panel {
+  margin-top: 8px;
+  margin-bottom: 4px;
   padding: 0 18px;
-  background-color: transparent;
+  /*background-color: rgba(255, 255, 255, 0.14);
+  border-left: 2px solid rgba(2, 53, 106, 0.18);
+  border-right: 2px solid rgba(2, 53, 106, 0.05);
+  border-bottom: 2px solid rgba(2, 53, 106, 0.08);
+  border-radius: 0 0 12px 12px;*/
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--t-panel) ease-in-out;
+  transition: max-height 0.45s cubic-bezier(.4, 0, .2, 1), padding 0.25s ease;
 }
+
+.accordion.active + .panel {
+  padding-top: 14px;
+  padding-bottom: 16px;
+}
+
+.panel table {
+  width: 100%;
+}
+
+.panel p,
+.panel li,
+.panel td {
+  line-height: 1.55;
+}
+
+.panel figure {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Vita-specific small polish */
+.panel td.two,
+.panel td.five,
+.panel td.seven,
+.panel td.ten {
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.panel td.three b,
+.panel td.four b,
+.panel td.six b,
+.panel td.eight b {
+  color: rgba(0, 0, 0, 0.92);
+} 
+
+
+/* Discussion / article-style accordions */
+.article-accordion {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+  padding-right: 46px;
+}
+
+.article-accordion h3 {
+  font-size: 18px;
+  font-variant: normal !important;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.article-accordion .accordion-meta {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.accordion-meta-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.accordion-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: rgba(2, 53, 106, 0.08);
+  color: rgba(2, 53, 106, 0.95);
+}
+
+.article-accordion::after {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*.article-panel {
+  background-color: rgba(255, 255, 255, 0.18);
+}*/
+
+.article-panel td.four {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.article-panel td.four p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.article-panel figure {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.article-panel figcaption {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.article-panel a {
+  color: var(--c-accent);
+}
+
+.article-panel a:hover,
+.article-panel a:active {
+  color: rgba(2, 53, 106, 0.75);
+} 
+
+/* Projects / project-style accordions */
+.project-accordion {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  padding-right: 46px;
+}
+
+.project-accordion h3 {
+  font-size: 18px;
+  font-variant: normal !important;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.project-accordion .accordion-meta {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.project-summary {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.project-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: rgba(2, 53, 106, 0.08);
+  color: rgba(2, 53, 106, 0.95);
+}
+
+.project-tag.ongoing {
+  background-color: rgba(2, 53, 106, 0.10);
+  color: rgba(2, 53, 106, 0.95);
+}
+
+.project-tag.planned {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.project-tag.completed {
+  background-color: rgba(15, 65, 6, 0.10);
+  color: rgba(15, 65, 6, 0.95);
+}
+
+.project-accordion::after {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*.project-panel {
+  background-color: rgba(255, 255, 255, 0.18);
+}*/
+
+.project-panel td.four {
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.project-panel td.four p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.project-panel a {
+  color: var(--c-accent);
+}
+
+.project-panel a:hover,
+.project-panel a:active {
+  color: rgba(2, 53, 106, 0.75);
+}
+
+/* Reading list inside project panels */
+.reading-item {
+  margin-bottom: 1rem;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.16);
+}
+
+.reading-item:last-child {
+  margin-bottom: 0;
+}
+
+.reading-item-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.reading-item-text {
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.55;
+}
+
 
 /* ==========================================================================
    8) Zoom UI
@@ -623,19 +911,15 @@ footermedia {
   position: sticky;
   top: 65px;
   z-index: 20;
-
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-
   padding: 0.65rem 0.75rem 0.75rem 0.75rem;
   margin-bottom: 1rem;
-
   background-color: rgba(203, 204, 186, 0.96);
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-
   backdrop-filter: blur(4px);
 }
 
@@ -738,6 +1022,16 @@ body.header-small .pub-toolbar {
 .pub-link {
   margin: 0;
   color: var(--c-accent);
+} 
+
+.pub-link-pdf {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+} 
+
+.pub-link-pdf::before {
+  content: "📄";
+  margin-right: 2px;
 }
 
 .pub-link:hover,
@@ -759,7 +1053,7 @@ body.header-small .pub-toolbar {
   border-radius: 999px;
   background-color: rgba(2, 53, 106, 0.08);
   color: rgba(2, 53, 106, 0.95);
-}
+} 
 
 .pub-mini-button {
   margin: 0;
@@ -794,6 +1088,33 @@ body.header-small .pub-toolbar {
   line-height: 1.45;
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 } 
+
+.pub-bibtex-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.pub-bibtex-copy {
+  /*padding: 4px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.85);*/
+  font-family: var(--ff-base);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 4px 4px 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent; 
+  position: absolute; 
+  color: darkblue;
+}
+
+.pub-bibtex-copy:hover,
+.pub-bibtex-copy:active {
+  color: teal;
+}
 
 
 /* Datamap page */
@@ -835,18 +1156,17 @@ body.header-small #container {
   height: calc(100vh - 35px);
 }
 
-
 /* ==========================================================================
    11) Mobile layout
    ========================================================================== */
 @media (max-width: 800px) {
   :root {
-    --mobile-header-offset: 75px;
-    --mobile-header-offset: 55px;
+    --mobile-header-offset: 58px;
+    --mobile-header-offset-small: 46px;
   }
 
   body.header-small {
-    --mobile-header-offset: var(--mobile-header-offset-small); 
+    --mobile-header-offset: var(--mobile-header-offset-small);
   }
 
   #header {
@@ -925,20 +1245,6 @@ body.header-small #container {
     display: none !important;
   }
 
-  .textdefault {
-    width: auto;
-    text-align: left !important;
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
-  }
-
-  .textdefault2 {
-    width: auto;
-    text-align: right !important;
-    margin-top: 2px !important;
-    margin-bottom: 2px !important;
-  }
-
   figure img {
     max-height: 100vh !important;
   }
@@ -977,10 +1283,62 @@ body.header-small #container {
   td.nine  { width: 4% !important; }
   td.ten   { width: 30% !important; }
 
-  .panel {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+
+  /* Accordion + page callout */
+  .page-callout {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    padding: 12px 12px;
+    border-radius: 10px;
   }
+
+  .accordion {
+    margin-top: 10px;
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+
+  .accordion h3 {
+    font-size: 15px;
+  }
+
+  .panel {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .accordion.active + .panel {
+    padding-top: 10px;
+    padding-bottom: 12px;
+  } 
+
+  .article-accordion h3 {
+    font-size: 16px;
+  }
+
+  .article-panel td.four {
+    font-size: 14px;
+    line-height: 1.65;
+  } 
+
+  .project-accordion h3 {
+    font-size: 16px;
+  }
+
+  .project-summary {
+    font-size: 13px;
+  }
+
+  .project-panel td.four {
+    font-size: 14px;
+  }
+
+  .reading-item {
+    padding: 9px 10px;
+    border-radius: 8px;
+  }
+
 
   .zoom-button {
     top: 165px !important;
@@ -995,21 +1353,15 @@ body.header-small #container {
     display: none !important;
   }
 
-  #menu-toggle {
-    display: inline-block;
-  }
+  .header-inner {
+    min-height: 42px;
+    padding: 3px 8px;
+  } 
 
-  #textcontainer {
-    display: block !important;
-    width: auto !important;
-    margin-left: 0 !important;
-    margin-top: 10px !important;
-    margin-bottom: 10px !important;
-  }
-
-  #textcontainer2 {
-    width: auto !important;
-    margin-right: 6px !important;
+  body.header-small .header-inner {
+    min-height: 34px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 
   .header-left {
@@ -1017,10 +1369,30 @@ body.header-small #container {
     justify-content: flex-start;
   }
 
-  .header-actions {
+  .header-right {
     flex: 0 0 auto;
     justify-content: flex-end;
-    gap: 2px;
+  }
+
+  #menu-toggle {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 6px;
+    width: 34px;
+    height: 34px;
+  }
+
+  body.header-small #menu-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  #menu-toggle span {
+    width: 20px;
+  }
+
+  body.header-small #menu-toggle span {
+    width: 18px;
   }
 
   /* Publications */
@@ -1028,10 +1400,8 @@ body.header-small #container {
     position: relative !important;
     top: 0 !important;
     z-index: auto !important;
-
     padding: 0.5rem 0 0.5rem 0;
     margin-bottom: 0.75rem;
-
     background-color: transparent;
     border: none;
     border-radius: 0;
@@ -1051,7 +1421,6 @@ body.header-small #container {
     font-size: 15px;
   }
 
-  
   .map-article {
     margin-top: 0 !important;
     padding-top: var(--mobile-header-offset) !important;

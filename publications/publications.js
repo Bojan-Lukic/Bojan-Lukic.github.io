@@ -25,9 +25,14 @@ function escapeHtml(value) {
 function buildFilters(publications) {
   const typeSelect = document.getElementById("pub-type");
   const yearSelect = document.getElementById("pub-year");
+  const tagSelect = document.getElementById("pub-tag");
 
   const types = uniqueSorted(publications.map(pub => pub.type), (a, b) => a.localeCompare(b));
   const years = uniqueSorted(publications.map(pub => pub.year), (a, b) => b - a);
+  const tags = uniqueSorted(
+    publications.flatMap(pub => pub.tags || []),
+    (a, b) => a.localeCompare(b)
+  );
 
   for (const type of types) {
     const option = document.createElement("option");
@@ -42,6 +47,15 @@ function buildFilters(publications) {
     option.textContent = String(year);
     yearSelect.appendChild(option);
   }
+
+  for (const tag of tags) {
+    const option = document.createElement("option");
+    option.value = tag;
+    option.textContent = tag;
+    tagSelect.appendChild(option);
+  }
+
+  publications.sort((a, b) => b.year - a.year); 
 }
 
 function matchesFilters(pub) {
@@ -49,10 +63,12 @@ function matchesFilters(pub) {
   const role = document.getElementById("pub-role").value;
   const type = document.getElementById("pub-type").value;
   const year = document.getElementById("pub-year").value;
+  const tag = document.getElementById("pub-tag").value;
 
   if (role && pub.role !== role) return false;
   if (type && pub.type !== type) return false;
   if (year && String(pub.year) !== year) return false;
+  if (tag && !(pub.tags || []).includes(tag)) return false;
 
   if (!query) return true;
 
@@ -73,6 +89,7 @@ function matchesFilters(pub) {
 
 function renderLinks(links) {
   if (!links || !links.length) return "";
+
   return links.map(link => {
     const label = escapeHtml(link.label);
     const url = escapeHtml(link.url);
@@ -87,18 +104,21 @@ function renderTags(tags) {
 
 function renderBibtexControls(pubId, bibtex) {
   if (!bibtex) return "";
-
-  return `
-    <button class="pub-mini-button" type="button" data-bibtex-toggle="${pubId}">BibTeX</button>
-    <button class="pub-mini-button" type="button" data-bibtex-copy="${pubId}">Copy</button>
-  `;
+  return `<button class="pub-mini-button" type="button" data-bibtex-toggle="${pubId}">BibTeX</button>`;
 }
 
 function publicationCard(pub, index) {
   const pubId = `pub-${index}`;
   const noteHtml = pub.note ? `<div class="pub-note">${escapeHtml(pub.note)}</div>` : "";
   const bibtexHtml = pub.bibtex
-    ? `<div class="pub-bibtex" id="${pubId}" hidden><pre>${escapeHtml(pub.bibtex)}</pre></div>`
+    ? `
+      <div class="pub-bibtex" id="${pubId}" hidden>
+        <div class="pub-bibtex-bar">
+          <button class="pub-bibtex-copy" type="button" data-bibtex-copy="${pubId}">⎘</button>
+        </div>
+        <pre>${escapeHtml(pub.bibtex)}</pre>
+      </div>
+    `
     : "";
 
   return `
@@ -114,6 +134,7 @@ function publicationCard(pub, index) {
         ${noteHtml}
         <div class="pub-links">
           ${renderLinks(pub.links)}
+          ${renderPdfLink(pub.pdf)}
           ${renderBibtexControls(pubId, pub.bibtex)}
         </div>
         <div class="pub-tags">${renderTags(pub.tags)}</div>
@@ -174,18 +195,22 @@ function bindBibtexActions() {
       const box = document.getElementById(targetId);
       if (!box) return;
 
-      const text = box.innerText.trim();
+      const pre = box.querySelector("pre");
+      if (!pre) return;
+
+      const text = pre.innerText.trim();
+
       try {
         await navigator.clipboard.writeText(text);
         const old = button.textContent;
-        button.textContent = "Copied";
+        button.textContent = "✔";
         setTimeout(() => {
           button.textContent = old;
         }, 1200);
       } catch (error) {
-        button.textContent = "Failed";
+        button.textContent = "❌";
         setTimeout(() => {
-          button.textContent = "Copy";
+          button.textContent = "⎘";
         }, 1200);
       }
     });
@@ -202,9 +227,16 @@ function bindBibtexActions() {
     document.getElementById("pub-role").addEventListener("change", () => render(publications));
     document.getElementById("pub-type").addEventListener("change", () => render(publications));
     document.getElementById("pub-year").addEventListener("change", () => render(publications));
+    document.getElementById("pub-tag").addEventListener("change", () => render(publications)); 
   } catch (error) {
     document.getElementById("pub-stats").textContent = "Could not load publications.";
     document.getElementById("pub-list-main").innerHTML = `<p>${escapeHtml(error.message)}</p>`;
     document.getElementById("pub-list-co").innerHTML = "";
   }
-})();
+})(); 
+
+function renderPdfLink(pdf) {
+  if (!pdf) return "";
+  const url = escapeHtml(pdf);
+  return `<a class="pub-link pub-link-pdf" href="${url}" target="_blank" rel="noopener noreferrer">PDF</a>`;
+} 

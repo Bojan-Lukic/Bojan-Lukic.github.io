@@ -24,10 +24,17 @@
         <div id = "nav"></div> 
 
         <div id = "article">
-            <div id = "text"></br>
+            <div id = "text">
 
-                <a class = "two" href="../resources/Bojan_Lukic_CV.pdf" title = "Consolidated CV" target = "_blank" rel = "noopener noreferrer"><b style = "color: #02356a"><u>Link to consolidated CV</u></b></a>
-                </br></br>
+                <div class="page-callout">
+                    <div class="page-callout-title">Curriculum Vitae</div>
+                    <div class="page-callout-text">
+                        A consolidated PDF version is available here:
+                        <a class="page-callout-link" href="../resources/Bojan_Lukic_CV.pdf" title="Consolidated CV" target="_blank" rel="noopener noreferrer">
+                            Open CV (PDF)
+                        </a>
+                    </div>
+                </div>
 
                 <button class="accordion"><h3 style="font-variant:small-caps">Education</h3></button>
                 <div class="panel">
@@ -324,60 +331,7 @@
         © 2026 www.bojanlukic.com
     </footermedia>
     
-    <script>
-        // Accordion menu script
-        // Current issues with dynamic figure size inside accordion prevent the accordion to span full content height. 
-        // Current solution is for DOM to finish loading before executing the script. A timeout of 30 ms seems to be 
-        // the minimum time here. 
-        // Not optimal, root for issue still needs to be explored. 
-        setTimeout(() => {
-            var acc = document.getElementsByClassName("accordion");
-            
-            // Get elements and sub elements from html 
-            var pan = document.getElementsByClassName("panel");
-            var accImgs = pan[0].getElementsByTagName("figure");
-            var accTabs = pan[0].getElementsByTagName("table");
-            heights = 0;
-            if (accImgs.length > 0) {
-                for (i = 0; i < accImgs.length; i++) {
-                    heights += accImgs[i].clientHeight;
-                }
-            }
-            if (accTabs.length > 0) {
-                for (i = 0; i < accTabs.length; i++) {
-                    heights += accTabs[i].clientHeight;
-                }
-            }
-
-            //window.alert(accImgs.length);
-            //window.alert(clientHeight);
-
-            // Another approach is to use the initial calculation of figure height from css. This is not ideal, though, 
-            // as this does not return the true height of the figure, but rather the max height it could have. 
-            //var pan = document.getElementsByClassName("panel");
-            //var accImgs = pan[0].getElementsByTagName("figure");
-            //var clientHeight = ((650 / window.innerHeight) ** 1.1) * window.innerHeight;
-            
-            var i;
-            // Currently not ideal as there is no animation using percentages (for whatever reason)
-            acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + heights) + "px";
-            acc[0].classList.toggle("active");
-
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.maxHeight) {
-                        panel.style.maxHeight = null;
-                    } 
-                    else {
-                        panel.style.maxHeight = panel.scrollHeight + "px";
-                    } 
-                });
-            }
-        }, "200");
-    </script>
-    
+    <script src="../accordion.js"></script>
 	<script src = "../scripts.js"></script>
 	
 </body>

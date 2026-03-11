@@ -1,57 +1,47 @@
 <div id="header">
-  <h1>
-    <div id="test">
-      <div class="header-left">
-        <button
-          id="menu-toggle"
-          type="button"
-          aria-label="Open navigation menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+  <div class="header-inner">
+    <div class="header-left">
+      <button
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <div id="textcontainer">
-          <div class="textdefault desktop-nav">
-            <a data-nav="home" href="https://www.bojanlukic.com">Home</a>
-            <a data-nav="vita" href="https://www.bojanlukic.com/vita">Vita</a>
-            <a data-nav="projects" href="https://www.bojanlukic.com/projects">Projects</a>
-          </div>
-          <div class="textdefault desktop-nav" style="margin-left: 0px !important;">
-            <a data-nav="discussion" href="https://www.bojanlukic.com/discussion">Discussion</a>
-            <a data-nav="places" href="https://www.bojanlukic.com/places">Places</a>
-            <a data-nav="publications" href="https://www.bojanlukic.com/publications">Publications</a>
-          </div>
-        </div>
-      </div>
-
-      <div id="textcontainer2">
-        <div class="header-actions">
-          <div class="textdefault2">
-            <a href="https://github.com/Bojan-Lukic" title="GitHub" target="_blank" rel="noopener noreferrer">
-              <img style="border-radius: 50% !important;" class="soc" src="resources/gh.svg" alt="GitHub">
-            </a>
-            <a href="https://www.researchgate.net/profile/Bojan-Lukic2" title="ResearchGate" target="_blank" rel="noopener noreferrer">
-              <img class="soc" src="resources/rg.svg" alt="ResearchGate">
-            </a>
-            <a href="https://www.linkedin.com/in/bojan-lukic1" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-              <img class="soc" src="resources/li.svg" alt="LinkedIn">
-            </a>
-          </div>
-        </div>
-      </div>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a data-nav="home" href="https://www.bojanlukic.com">Home</a>
+        <a data-nav="vita" href="https://www.bojanlukic.com/vita">Vita</a>
+        <a data-nav="projects" href="https://www.bojanlukic.com/projects">Projects</a>
+        <a data-nav="discussion" href="https://www.bojanlukic.com/discussion">Discussion</a>
+        <a data-nav="places" href="https://www.bojanlukic.com/places">Places</a>
+        <a data-nav="publications" href="https://www.bojanlukic.com/publications">Publications</a>
+      </nav>
     </div>
-  </h1>
 
-  <div id="mobile-menu">
+    <div class="header-right">
+      <a href="https://github.com/Bojan-Lukic" title="GitHub" target="_blank" rel="noopener noreferrer">
+        <img class="soc soc-round" src="resources/gh.svg" alt="GitHub">
+      </a>
+      <a href="https://www.researchgate.net/profile/Bojan-Lukic2" title="ResearchGate" target="_blank" rel="noopener noreferrer">
+        <img class="soc" src="resources/rg.svg" alt="ResearchGate">
+      </a>
+      <a href="https://www.linkedin.com/in/bojan-lukic1" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+        <img class="soc" src="resources/li.svg" alt="LinkedIn">
+      </a>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" aria-label="Mobile navigation">
     <a data-nav="home" href="https://www.bojanlukic.com">Home</a>
     <a data-nav="vita" href="https://www.bojanlukic.com/vita">Vita</a>
     <a data-nav="projects" href="https://www.bojanlukic.com/projects">Projects</a>
     <a data-nav="discussion" href="https://www.bojanlukic.com/discussion">Discussion</a>
     <a data-nav="places" href="https://www.bojanlukic.com/places">Places</a>
     <a data-nav="publications" href="https://www.bojanlukic.com/publications">Publications</a>
-  </div>
+  </nav>
 </div>

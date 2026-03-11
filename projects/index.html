@@ -24,156 +24,202 @@
         <div id = "nav"></div> 
 
         <div id = "article">
-            <div id="text" style="margin-top: -20px;"></br>
+            <div id="text">
                 
-                <button class="accordion"><h3 style="font-variant:small-caps">Mobile Application</h3></button>
-                <div class="panel">
+                <div class="page-callout">
+                    <div class="page-callout-title">Projects</div>
+                    <div class="page-callout-text">
+                        A selection of technical work, ideas, and ongoing experiments. Some entries are mature, others are still evolving.
+                    </div>
+                </div>
+                
+                <button class="accordion project-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-tag project-tag planned">Planned</div>
+                        <div class="accordion-meta">Mobile / Software</div>
+                    </div>
+                    <h3>Mobile Application</h3>
+                    <div class="project-summary">
+                        Early-stage concept for a location-based mobile app focused on discovering venues and places in unfamiliar cities.
+                    </div>
+                </button>
+
+                <div class="panel project-panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
                             <td class="four">
-                                To be updated...
-								<!-- During my bachelor, I discussed ideas for mobile applications with a couple of fellow students. 
-                                Eventually, we realized that whenever we visited new cities, we had difficulties finding good venues
-                                that suited our tastes. It is possible to search for clubs via Google search and get a list of bars, restaurants,
-                                and clubs in the surrounding area. However, in some cases smaller venues are masked by the bigger ones or would not
-                                show up at all in the search results. Furthermore, it is fairly difficult to search for places with a particular
-                                theme (such as venues playing alternative music). Many of these clubs and bars are known to locals through 
-                                word of mouth. Other apps that list local events in bigger cities exist. However, it is not possible to directly 
-                                search for bars, clubs or restaurants on these apps. <br>
-                                The idea of an app displaying local venues seems to cover a niche that has not been explored yet. Ideally, 
-                                the app will keep entries of all relevant venues worlwide and offer a centralized solution for people that are 
-                                looking for places in unfamiliar cities. To implement aforementioned idea, I created a project in Android Studio
-								which I will be working on in the next weeks to months. The goal is to have a first draft of an app which can 
-								display local venues with the use of Google maps and a list, showing the most importnat information. The repository 
-								containing the project files can be found on my GitHub. More updates to follow.<br> -->
+
+                                <p>
+                                    This project started from a fairly simple observation: when visiting a new city, it is often difficult to find
+                                    places that match a specific taste or atmosphere. Standard search tools usually surface the bigger and more
+                                    obvious venues first, while smaller or more specialized places are much harder to discover.
+                                </p>
+
+                                <p>
+                                    The original idea was to build a mobile application that helps users discover bars, clubs, restaurants, and
+                                    other venues in a more targeted way. In particular, I was interested in the idea of finding places with a
+                                    specific character or theme that are often known mainly through local word of mouth.
+                                </p>
+
+                                <p>
+                                    I already explored the concept technically and created a project in Android Studio. The longer-term goal is
+                                    to build a first working version that combines a map-based interface with a structured list of venues and their
+                                    most relevant information.
+                                </p>
+
+                                <p>
+                                    At the moment, this entry serves as a placeholder for a future write-up. More details will be added once the
+                                    concept and implementation mature further.
+                                </p>
+
                             </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
                 </div>
 
-                <button class="accordion"><h3 style="font-variant:small-caps">Wireless WPA2-Enterprise/802.1x WiFi Extender Using Raspberry Pi</h3></button>
-                <div class="panel">
+                <button class="accordion project-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-tag project-tag planned">Planned</div>
+                        <div class="accordion-meta">Networking / Raspberry Pi</div>
+                    </div>
+                    <h3>Wireless WPA2-Enterprise / 802.1x WiFi Extender Using Raspberry Pi</h3>
+                    <div class="project-summary">
+                        Exploration of a Raspberry Pi-based approach for extending WPA2-Enterprise / 802.1x WiFi networks in situations where standard extenders do not work.
+                    </div>
+                </button>
+
+                <div class="panel project-panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
                             <td class="four">
-                                To be updated...
-								<!-- <b>Disclaimer</b>: extending the range of a WiFi network using a 802.1x access control standard should only be 
-								done with consent of the network admin and for personal use. 802.1x requires a user to sign in to the network, hence 
-								only the user should use the network.<br>
-								One summer night when I was visiting my brother, him and I came across a challenge: At that 
-                                time my brother was utilizing the campus network of his university which was transmitted from one of the neighboring 
-								buildings. Unfortunately, the signal strength was low, which led to an inconsistent Internet connection. He was using 
-								a USB WiFi amplifier to amplify the WiFi signal, providing a stronger signal for the device the amplifier was 
-								connected to with the drawback of lower network speeds. 
-                                <figure>
-                                    <img src="../resources/TL-WN822N_EU_5.0_01_large_1507615225760s.jpg" title = "USB WiFi amplifier"/>
-                                    <figcaption>Fig.1 - Example of a TP-Link USB WiFi amplifier.</figcaption>
-                                </figure>
-								Figure one depicts such a WiFi amplifier that my brother was using.
-                                The problem was that the amplifier could only be used with one device at a time, meaning it did not act as an access 
-								point for multiple devices.
-								One might ask why we didn't use a router which can be used in range extender mode to receive the signal and create a 
-								new private network. Unfortunately, the network access control standard for the WiFi network was 802.1x, a standard 
-								often used in universities and public sector institutions in general. This standard involves a sign in with username 
-								and password. The access standards used in regular WiFi routers do not comply with the 802.1x standard, which is why 
-								the use of a common WiFi extender was not possible in that case. 
-								Nevertheless, I was determined to find a way for extending WiFi signals using 802.1x access standards and quickly I 
-								came across multiple websites describing possibilities of extending these types of networks using a Raspberry Pi and 
-								some scripting. Right now I am looking into the capabilities of these tools and ways to implement them. More updates 
-								will follow in the next weeks. -->
+
+                                <p>
+                                    This project emerged from a practical networking problem. Standard consumer WiFi extenders work well in many
+                                    home environments, but they are often not suitable for networks that use WPA2-Enterprise / 802.1x authentication,
+                                    such as those commonly found at universities or in public institutions.
+                                </p>
+
+                                <p>
+                                    The idea here is to explore whether a Raspberry Pi can be used as a more flexible intermediate system:
+                                    authenticating properly against such a network and then acting as a usable local access point or relay for
+                                    personal devices.
+                                </p>
+
+                                <p>
+                                    The project is still in an exploratory stage. At the moment, I am mainly interested in the required tooling,
+                                    setup constraints, and the practical viability of such a solution. The appeal of the project lies in the mix
+                                    of networking, scripting, Linux-based systems, and small-scale hardware integration.
+                                </p>
+
+                                <p>
+                                    A more technical write-up will follow once I have a stable and reproducible setup worth documenting in detail.
+                                </p>
+
                             </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
                 </div>
 
-                <button class="accordion"><h3 style="font-variant:small-caps">Finances</h3></button>
-                <div class="panel">
+                <button class="accordion project-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-tag project-tag ongoing">Ongoing</div>
+                        <div class="accordion-meta">Personal systems / Finance</div>
+                    </div>
+                    <h3>Finances</h3>
+                    <div class="project-summary">
+                        A broader ongoing topic around personal finance, investing, and the long-term structure of financial decision-making.
+                    </div>
+                </button>
+
+                <div class="panel project-panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
                             <td class="four">
-                                To be updated... 
+
+                                <p>
+                                    This entry is less a single project in the narrow sense and more an umbrella topic that I keep returning to.
+                                    It includes questions around personal finance, investing, risk, long-term planning, and the broader logic of
+                                    financial systems.
+                                </p>
+
+                                <p>
+                                    Over time I would like to turn this into a more structured collection of notes and tools — potentially including
+                                    reading notes, small analyses, and practical frameworks for thinking about financial decisions more clearly.
+                                </p>
+
+                                <p>
+                                    For now, this section remains intentionally compact. It will be expanded once the scope is defined more precisely.
+                                </p>
+
                             </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
                 </div>
-				
-				<button class="accordion"><h3 style="font-variant:small-caps">Scientific Publications</h3></button>
-                <div class="panel">
+
+                <button class="accordion project-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-tag project-tag ongoing">Ongoing</div>
+                        <div class="accordion-meta">Reading / Research notes</div>
+                    </div>
+                    <h3>Scientific Publications</h3>
+                    <div class="project-summary">
+                        A growing collection of papers, foundational texts, and reading notes from different technical and scientific domains.
+                    </div>
+                </button>
+
+                <div class="panel project-panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
                             <td class="four">
-								Recently, I started reading scientific publications from different domains. Following is a list of papers 
-								that could also be interesting for you:</td>
+                                <p>
+                                    Recently, I started reading scientific publications from different domains more systematically. This section is
+                                    intended as a place to collect papers that I found interesting, together with short notes or comments on why
+                                    they matter.
+                                </p>
+                            </td>
                             <td class="one"></td>
-                        </tr><tr><td><br></td></tr>
+                        </tr>
+                        <tr><td><br></td></tr>
                     </table>
-                    <table style="width:100%">
-                        <tr>
-                            <td class="one"></td>
-                            <td class="four"><b>Bitcoin white paper</b></td>
-                            <td class="one"></td>
-                        </tr>
-                        <tr>
-                            <td class="one"></td>
-                            <td class="four">To be updated...<br><br>
-							<!--
-								<div class="video-container">
-                                    <iframe width = "560" height = "315" src="https://www.youtube.com/embed/zVqczFZr124" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div><br><br>
-                                To be updated...</td>
-							-->
-                            <td class="one"></td>
-						<!--
-                        </tr><tr><td><br></td></tr>
-						-->
-                        <tr>
-                            <td class="one"></td>
-                            <td class="four"><b>Bat origin of human coronaviruses</b></td>
-                            <td class="one"></td>
-                        </tr>
-                        <tr>
-                            <td class="one"></td>
-                            <td class="four">To be updated...</td>
-                            <td class="one"></td>
-                        </tr><tr><td><br></td></tr>
-                        <tr>
-                            <td class="one"></td>
-                            <td class="four"><b>McCulloch and Pitts 1943</b></td>
-                            <td class="one"></td>
-                        </tr>
-                        <tr>
-                            <td class="one"></td>
-                            <td class="four">To be updated...<!--<br><br>
-                                <div class="video-container">
-                                    <iframe width = "560" height = "315" src = "https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf#zoom=90"></iframe>
-                                </div>
-                                <p style = "text-align: center !important;"><i>Source: <a href="https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf" title = "A Logical Calculus of the Ideas Immanent In Nervous Activity"><b style = "color: #02356a">Carnegie Mellon University</b></a></i></p><br><br>
-                                To be updated...</td>
-								-->
-                            <td class="one"></td>
-                        </tr><tr><td><br></td></tr>
-                        <tr>
-                            <td class="one"></td>
-                            <td class="four"><b>Turing Machine</b></td>
-                            <td class="one"></td>
-                        </tr>
-                        <tr>
-                            <td class="one"></td>
-                            <td class="four">To be updated...</td>
-                            <td class="one"></td>
-                        </tr><tr><td><br></td></tr>
-                    </table><br><br>
+
+                    <div class="reading-item">
+                        <div class="reading-item-title">Bitcoin white paper</div>
+                        <div class="reading-item-text">
+                            A future note on the original Bitcoin white paper and why it remains such an influential technical and economic document.
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <div class="reading-item-title">Bat origin of human coronaviruses</div>
+                        <div class="reading-item-text">
+                            Planned reading notes on virology, zoonotic transmission, and the broader scientific context of coronavirus research.
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <div class="reading-item-title">McCulloch and Pitts 1943</div>
+                        <div class="reading-item-text">
+                            A future note on one of the foundational papers in computational neuroscience and the early conceptual roots of artificial neural networks.
+                        </div>
+                    </div>
+
+                    <div class="reading-item">
+                        <div class="reading-item-title">Turing Machine</div>
+                        <div class="reading-item-text">
+                            Planned notes on the Turing machine concept and its importance for computation theory, abstraction, and computer science as a whole.
+                        </div>
+                    </div>
                 </div><br><br>
 
             </div>
@@ -192,60 +238,7 @@
         © 2026 www.bojanlukic.com
     </footermedia>
     
-    <script>
-        // Accordion menu script
-        // Current issues with dynamic figure size inside accordion prevent the accordion to span full content height. 
-        // Current solution is for DOM to finish loading before executing the script. A timeout of 30 ms seems to be 
-        // the minimum time here. 
-        // Not optimal, root for issue still needs to be explored. 
-        setTimeout(() => {
-            var acc = document.getElementsByClassName("accordion");
-            
-            // Get elements and sub elements from html 
-            var pan = document.getElementsByClassName("panel");
-            var accImgs = pan[0].getElementsByTagName("figure");
-            var accTabs = pan[0].getElementsByTagName("table");
-            heights = 0;
-            if (accImgs.length > 0) {
-                for (i = 0; i < accImgs.length; i++) {
-                    heights += accImgs[i].clientHeight;
-                }
-            }
-            if (accTabs.length > 0) {
-                for (i = 0; i < accTabs.length; i++) {
-                    heights += accTabs[i].clientHeight;
-                }
-            }
-
-            //window.alert(accImgs.length);
-            //window.alert(clientHeight);
-
-            // Another approach is to use the initial calculation of figure height from css. This is not ideal, though, 
-            // as this does not return the true height of the figure, but rather the max height it could have. 
-            //var pan = document.getElementsByClassName("panel");
-            //var accImgs = pan[0].getElementsByTagName("figure");
-            //var clientHeight = ((650 / window.innerHeight) ** 1.1) * window.innerHeight;
-            
-            var i;
-            // Currently not ideal as there is no animation using percentages (for whatever reason)
-            acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + heights) + "px";
-            acc[0].classList.toggle("active");
-
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.maxHeight) {
-                        panel.style.maxHeight = null;
-                    } 
-                    else {
-                        panel.style.maxHeight = panel.scrollHeight + "px";
-                    } 
-                });
-            }
-        }, "200");
-    </script>
-
+    <script src="../accordion.js"></script>
 	<script src = "../scripts.js"></script>
 	
 </body>

@@ -24,62 +24,97 @@
         <div id = "nav"></div>
 
         <div id = "article">
-            <div id="text" style="margin-top: -20px;"></br>
+            <div id="text">
 
-                <button class="accordion"><h3 style="font-variant:small-caps">Is the next financial Crisis imminent?</h3></button>
-                <div class="panel">
+                <div class="page-callout">
+                    <div class="page-callout-title">Discussion</div>
+                    <div class="page-callout-text">
+                        Notes, essays, and reading reflections on topics I find interesting — mostly technology, economics, systems, and a few broader observations.
+                    </div>
+                </div>
+
+                <button class="accordion article-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-meta">2025-02-06</div>
+                        <div class="accordion-tag">Economics</div>
+                    </div>
+                    <h3>Is the next financial crisis imminent?</h3>
+                </button>
+
+                <div class="panel article-panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
-                            <td class="four"><i>2025-02-06</i></br></br>  
-                                Since the global financial crisis of 2007/2008, many econometrists have warned about a repition of 
-                                such events. In fact, global financial crises seem to occur roughly once every decade. Looking at 
-                                the biggest global crises of the last 50 years reinforces the claim: 
-                                </br></br>
+                            <td class="four">
+
+                                <p>
+                                    Since the global financial crisis of 2007/2008, many econometrists have warned about a repetition of such events.
+                                    In fact, global financial crises seem to occur roughly once every decade. Looking at the biggest global crises
+                                    of the last 50 years reinforces that impression:
+                                </p>
+
                                 <ul style="padding-left:30px">
-                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/1973_oil_crisis" title = "Oil Crisis" target = "_blank" rel = "noopener noreferrer">1973 oil crisis</a></li>
-                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/Savings_and_loan_crisis" title = "Savings Crisis" target = "_blank" rel = "noopener noreferrer">1980s recession and savings & loan crisis</a></li>
-                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/Early_1990s_recession" title = "1990s Recession" target = "_blank" rel = "noopener noreferrer">1991 recession</a></li>
-                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/Early_2000s_recession" title = "2000s Recession" target = "_blank" rel = "noopener noreferrer">2000/1 recession and bursting of dot-com bubble</a></li>
-                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/2008_financial_crisis" title = "Housing Crisis" target = "_blank" rel = "noopener noreferrer">2007/8 global financial crisis</a></li>
-                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/2020_stock_market_crash" title = "2020 Crash" target = "_blank" rel = "noopener noreferrer">2020 stock market crash</a></li>
-                                </ul> 
-                                </br>
-                                This is roughly one crisis every 9.4 years. If we look at the global annual GDP growth in % from 
-                                <a style="display: inline; color:blue" href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG" title = "World Bank" target = "_blank" rel = "noopener noreferrer">World Bank Group</a>, 
-                                we can see strong negative correlation between above crises events and global GDP growth. The data is plotted 
-                                in following figure:
-                                </br></br>
+                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/1973_oil_crisis" title="Oil Crisis" target="_blank" rel="noopener noreferrer">1973 oil crisis</a></li>
+                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/Savings_and_loan_crisis" title="Savings Crisis" target="_blank" rel="noopener noreferrer">1980s recession and savings &amp; loan crisis</a></li>
+                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/Early_1990s_recession" title="1990s Recession" target="_blank" rel="noopener noreferrer">1991 recession</a></li>
+                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/Early_2000s_recession" title="2000s Recession" target="_blank" rel="noopener noreferrer">2000/1 recession and bursting of dot-com bubble</a></li>
+                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/2008_financial_crisis" title="Housing Crisis" target="_blank" rel="noopener noreferrer">2007/8 global financial crisis</a></li>
+                                    <li><a style="color:blue" href="https://en.wikipedia.org/wiki/2020_stock_market_crash" title="2020 Crash" target="_blank" rel="noopener noreferrer">2020 stock market crash</a></li>
+                                </ul>
+
+                                <p>
+                                    This is roughly one crisis every 9.4 years. If we look at the global annual GDP growth in percent from the
+                                    <a style="display: inline; color:blue" href="https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG" title="World Bank" target="_blank" rel="noopener noreferrer">World Bank Group</a>,
+                                    we can see a strong negative correlation between the above crisis events and global GDP growth. The data is plotted
+                                    in the following figure:
+                                </p>
+
                                 <figure>
-                                    <img src="resources/GDP real growth.svg" title = "50 year global annual GPD growth"/>
-                                    <figcaption style = "text-align: center !important;">Fig. 1.1 - Global annual GDP growth in % from 1961 to 2023.</figcaption>
+                                    <img src="resources/GDP real growth.svg" title="50 year global annual GDP growth"/>
+                                    <figcaption style="text-align: center !important;">Fig. 1.1 - Global annual GDP growth in % from 1961 to 2023.</figcaption>
                                 </figure>
-                                </br>
-                                The data is plotted with annual global GDP growth in percentage on the y-axis over the years 
-                                1961 to 2023 on the x-axis. When inspecting the curve, we see local minima in the years 1975, 
-                                1982, 1991, 2001, 2009, and 2020 with GDP growth of 0.56, 0.36, 1.21, 2.03, -1.34, and -2.88, respectively. 
-                                An interesting observation from above plot is that seemingly, over time, financial crises become more volatile. 
-                                </br></br>
-                                What does this mean for our current economy? And, maybe more importantly, could these observations be mere 
-                                symptoms from deep-rooted dynamics in our financial system? 
-                                In his book <a style="display: inline; color:blue" href="https://isbnsearch.org/isbn/9781101427422" title = "Crisis Economics" target = "_blank" rel = "noopener noreferrer">Crisis Economics</a>
-                                Nouriel Roubini writes about causes of financial crises in the context of the current global financial system. 
-                                In a nutshell (and please don't quote me on this), the instabilities that we regularly observe are rooted in 
-                                the incentives that the capitalist financial and political system promotes. Especially when looking at the highly  
-                                globalized economics in the Western Hemisphere, we see speculative and risky practices which are insufficiently 
-                                mitigated by financial insitutions and governments alike. A recurrent theme throughout the decades has been the 
-                                speculative bubbles in different financial sectors caused by risky investment practices. Roubini exemplifies 
-                                some of these events with one of them being the Dot-com bubble. Enabled by rapid adoption of web technologies, 
-                                at the end of the 1990s, an unprecedented number of tech companies found their way to the stock market. Enthusiastic 
-                                investors poured assets into these newly established companies just to realize that most of them were not profitable 
-                                nor mature yet. 
-                                </br></br>
-                                History tends to repeat itself. Could there currently be unsustainable investment practices? Like for instance 
-                                in the EV (electric vehicle) sector in 2024? Tesla, for instance, has the highest 
-                                <a style="display: inline; color:blue" href="https://docs.google.com/spreadsheets/u/1/d/1HflVng6sYIb6Gs4pOKiDGtqU5YJ2-hgdM4pRNaT62gs/htmlview" title = "Car Manufacturers by Market Capitalization" target = "_blank" rel = "noopener noreferrer">market capitalization of all car manufacturers</a>, 
-                                by a large margin:
-                                </br></br>
+
+                                <p>
+                                    The data is plotted with annual global GDP growth in percentage on the y-axis over the years 1961 to 2023 on the x-axis.
+                                    When inspecting the curve, we see local minima in the years 1975, 1982, 1991, 2001, 2009, and 2020 with GDP growth
+                                    of 0.56, 0.36, 1.21, 2.03, -1.34, and -2.88, respectively. An interesting observation from the above plot is that,
+                                    seemingly, over time, financial crises become more volatile.
+                                </p>
+
+                                <p>
+                                    What does this mean for our current economy? And, maybe more importantly, could these observations be mere symptoms
+                                    of deep-rooted dynamics in our financial system?
+                                </p>
+
+                                <p>
+                                    In his book
+                                    <a style="display: inline; color:blue" href="https://isbnsearch.org/isbn/9781101427422" title="Crisis Economics" target="_blank" rel="noopener noreferrer">Crisis Economics</a>,
+                                    Nouriel Roubini writes about causes of financial crises in the context of the current global financial system.
+                                    In a nutshell — and please don't quote me on this — the instabilities that we regularly observe are rooted in the
+                                    incentives that the capitalist financial and political system promotes.
+                                </p>
+
+                                <p>
+                                    Especially when looking at highly globalized economies in the Western Hemisphere, we see speculative and risky
+                                    practices which are insufficiently mitigated by financial institutions and governments alike. A recurrent theme
+                                    throughout the decades has been speculative bubbles in different financial sectors caused by risky investment
+                                    practices. Roubini exemplifies some of these events, one of them being the dot-com bubble.
+                                </p>
+
+                                <p>
+                                    Enabled by the rapid adoption of web technologies, at the end of the 1990s an unprecedented number of tech companies
+                                    found their way to the stock market. Enthusiastic investors poured assets into these newly established companies just
+                                    to realize that most of them were neither profitable nor mature yet.
+                                </p>
+
+                                <p>
+                                    History tends to repeat itself. Could there currently be unsustainable investment practices? Like, for instance,
+                                    in the EV sector in 2024? Tesla, for instance, has the highest
+                                    <a style="display: inline; color:blue" href="https://docs.google.com/spreadsheets/u/1/d/1HflVng6sYIb6Gs4pOKiDGtqU5YJ2-hgdM4pRNaT62gs/htmlview" title="Car Manufacturers by Market Capitalization" target="_blank" rel="noopener noreferrer">market capitalization of all car manufacturers</a>,
+                                    by a large margin:
+                                </p>
+
                                 <table style="width: 100%">
                                     <tr>
                                         <th style="width: 25%">Rank</th>
@@ -106,11 +141,13 @@
                                         <td>...</td>
                                         <td>...</td>
                                     </tr>
-                                </table> 
-                                </br>
-                                In contrast, we get a different picture when going 
-                                <a style="display: inline; color:blue" href="https://en.wikipedia.org/wiki/List_of_automotive_manufacturers_by_production#2024" title = "Car Manufacturers by Production" target = "_blank" rel = "noopener noreferrer">by production</a>:
-                                </br></br>
+                                </table>
+
+                                <p>
+                                    In contrast, we get a different picture when going
+                                    <a style="display: inline; color:blue" href="https://en.wikipedia.org/wiki/List_of_automotive_manufacturers_by_production#2024" title="Car Manufacturers by Production" target="_blank" rel="noopener noreferrer">by production</a>:
+                                </p>
+
                                 <table style="width: 100%">
                                     <tr>
                                         <th style="width: 25%">Rank</th>
@@ -137,244 +174,377 @@
                                         <td>...</td>
                                         <td>...</td>
                                     </tr>
-                                </table> 
-                                </br>
-                                Many argue that especially Tesla's capitalization is largely inflated due to highly speculative investment 
-                                practices. Perhaps much of Tesla's value comes from an overly optimistic valuation on the stock market. 
-                                And what about AI? Every modern tech company and their mother is jumping on the AI hype train. Isn't this
-                                an exact replica of the Dot-com bubble, just that this time it's not the broad theme of web technologies 
-                                but the "AI solves all your problems" promise? 
-                                </br></br> 
-                                Getting back to the topic of financial practices and crises. From my own observation, our current economic
-                                system enourages unsustainable ideologies. There seems to be a consensus, especially around finance cracks, 
-                                that the only way forward is radical growth. However, in the current system, infinite growth is not possible, at
-                                least not with unsustainable and highly speculative practices. These tend to lead to overvaluation, followed 
-                                by disillusion, a decreased demand, and, finally, the burst. If we want to grow our wealth as a society, we have 
-                                to grow our economy sustainably, driven by practicality and pragmatism. Not by hedonism. Investments need to be 
-                                fair and propel quality of life for everyone. I'm getting too philosophical here. 
-                                To conclude, I highly recommend reading Roubini's book about Crisis Economics. You will find many parallels, in the 
-                                context of economic dynanics, between the past and present. And maybe you can profit from them yourself ;-]
+                                </table>
+
+                                <p>
+                                    Many argue that especially Tesla's capitalization is largely inflated due to highly speculative investment practices.
+                                    Perhaps much of Tesla's value comes from an overly optimistic valuation on the stock market.
+                                </p>
+
+                                <p>
+                                    And what about AI? Every modern tech company and their mother is jumping on the AI hype train. Isn't this an exact
+                                    replica of the dot-com bubble, just that this time it's not the broad theme of web technologies but the
+                                    “AI solves all your problems” promise?
+                                </p>
+
+                                <p>
+                                    Getting back to the topic of financial practices and crises: from my own observation, our current economic system
+                                    encourages unsustainable ideologies. There seems to be a consensus, especially around finance circles, that the only
+                                    way forward is radical growth.
+                                </p>
+
+                                <p>
+                                    However, in the current system, infinite growth is not possible, at least not with unsustainable and highly speculative
+                                    practices. These tend to lead to overvaluation, followed by disillusion, decreased demand, and, finally, the burst.
+                                    If we want to grow our wealth as a society, we have to grow our economy sustainably, driven by practicality and pragmatism,
+                                    not by hedonism. Investments need to be fair and propel quality of life for everyone. I'm getting too philosophical here.
+                                </p>
+
+                                <p>
+                                    To conclude, I highly recommend reading Roubini's book about crisis economics. You will find many parallels, in the
+                                    context of economic dynamics, between the past and the present. And maybe you can profit from them yourself ;-]
+                                </p>
+
                             </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
                 </div>
 
-                <button class="accordion"><h3 style="font-variant:small-caps">Is a vegan diet detrimental to endurance and muscle strength?</h3></button>
-                <div class="panel">
+                <button class="accordion article-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-meta">2025-03-21</div>
+                        <div class="accordion-tag">Nutrition</div>
+                    </div>
+                    <h3>Is a vegan diet detrimental to endurance and muscle strength?</h3>
+                </button>
+
+                <div class="panel article-panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
-                            <td class="four"><i>2025-03-21</i></br></br>
-                                I asked myself this question back in 2018 when I started changing my diet from omnivore to vegan. But let's go back 
-                                a little further. When I was in my early teens, my diet would mainly consist of bread, meat, milk, and sweets. It's 
-                                a wonder I am still alive :-] </br>
-                                Jokes aside, I heard pretty often that young people can get away with bad lifestyles. Some say it's because they are 
-                                still growing. Maybe it also has to do with the short exposure to their lifestyle choices so they don't have such a 
-                                big impact on their body. In any case, for the longest time I had been under the assumption that a meal without meat 
-                                is not a proper meal. And that vegetables might be healthy but that you don't really need them that much. Well, as 
-                                many things do, my diet starting changing once I moved out from home. I still took in animal products such as eggs 
-                                and chicken. But, at least, the consumption of fatty and red meats, milk, and cheeses seemed to decrease. This was 
-                                simply because your fridge only supplies those foods that you yourself provide. And in this case I didn't buy a 
-                                whole spectrum of foods but rather selected a few that, I thought, would be the right ones for my lifestyle. That 
-                                lifestyle, at that time, was predominantly revolved around sports. It still is today, but in a different way. More 
-                                on that later. Things stayed like that for many of the following years. One thing that changed though, was my perception 
-                                of what kinds of foods could be more beneficial for the development of my mind and body. Year after year, vegetables 
-                                replaced many of the not so healthy foods. I started experimenting with protein shakea as a way to replace the missing 
-                                proteins from my now vegetable-centric diet. One more thing that I observed was that my breakfast was almost vegan. 
-                                Since I moved out from home I've basically been eating the same breakfast: Oatmeal, in different variations. The first 
-                                years mainly with fruits and yoghurt, nowadays with various nuts and with plan-based milk. I evolved my diet to be as 
-                                efficient and nutritious as possible, as I've been steadily increasing my focus on sport, the healthy lifestyle, and 
-                                a clear mind. Fast forward to 2019 and the only animal products I consumed were chicken and occasionally some milk. 
-                                My roommate at that time introduced me to delicious vanilla soy milk which slowly replaced the remaining dairy products 
-                                that I would in some instances still consume. So, there I was, with the only product that was non-vegan being chicken. So, 
-                                I thought "What if I replaced chicken with a vegan alternative. Then my diet would be fully vegan. I could try it out, 
-                                just for fun." And I did. I started using Tempeh instead of chicken, and, honestly, it wasn't too bad. Especially 
-                                when preparing Tempeh properly. Obviously, I didn't fully restrict myself to animal products at that time. So, from time to time, 
-                                I would buy things like ham sandwiches. That was mostly on weekends as a treat. Since then I consciously 
-                                reduced even the little treats until I reached a point of full veganism. There might still be instances when I consume 
-                                animal products, but that is because of politeness when eating self-made meals by others or to reduce food waste. 
-                                Other than that, my diet is fully vegan! You can see that my transformation was quite natural and didn't happen over night. And for anyone 
-                                who is contemplating doing something like this, I suggest doing it the same way. That is, taking your time with the change 
-                                and not being harsh with yourself. Everything takes time, especially changing something so deep-rooted as (eating) habits 
-                                that also have some social construct embedded in them. 
-                                </br></br>
-                                Coming to the main topic. Over the years I read more and more about dieting and foods to incorporate or avoid in 
-                                your diet. Part of my research also focused on the question if a vegan diet is detrimental to endurance and muscle 
-                                strength. This is especially interesting for me as I'm physically quite active. A quick search on Google scholar yields some 
-                                interesting research that could help us understand the impact of vegan diets on performance and overall health for 
-                                physically active people.</br>
-                                In their 
-                                <a style="display: inline; color:blue" href="https://doi.org/10.1038/s41430-020-0639-y" title = "Vegan Diet and Endurance/Strength" target = "_blank" rel = "noopener noreferrer">paper</a>, 
-                                Boutros et al. examine endurance and muscle strength differences between vegan and omnivore participants. The authors 
-                                "studied 56 healthy young lean physically active women [...] classified as vegan (n = 28) or omnivore (n = 28) based 
-                                on their eating habits. All volunteers followed either a vegan or an omnivore diet for at least 2 years." The 
-                                results show that "vegans had a significantly higher estimated VO<sub>2</sub> max [...] and submaximal endurance time 
-                                to exhaustion compared with omnivores." Further, "submaximal endurance might be better in vegans compared with omnivores." 
-                                The authors suggest that "[o]ne potential mechanism that could explain the greater level of endurance performance in vegans 
-                                may be a higher amount of carbohydrate intake. Evidence has suggested that greater carbohydrate intake may be associated
-                                with a better endurance performance and this could be due to higher muscle glycogen storage." Also, "[o]ther potential 
-                                mechanisms that may explain the better endurance performance in vegans could be due to favorable oxidative stress and 
-                                inflammation profiles."</br> 
-                                In their 
-                                <a style="display: inline; color:blue" href="https://doi.org/10.3390/nu13113884" title = "Impact of Vegan Diet on Performance" target = "_blank" rel = "noopener noreferrer">explorative study</a>, 
-                                Pohl et al. explain that "existing literature indicates the influence of particularly important nutrients [...] on 
-                                molecular signaling in tissues and in the long-term different diet regimens may therefore affect exercise performance." 
-                                Furthermore they suggest that "[v]egan and vegetarian diets possess potentially beneficial properties for the gut 
-                                microbiome and might therefore influence those mechanisms which may affect in the long-term exercise performance."</br> 
-                                Finally, Durkalec-Michalski et al. present an 
-                                <a style="display: inline; color:blue" href="https://doi.org/10.3390/nu14040894" title = "Four-Week Vegan Diet on Performance" target = "_blank" rel = "noopener noreferrer">interventional study</a> 
-                                on "the effect of a four-week vegan diet [...] during a four-week high-intensity functional training [...] on performance, 
-                                training results and blood biochemical indices" in a mixed group. The authors discuss that "[a]fter the four-week 
-                                nutritional interventions, individual groups experienced a significant increase in the number of repetitions performed 
-                                [...] and a significant improvement in the speed and a shorter time of completing training units [...]." Here, the authors 
-                                mention that, at least for short and intense cross-training exercises, the increased intake of carbohydrates in vegan 
-                                diets does not seem to have an effect on the performance of the test participants. The authors also mention that 
-                                "endurance training tends to reduce iron stores" and that "a high prevalence of iron depletion and anaemia [in vegetarian 
-                                diets] are based on the poor bioavailability of iron from plant sources." However, "iron deficiency anaemia rarely occurs 
-                                in vegetarian athletes and a mild iron deficiency is not likely to impair performance. Surprisingly, contrary to what is 
-                                commonly believed, this study did not reveal any significant changes in iron metabolism markers (iron, transferrin, 
-                                ferritin) between the groups." The authors go on to talk about mixed observations in other studies regarding iron 
-                                metabolism markers in people with vegan and omnivore diets.</br></br> 
-                                From my personal observations, in the six years that I am following it, I couldn't observe any 
-                                direct negative effects from my vegan diet on endurance, muscle strength, and overall well-being. In fact, in these 
-                                six years my strength and endurance have steadily increased albeit it probably having more to do with the regular workouts 
-                                rather than dramatic changes from the different diet. There have definitely been other observable positive effects, though. 
-                                Since the change to plant-based products, I noticed that I very rarely get inflammations that I would usually get when 
-                                following an omnivore diet. Those are, for instance, inflammation of my gums or my skin. Some studies 
-                                [<a style="display: inline; color:blue" href="https://doi.org/10.1038/s41598-020-78426-8" title = "Vegan diet and inflammatory markers 1" target = "_blank" rel = "noopener noreferrer">1</a>, 
-                                <a style="display: inline; color:blue" href="https://doi.org/10.1038/s41598-020-58875-x" title = "Vegan diet and inflammatory markers 2" target = "_blank" rel = "noopener noreferrer">2</a>, 
-                                <a style="display: inline; color:blue" href="https://doi.org/10.1161/JAHA.118.011367" title = "Vegan diet and inflammatory markers 3" target = "_blank" rel = "noopener noreferrer">3</a>] 
-                                suggest that there might be a link between a vegan diet and reduced inflammatory markers. Other studies explain, though, 
-                                that the observations are not definitive and further ones are needed to support this claim. What is definitive is that 
-                                some meats negatively impact inflammatory markers in humans, as shown 
-                                <a style="display: inline; color:blue" href="https://doi.org/10.1093/cdn/nzac068.023" title = "Meats and inflammatory markers" target = "_blank" rel = "noopener noreferrer">here</a>. 
-                                Especially red meats and poultry (and with that eggs) contain the omega-6 fat arachidonic acid which is shown to cause 
-                                inflammation. This acid can't be found in vegetable sources. This could at the same time and potentially be disadvantageous 
-                                for vegans as theses acids do have some benefits.</br> 
-                                One other thing I noticed is that I can process foods much quicker and easier now. I don't feel bloated, never 
-                                have an upset stomach, and feel much lighter during my workouts with a strictly vegan diet. I can definitely feel the 
-                                contrast on the rare occasion that I do consume some animal products, especially when they are greasy and overly spicy. 
-                                Then, I get problems with my digestion and feel sluggish. I also notice that a plant-based diet helps me get through the 
-                                day easier without fatigue. This could be due to the omnivore diets often being heavier. By now, I barely consume any added fats 
-                                and keep my meals light and natural. The same can't always be said about omnivore meals that can potentially be heavily 
-                                processed. But then again, this might have more to do with preparing one's own meals versus eating out. I noticed that I pretty 
-                                much fully stopped eating out and that I prepare my own meals on a daily basis. Doing the same on an omnivore diet could yield 
-                                the same benefits that I mentioned above.</br> 
-                                One last thing that I would like to discuss is the myths that go around in non-vegan communities. One thing 
-                                I often hear from people that are open-minded and tried out a vegan diet before is something like "I tried the plant-based 
-                                diet but after a couple of weeks I noticed a decline in mental and physical health. This probably has to do with something 
-                                missing in plant-based diets that my body needs." Well, I would argue that it isn't the vegan diet in its broader sense 
-                                that leads to such effects but rather the personal choice of a specific (vegan) diet. Becoming vegan by taking out all 
-                                the animal products in your current diet without any substitutions and additional provisions is unsustainable. And I 
-                                suspect that many people fail their transition because of that. Becoming vegan means informing oneself about macro- and 
-                                micronutrients, one's own predespositions, and the importance of complete and well-balanced diets in general. And I 
-                                recommend learning about this to anyone, even outside of veganism. I'm a big advocate of at least one 
-                                protein-rich food source in each meal. This is something many people miss when not substituting animal products with 
-                                plant-based products that are rich in proteins. Another example is the link of vegan diets and vitamin B12 deficiency. 
-                                It is true that vegans do need to supplements vitamin B12 in some form if not mitigating the deficiency directly through 
-                                certain foods. From my own observations, there seems to be 
-                                a consensus around non-vegans that a vegan diet is incomplete and can therefore not be healthy for humans, because of 
-                                the need for certain additional supplements. However, what most people don't know is that these deficiencies 
-                                are more of a symptom from a society that is, in a nutritional sense, based on a heavy meat industry which fails to 
-                                address needs for people with other diets rather than stemming from veganism as a root cause. Vitamin B12, for instance, 
-                                cannot be synthesized by either plants or animals. Instead, animals (and humans alike) get vitamin B12 through microorganisms 
-                                which are ingested with soil or bacteria. The reason vegans don't get enough vitamin B12 through a plant-based diet is 
-                                mostly because of plants being processed, that is, washed, peeled, etc., and the soil and bacteria being removed in the 
-                                process. Omnivores don't need to care about this as the animal products they ingest are rich in vitamin B12 from the raw 
-                                plants the animals consumed during their life. This is just one example of the skewed perception that currently exists 
-                                for some when thinking about plant-based diets. There are many more interesting facts and I suggest reading about if 
-                                you are interested in the topic. Going further into detail about them here would go beyond the scope of this article.</br></br> 
-                                Finally, I would like to say that just seven years ago I believed that alternative diets like the vegan diet are delusional. 
-                                By informing myself about diets, tracking my health with regular blood samples, and gradually transitioning to a fully 
-                                plant-based diet I established a sustainable way of veganism, <u>for myself</u>. There will definitely be nuances for 
-                                other people with different physiologies. Or, a vegan diet might not be feasible at all for some people with certain 
-                                predespositions or health issues. Nevertheless, and perhaps because of it, our health, it is imperative to learn about 
-                                different diets, one's personal needs, and the possibilities of change. 
+                            <td class="four">
+
+                                <p>
+                                    I asked myself this question back in 2018 when I started changing my diet from omnivore to vegan. But let's go back
+                                    a little further. When I was in my early teens, my diet would mainly consist of bread, meat, milk, and sweets. It's
+                                    a wonder I am still alive :-]
+                                </p>
+
+                                <p>
+                                    Jokes aside, I heard pretty often that young people can get away with bad lifestyles. Some say it's because they are
+                                    still growing. Maybe it also has to do with the short exposure to their lifestyle choices so they don't have such a
+                                    big impact on their body. In any case, for the longest time I had been under the assumption that a meal without meat
+                                    is not a proper meal, and that vegetables might be healthy but that you don't really need them that much.
+                                </p>
+
+                                <p>
+                                    Well, as many things do, my diet started changing once I moved out from home. I still took in animal products such as
+                                    eggs and chicken. But, at least, the consumption of fatty and red meats, milk, and cheeses seemed to decrease. This was
+                                    simply because your fridge only supplies those foods that you yourself provide. And in this case I didn't buy a
+                                    whole spectrum of foods but rather selected a few that, I thought, would be the right ones for my lifestyle.
+                                </p>
+
+                                <p>
+                                    That lifestyle, at that time, was predominantly revolved around sports. It still is today, but in a different way.
+                                    More on that later. Things stayed like that for many of the following years. One thing that changed though, was my perception
+                                    of what kinds of foods could be more beneficial for the development of my mind and body. Year after year, vegetables
+                                    replaced many of the not so healthy foods. I started experimenting with protein shakes as a way to replace the missing
+                                    proteins from my now vegetable-centric diet.
+                                </p>
+
+                                <p>
+                                    One more thing that I observed was that my breakfast was almost vegan. Since I moved out from home I've basically been
+                                    eating the same breakfast: oatmeal, in different variations. The first years mainly with fruits and yoghurt, nowadays
+                                    with various nuts and plant-based milk. I evolved my diet to be as efficient and nutritious as possible, as I've been
+                                    steadily increasing my focus on sport, the healthy lifestyle, and a clear mind.
+                                </p>
+
+                                <p>
+                                    Fast forward to 2019 and the only animal products I consumed were chicken and occasionally some milk. My roommate at that
+                                    time introduced me to delicious vanilla soy milk which slowly replaced the remaining dairy products that I would in some
+                                    instances still consume. So, there I was, with the only product that was non-vegan being chicken. So, I thought:
+                                    “What if I replaced chicken with a vegan alternative? Then my diet would be fully vegan. I could try it out, just for fun.”
+                                    And I did.
+                                </p>
+
+                                <p>
+                                    I started using tempeh instead of chicken, and, honestly, it wasn't too bad. Especially when preparing tempeh properly.
+                                    Obviously, I didn't fully restrict myself to animal products at that time. So, from time to time, I would buy things
+                                    like ham sandwiches. That was mostly on weekends as a treat. Since then I consciously reduced even the little treats until
+                                    I reached a point of full veganism.
+                                </p>
+
+                                <p>
+                                    There might still be instances when I consume animal products, but that is because of politeness when eating self-made
+                                    meals by others or to reduce food waste. Other than that, my diet is fully vegan. You can see that my transformation was
+                                    quite natural and didn't happen overnight. And for anyone who is contemplating doing something like this, I suggest doing
+                                    it the same way: taking your time with the change and not being harsh with yourself. Everything takes time, especially
+                                    changing something so deep-rooted as eating habits that also have some social construct embedded in them.
+                                </p>
+
+                                <p>
+                                    Coming to the main topic: over the years I read more and more about dieting and foods to incorporate or avoid in your diet.
+                                    Part of my research also focused on the question of whether a vegan diet is detrimental to endurance and muscle strength.
+                                    This is especially interesting for me as I'm physically quite active. A quick search on Google Scholar yields some
+                                    interesting research that could help us understand the impact of vegan diets on performance and overall health for
+                                    physically active people.
+                                </p>
+
+                                <p>
+                                    In their
+                                    <a style="display: inline; color:blue" href="https://doi.org/10.1038/s41430-020-0639-y" title="Vegan Diet and Endurance/Strength" target="_blank" rel="noopener noreferrer">paper</a>,
+                                    Boutros et al. examine endurance and muscle strength differences between vegan and omnivore participants. The authors
+                                    “studied 56 healthy young lean physically active women [...] classified as vegan (n = 28) or omnivore (n = 28) based
+                                    on their eating habits. All volunteers followed either a vegan or an omnivore diet for at least 2 years.”
+                                </p>
+
+                                <p>
+                                    The results show that “vegans had a significantly higher estimated VO<sub>2</sub> max [...] and submaximal endurance time
+                                    to exhaustion compared with omnivores.” Further, “submaximal endurance might be better in vegans compared with omnivores.”
+                                    The authors suggest that “[o]ne potential mechanism that could explain the greater level of endurance performance in vegans
+                                    may be a higher amount of carbohydrate intake. Evidence has suggested that greater carbohydrate intake may be associated
+                                    with a better endurance performance and this could be due to higher muscle glycogen storage.” Also, “[o]ther potential
+                                    mechanisms that may explain the better endurance performance in vegans could be due to favorable oxidative stress and
+                                    inflammation profiles.”
+                                </p>
+
+                                <p>
+                                    In their
+                                    <a style="display: inline; color:blue" href="https://doi.org/10.3390/nu13113884" title="Impact of Vegan Diet on Performance" target="_blank" rel="noopener noreferrer">explorative study</a>,
+                                    Pohl et al. explain that “existing literature indicates the influence of particularly important nutrients [...] on
+                                    molecular signaling in tissues and in the long-term different diet regimens may therefore affect exercise performance.”
+                                    Furthermore they suggest that “[v]egan and vegetarian diets possess potentially beneficial properties for the gut
+                                    microbiome and might therefore influence those mechanisms which may affect in the long-term exercise performance.”
+                                </p>
+
+                                <p>
+                                    Finally, Durkalec-Michalski et al. present an
+                                    <a style="display: inline; color:blue" href="https://doi.org/10.3390/nu14040894" title="Four-Week Vegan Diet on Performance" target="_blank" rel="noopener noreferrer">interventional study</a>
+                                    on “the effect of a four-week vegan diet [...] during a four-week high-intensity functional training [...] on performance,
+                                    training results and blood biochemical indices” in a mixed group. The authors discuss that “[a]fter the four-week
+                                    nutritional interventions, individual groups experienced a significant increase in the number of repetitions performed
+                                    [...] and a significant improvement in the speed and a shorter time of completing training units [...].”
+                                </p>
+
+                                <p>
+                                    Here, the authors mention that, at least for short and intense cross-training exercises, the increased intake of carbohydrates
+                                    in vegan diets does not seem to have an effect on the performance of the test participants. The authors also mention that
+                                    “endurance training tends to reduce iron stores” and that “a high prevalence of iron depletion and anaemia [in vegetarian
+                                    diets] are based on the poor bioavailability of iron from plant sources.” However, “iron deficiency anaemia rarely occurs
+                                    in vegetarian athletes and a mild iron deficiency is not likely to impair performance. Surprisingly, contrary to what is
+                                    commonly believed, this study did not reveal any significant changes in iron metabolism markers (iron, transferrin,
+                                    ferritin) between the groups.” The authors go on to talk about mixed observations in other studies regarding iron
+                                    metabolism markers in people with vegan and omnivore diets.
+                                </p>
+
+                                <p>
+                                    From my personal observations, in the six years that I am following it, I couldn't observe any direct negative effects from
+                                    my vegan diet on endurance, muscle strength, and overall well-being. In fact, in these six years my strength and endurance
+                                    have steadily increased, albeit it probably having more to do with the regular workouts rather than dramatic changes from
+                                    the different diet.
+                                </p>
+
+                                <p>
+                                    There have definitely been other observable positive effects, though. Since the change to plant-based products, I noticed
+                                    that I very rarely get inflammations that I would usually get when following an omnivore diet. Those are, for instance,
+                                    inflammation of my gums or my skin. Some studies
+                                    [<a style="display: inline; color:blue" href="https://doi.org/10.1038/s41598-020-78426-8" title="Vegan diet and inflammatory markers 1" target="_blank" rel="noopener noreferrer">1</a>,
+                                    <a style="display: inline; color:blue" href="https://doi.org/10.1038/s41598-020-58875-x" title="Vegan diet and inflammatory markers 2" target="_blank" rel="noopener noreferrer">2</a>,
+                                    <a style="display: inline; color:blue" href="https://doi.org/10.1161/JAHA.118.011367" title="Vegan diet and inflammatory markers 3" target="_blank" rel="noopener noreferrer">3</a>]
+                                    suggest that there might be a link between a vegan diet and reduced inflammatory markers. Other studies explain, though,
+                                    that the observations are not definitive and further ones are needed to support this claim.
+                                </p>
+
+                                <p>
+                                    What is definitive is that some meats negatively impact inflammatory markers in humans, as shown
+                                    <a style="display: inline; color:blue" href="https://doi.org/10.1093/cdn/nzac068.023" title="Meats and inflammatory markers" target="_blank" rel="noopener noreferrer">here</a>.
+                                    Especially red meats and poultry (and with that eggs) contain the omega-6 fat arachidonic acid which is shown to cause
+                                    inflammation. This acid can't be found in vegetable sources. This could at the same time potentially be disadvantageous
+                                    for vegans, as these acids do have some benefits.
+                                </p>
+
+                                <p>
+                                    One other thing I noticed is that I can process foods much quicker and easier now. I don't feel bloated, never have an upset
+                                    stomach, and feel much lighter during my workouts with a strictly vegan diet. I can definitely feel the contrast on the rare
+                                    occasion that I do consume some animal products, especially when they are greasy and overly spicy. Then I get problems with
+                                    my digestion and feel sluggish.
+                                </p>
+
+                                <p>
+                                    I also notice that a plant-based diet helps me get through the day easier without fatigue. This could be due to omnivore diets
+                                    often being heavier. By now, I barely consume any added fats and keep my meals light and natural. The same can't always be
+                                    said about omnivore meals that can potentially be heavily processed. But then again, this might have more to do with preparing
+                                    one's own meals versus eating out. I noticed that I pretty much fully stopped eating out and that I prepare my own meals on
+                                    a daily basis. Doing the same on an omnivore diet could yield the same benefits that I mentioned above.
+                                </p>
+
+                                <p>
+                                    One last thing that I would like to discuss is the myths that go around in non-vegan communities. One thing I often hear from
+                                    people that are open-minded and tried out a vegan diet before is something like: “I tried the plant-based diet but after a
+                                    couple of weeks I noticed a decline in mental and physical health. This probably has to do with something missing in plant-based
+                                    diets that my body needs.”
+                                </p>
+
+                                <p>
+                                    Well, I would argue that it isn't veganism in its broader sense that leads to such effects but rather the personal choice of
+                                    a specific vegan diet. Becoming vegan by taking out all the animal products in your current diet without any substitutions and
+                                    additional provisions is unsustainable. And I suspect that many people fail their transition because of that. Becoming vegan
+                                    means informing oneself about macro- and micronutrients, one's own predispositions, and the importance of complete and
+                                    well-balanced diets in general. And I recommend learning about this to anyone, even outside of veganism.
+                                </p>
+
+                                <p>
+                                    I'm a big advocate of at least one protein-rich food source in each meal. This is something many people miss when not
+                                    substituting animal products with plant-based products that are rich in proteins. Another example is the link between vegan
+                                    diets and vitamin B12 deficiency. It is true that vegans do need to supplement vitamin B12 in some form if not mitigating
+                                    the deficiency directly through certain foods.
+                                </p>
+
+                                <p>
+                                    From my own observations, there seems to be a consensus around non-vegans that a vegan diet is incomplete and can therefore
+                                    not be healthy for humans, because of the need for certain additional supplements. However, what most people don't know is
+                                    that these deficiencies are more of a symptom from a society that is, in a nutritional sense, based on a heavy meat industry
+                                    which fails to address needs for people with other diets rather than stemming from veganism as a root cause.
+                                </p>
+
+                                <p>
+                                    Vitamin B12, for instance, cannot be synthesized by either plants or animals. Instead, animals (and humans alike) get vitamin
+                                    B12 through microorganisms which are ingested with soil or bacteria. The reason vegans don't get enough vitamin B12 through
+                                    a plant-based diet is mostly because of plants being processed — that is, washed, peeled, etc. — and the soil and bacteria
+                                    being removed in the process. Omnivores don't need to care about this as the animal products they ingest are rich in vitamin
+                                    B12 from the raw plants the animals consumed during their life.
+                                </p>
+
+                                <p>
+                                    This is just one example of the skewed perception that currently exists for some when thinking about plant-based diets. There
+                                    are many more interesting facts and I suggest reading about them if you are interested in the topic. Going further into detail
+                                    about them here would go beyond the scope of this article.
+                                </p>
+
+                                <p>
+                                    Finally, I would like to say that just seven years ago I believed that alternative diets like the vegan diet are delusional.
+                                    By informing myself about diets, tracking my health with regular blood samples, and gradually transitioning to a fully
+                                    plant-based diet I established a sustainable way of veganism, <u>for myself</u>. There will definitely be nuances for other
+                                    people with different physiologies. Or, a vegan diet might not be feasible at all for some people with certain predispositions
+                                    or health issues. Nevertheless, and perhaps because of it, it is imperative to learn about different diets, one's personal
+                                    needs, and the possibilities of change.
+                                </p>
+
                             </td>
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
                 </div>
 
-                <button class="accordion"><h3 style="font-variant:small-caps">Thoughts on climate and environmental changes</h3></button>
-                <div class="panel">
+                <button class="accordion article-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-meta">2025-04-01</div>
+                        <div class="accordion-tag">Environment</div>
+                    </div>
+                    <h3>Thoughts on climate and environmental changes</h3>
+                </button>
+
+                <div class="panel article-panel">
                     <table style="width:100%">
                         <tr><td><br></td></tr>
                         <tr>
                             <td class="one"></td>
-                            <td class="four"><i>2025-04-01</i></br></br>
-                                The topic of climate change and environmental impacts is being discussed more than ever. And for a good reason. News 
-                                about extreme weather phenomena around the globe are accumulating. These seem to be rising steadily and show correlation 
-                                with the increase in the average global temeperature. Let's start with a chart known to all, the annual mean temperature 
-                                trend. This one is taken from 
-                                <a style="display: inline; color:blue" href="https://climate.nasa.gov/vital-signs/global-temperature/?intent=121" title = "Global Temperature" target = "_blank" rel = "noopener noreferrer">NASA</a>: 
-                                </br></br>
+                            <td class="four">
+
+                                <p>
+                                    The topic of climate change and environmental impacts is being discussed more than ever, and for good reason. News
+                                    about extreme weather phenomena around the globe are accumulating. These seem to be rising steadily and show correlation
+                                    with the increase in the average global temperature.
+                                </p>
+
+                                <p>
+                                    Let's start with a chart known to all, the annual mean temperature trend. This one is taken from
+                                    <a style="display: inline; color:blue" href="https://climate.nasa.gov/vital-signs/global-temperature/?intent=121" title="Global Temperature" target="_blank" rel="noopener noreferrer">NASA</a>:
+                                </p>
+
                                 <figure>
-                                    <img src="resources/Climate trend.svg" title = "Global Land-Ocean Temperature Index"/>
-                                    <figcaption style = "text-align: center !important;">Fig. 3.1 - Global land-ocean temperature index from 1880 to 2024.</figcaption>
+                                    <img src="resources/Climate trend.svg" title="Global Land-Ocean Temperature Index"/>
+                                    <figcaption style="text-align: center !important;">Fig. 3.1 - Global land-ocean temperature index from 1880 to 2024.</figcaption>
                                 </figure>
-                                </br>
-                                The temperature anomaly in degrees Celsius are plotted on the y-axis over the years 1880 to 2024 on the x-axis. 
-                                "[The] graph shows the change in global surface temperature compared to the long-term average from 1951 to 1980. 
-                                Earth’s average surface temperature in 2024 was the warmest on record since recordkeeping began in 1880." But what 
-                                does that mean? When looking at the plot, some people suggest that earth has had volatile temperature changes before. 
-                                That is true, however, what is alarming is the speed at which we experience the current increase in global temperature.  
-                                <a style="display: inline; color:blue" href="https://doi.org/10.1038/s41586-021-03984-4" title = "Global Surface Temperatures" target = "_blank" rel = "noopener noreferrer">This</a> 
-                                research shows that "[t]he magnitude and rate [of] warming over the last 150 years far surpasses the magnitude and 
-                                rate of changes over the last 24,000 years." Related: 
-                                <a style="display: inline; color:blue" href="https://xkcd.com/1732/" title = "Timeline Average Temperature Comic" target = "_blank" rel = "noopener noreferrer">https://xkcd.com/1732/</a>. 
-                                If we plotted the average global temperature over a longer period, let's say the last billion years, the temperature 
-                                increase we observed over the last few years would look like a vertical wall in our plot. This discontinuous trend  
-                                could be a cause for concern.</br></br> 
-                                An interesting observation is the correlation between the rise in temperature and the increase in CO<sub>2</sub> levels. 
-                                With the global temperature, the carbon dioxide levels have risen steadily. Following figure shows the global carbon 
-                                dioxide index from 1958 to 2024:
-                                </br></br>
+
+                                <p>
+                                    The temperature anomaly in degrees Celsius is plotted on the y-axis over the years 1880 to 2024 on the x-axis.
+                                    “[The] graph shows the change in global surface temperature compared to the long-term average from 1951 to 1980.
+                                    Earth’s average surface temperature in 2024 was the warmest on record since recordkeeping began in 1880.”
+                                </p>
+
+                                <p>
+                                    But what does that mean? When looking at the plot, some people suggest that Earth has had volatile temperature changes
+                                    before. That is true. What is alarming, however, is the speed at which we experience the current increase in global
+                                    temperature.
+                                    <a style="display: inline; color:blue" href="https://doi.org/10.1038/s41586-021-03984-4" title="Global Surface Temperatures" target="_blank" rel="noopener noreferrer">This</a>
+                                    research shows that “[t]he magnitude and rate [of] warming over the last 150 years far surpasses the magnitude and
+                                    rate of changes over the last 24,000 years.” Related:
+                                    <a style="display: inline; color:blue" href="https://xkcd.com/1732/" title="Timeline Average Temperature Comic" target="_blank" rel="noopener noreferrer">https://xkcd.com/1732/</a>.
+                                    If we plotted the average global temperature over a longer period, let's say the last billion years, the temperature
+                                    increase we observed over the last few years would look like a vertical wall in our plot. This discontinuous trend
+                                    could be a cause for concern.
+                                </p>
+
+                                <p>
+                                    An interesting observation is the correlation between the rise in temperature and the increase in CO<sub>2</sub> levels.
+                                    With the global temperature, the carbon dioxide levels have risen steadily. The following figure shows the global carbon
+                                    dioxide index from 1958 to 2024:
+                                </p>
+
                                 <figure>
-                                    <img src="resources/Carbon trend.svg" title = "Global Carbon Dioxide Index"/>
-                                    <figcaption style = "text-align: center !important;">Fig. 3.2 - Global carbon dioxide index from 1958 to 2024.</figcaption>
+                                    <img src="resources/Carbon trend.svg" title="Global Carbon Dioxide Index"/>
+                                    <figcaption style="text-align: center !important;">Fig. 3.2 - Global carbon dioxide index from 1958 to 2024.</figcaption>
                                 </figure>
-                                </br>
-                                In this plot, the CO<sub>2</sub> parts per million are plotted on the y axis. 
-                                There are several reasons for the steady increase in carbon dioxide levels over the last decades. Some of the are 
-                                following: 
-                                </br></br>
+
+                                <p>
+                                    In this plot, the CO<sub>2</sub> parts per million are plotted on the y-axis. There are several reasons for the steady
+                                    increase in carbon dioxide levels over the last decades. Some of them are the following:
+                                </p>
+
                                 <ul style="padding-left:30px">
-                                    <li>Burning of fossil fuels — the burning of coal, oil, and natural gas. This process has increased with the 
-                                        advent of the industrial revolution. 
-                                    </li>
-                                    <li>Cement production — during cement production, carbon dioxide is released as a biproduct</li>
-                                    <li>Deforestation — the clearing of forests significantly decreases the number of trees that can absorb carbon 
-                                        dioxide from the air
-                                    </li>
-                                    <li>Population growth — with an increase in the global population, the demand for energy rises. This is reinforced 
-                                        by the use of fossil fuels to meet the rising demand for energy. 
-                                    </li>
-                                </ul> 
-                                </br>
-                                Regarding the causality between the increase in carbon dioxide levels and the temperature on earth, there are some 
-                                studies that could suggest opposing findings. One of those studies is a paper 
-                                [<a style="display: inline; color:blue" href="https://doi.org/10.3390/cli5040076" title = "Relationship between Atmospheric Carbon Dioxide Concentration and Global Temperature" target = "_blank" rel = "noopener noreferrer">1</a>] 
-                                from Davis which analyzes data from the last 425 million years regarding carbon dioxide levels. The author only finds 
-                                weak correlation between the two metrics. The study uses Phanerozoic Eon databases and MODTRAN modeling for the findings. 
-                                The authors claim that changes in atmospheric CO<sub>2</sub> concentration did not cause temperature change in the 
-                                ancient climate. The conclusion of the paper is that, while the atmospheric concentration of carbon dioxide is not 
-                                correlated with temperature over most of the ancient (Phanerozoic) climate and regulation of anthropogenic carbon 
-                                dioxide emissions may be less important than previously thought for controlling global temperature, these emissions 
-                                are more important than previously recognized for conserving biodiversity. At the same time, the author warns that 
-                                there is a potential link between atmospheric carbon dioxide levels and historical mass extinctions during the 
-                                Phanerozoic Eon. Regarding correlation vs. causation the author does emphasize that the former does not imply the latter. 
-                                One of the reasons is the low sampling resolution for the data used in the study. Generally, it is difficult to get 
-                                precise and high resolution samples from which results are extrapolated.</br></br> 
-                                Regardless of the different studies, the climate change is real and it's there, and our civilization has to deal with 
-                                it. An interesting observation I read about more often recently is the disconnect between humans and nature. There 
-                                seems to be a trend of people moving to bigger cities and small villages dying out. Some experts predict that in a couple 
-                                of decades the majority of people will be living in mega cities. While this is benificial for servicing a population, 
-                                it might be counter productive for our survival, in case we cannot halt the current temperature increase. 
-                                </br></br>
-                                <i>To be continued...</i>          
+                                    <li>Burning of fossil fuels — the burning of coal, oil, and natural gas. This process has increased with the advent of the industrial revolution.</li>
+                                    <li>Cement production — during cement production, carbon dioxide is released as a byproduct.</li>
+                                    <li>Deforestation — the clearing of forests significantly decreases the number of trees that can absorb carbon dioxide from the air.</li>
+                                    <li>Population growth — with an increase in the global population, the demand for energy rises. This is reinforced by the use of fossil fuels to meet the rising demand for energy.</li>
+                                </ul>
+
+                                <p>
+                                    Regarding the causality between the increase in carbon dioxide levels and the temperature on Earth, there are some
+                                    studies that could suggest opposing findings. One of those studies is a paper
+                                    [<a style="display: inline; color:blue" href="https://doi.org/10.3390/cli5040076" title="Relationship between Atmospheric Carbon Dioxide Concentration and Global Temperature" target="_blank" rel="noopener noreferrer">1</a>]
+                                    from Davis which analyzes data from the last 425 million years regarding carbon dioxide levels. The author only finds
+                                    weak correlation between the two metrics.
+                                </p>
+
+                                <p>
+                                    The study uses Phanerozoic Eon databases and MODTRAN modeling for the findings. The author claims that changes in
+                                    atmospheric CO<sub>2</sub> concentration did not cause temperature change in the ancient climate. The conclusion of the
+                                    paper is that, while the atmospheric concentration of carbon dioxide is not correlated with temperature over most of
+                                    the ancient (Phanerozoic) climate and regulation of anthropogenic carbon dioxide emissions may be less important than
+                                    previously thought for controlling global temperature, these emissions are more important than previously recognized for
+                                    conserving biodiversity.
+                                </p>
+
+                                <p>
+                                    At the same time, the author warns that there is a potential link between atmospheric carbon dioxide levels and historical
+                                    mass extinctions during the Phanerozoic Eon. Regarding correlation vs. causation the author does emphasize that the former
+                                    does not imply the latter. One of the reasons is the low sampling resolution for the data used in the study. Generally,
+                                    it is difficult to get precise and high-resolution samples from which results are extrapolated.
+                                </p>
+
+                                <p>
+                                    Regardless of the different studies, climate change is real and our civilization has to deal with it. An interesting
+                                    observation I read about more often recently is the disconnect between humans and nature. There seems to be a trend of
+                                    people moving to bigger cities and small villages dying out. Some experts predict that in a couple of decades the majority
+                                    of people will be living in mega cities. While this is beneficial for servicing a population, it might be counterproductive
+                                    for our survival in case we cannot halt the current temperature increase.
+                                </p>
+
+                                <p><i>To be continued...</i></p>
+
                             </td>
                             <td class="one"></td>
                         </tr>
@@ -397,60 +567,7 @@
         © 2026 www.bojanlukic.com
     </footermedia>
     
-    <script>
-        // Accordion menu script
-        // Current issues with dynamic figure size inside accordion prevent the accordion to span full content height. 
-        // Current solution is for DOM to finish loading before executing the script. A timeout of 30 ms seems to be 
-        // the minimum time here. 
-        // Not optimal, root for issue still needs to be explored. 
-        setTimeout(() => {
-            var acc = document.getElementsByClassName("accordion");
-            
-            // Get elements and sub elements from html 
-            var pan = document.getElementsByClassName("panel");
-            var accImgs = pan[0].getElementsByTagName("figure");
-            var accTabs = pan[0].getElementsByTagName("table");
-            heights = 0;
-            if (accImgs.length > 0) {
-                for (i = 0; i < accImgs.length; i++) {
-                    heights += accImgs[i].clientHeight;
-                }
-            }
-            if (accTabs.length > 0) {
-                for (i = 0; i < accTabs.length; i++) {
-                    heights += accTabs[i].clientHeight;
-                }
-            }
-
-            //window.alert(accImgs.length);
-            //window.alert(clientHeight);
-
-            // Another approach is to use the initial calculation of figure height from css. This is not ideal, though, 
-            // as this does not return the true height of the figure, but rather the max height it could have. 
-            //var pan = document.getElementsByClassName("panel");
-            //var accImgs = pan[0].getElementsByTagName("figure");
-            //var clientHeight = ((650 / window.innerHeight) ** 1.1) * window.innerHeight;
-            
-            var i;
-            // Currently not ideal as there is no animation using percentages (for whatever reason)
-            acc[0].nextElementSibling.style.maxHeight = (acc[0].nextElementSibling.scrollHeight + heights) + "px";
-            acc[0].classList.toggle("active");
-
-            for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.maxHeight) {
-                        panel.style.maxHeight = null;
-                    } 
-                    else {
-                        panel.style.maxHeight = panel.scrollHeight + "px";
-                    } 
-                });
-            }
-        }, "200");
-    </script>
-
+    <script src="../accordion.js"></script>
 	<script src = "../scripts.js"></script> 
 	
 </body>
