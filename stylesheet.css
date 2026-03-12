@@ -1281,10 +1281,6 @@ body.header-small #container {
     padding-right: 10px !important;
   }
 
-  body {
-    background-color: var(--c-surface);
-  }
-
   figcaption {
     text-align: center !important;
   }
@@ -1294,18 +1290,30 @@ body.header-small #container {
     transform-origin: none !important;
   }
 
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--c-surface);
+  }
+  
+  html, body {
+    min-height: 100%;
+  }
+
   #article {
     width: 100% !important;
-    min-height: 0 !important;
+    min-height: calc(100vh - var(--mobile-header-offset)) !important;
     padding-top: 0 !important;
     margin-top: var(--mobile-header-offset);
     transition: margin-top 0.35s cubic-bezier(.4, 0, .2, 1);
   }
-
-  #text {
-    width: 100% !important;
-    height: auto;
-    padding: 0.25rem !important;
+  
+  section {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
   }
 
   footer {
@@ -1319,6 +1327,15 @@ body.header-small #container {
     text-align: center;
     background: var(--c-footer-bg);
     color: var(--c-accent);
+    margin-top: auto;
+    flex-shrink: 0;
+  }
+
+  
+  #text {
+    width: 100% !important;
+    height: auto;
+    padding: 0.25rem !important;
   }
 
   #nav,
