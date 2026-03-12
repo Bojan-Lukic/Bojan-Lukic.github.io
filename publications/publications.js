@@ -54,8 +54,6 @@ function buildFilters(publications) {
     option.textContent = tag;
     tagSelect.appendChild(option);
   }
-
-  publications.sort((a, b) => b.year - a.year); 
 }
 
 function matchesFilters(pub) {
@@ -68,7 +66,7 @@ function matchesFilters(pub) {
   if (role && pub.role !== role) return false;
   if (type && pub.type !== type) return false;
   if (year && String(pub.year) !== year) return false;
-  if (tag && !(pub.tags || []).includes(tag)) return false;
+  if (tag && !(pub.tags || []).map(normalize).includes(normalize(tag))) return false; 
 
   if (!query) return true;
 
@@ -97,6 +95,12 @@ function renderLinks(links) {
   }).join("");
 }
 
+function renderPdfLink(pdf) {
+  if (!pdf) return "";
+  const url = escapeHtml(pdf);
+  return `<a class="pub-link pub-link-pdf" href="${url}" target="_blank" rel="noopener noreferrer">PDF</a>`;
+} 
+
 function renderTags(tags) {
   if (!tags || !tags.length) return "";
   return tags.map(tag => `<span class="pub-tag">${escapeHtml(tag)}</span>`).join("");
@@ -114,7 +118,7 @@ function publicationCard(pub, index) {
     ? `
       <div class="pub-bibtex" id="${pubId}" hidden>
         <div class="pub-bibtex-bar">
-          <button class="pub-bibtex-copy" type="button" data-bibtex-copy="${pubId}">⎘</button>
+          <button class="pub-bibtex-copy" type="button" data-bibtex-copy="${pubId}" aria-label="Copy BibTeX" title="Copy BibTeX">⎘</button>
         </div>
         <pre>${escapeHtml(pub.bibtex)}</pre>
       </div>
@@ -234,9 +238,3 @@ function bindBibtexActions() {
     document.getElementById("pub-list-co").innerHTML = "";
   }
 })(); 
-
-function renderPdfLink(pdf) {
-  if (!pdf) return "";
-  const url = escapeHtml(pdf);
-  return `<a class="pub-link pub-link-pdf" href="${url}" target="_blank" rel="noopener noreferrer">PDF</a>`;
-} 
