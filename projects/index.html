@@ -197,6 +197,152 @@
                             <td class="one"></td>
                         </tr>
                     </table><br><br>
+                </div> 
+
+                <button class="accordion project-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-tag project-tag completed">Completed</div>
+                        <div class="accordion-meta">MATLAB / GUI / Chromium / PDF Export</div>
+                    </div>
+                    <h3>GUI Print to PDF for Chromium Windows in MATLAB</h3>
+                    <div class="project-summary">
+                        Notes on exporting MATLAB GUI windows as scalable PDF graphics, with emphasis on the transition from classic UI figures to Chromium-based web windows.
+                    </div>
+                </button>
+
+                <div class="panel project-panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="four">
+
+                                <p>
+                                    I like to use scalable images whenever possible (ignore the images used in this entry below!!). Taking screenshots 
+                                    of MATLAB GUIs has been a little frustrating in this regard: how do you capture application
+                                    windows as scalable images rather than simple raster screenshots? In many cases, the real goal is not just to
+                                    "take a screenshot," but to export the visible GUI state in a format that remains sharp when zooming or printing.
+                                    PDF export is particularly useful here because it preserves quality much better than a standard bitmap capture.
+                                </p>
+
+                                <p>
+                                    What makes this topic interesting is that MATLAB currently spans two different GUI worlds. For a long time,
+                                    many MATLAB windows were handled as UI figures, that is, objects of type <code>matlab.ui.Figure</code>.
+                                    More recently, MathWorks has been moving parts of its interface stack toward web-based windows built on top of
+                                    HTML content served locally and rendered through the Chromium Embedded Framework (CEF). These windows are exposed
+                                    internally through objects such as <code>matlab.internal.webwindow</code>.
+                                </p>
+
+                                <p>
+                                    From a user perspective, both may appear as ordinary MATLAB application windows. From a technical perspective,
+                                    however, exporting them is fundamentally different. That difference is exactly what makes this problem slightly
+                                    obscure: the correct export method depends on the kind of window you are dealing with.
+                                </p>
+
+                                <p>
+                                    A useful background reference on this broader transition is the Undocumented MATLAB article on customizing UI figures:
+                                    <a style="display: inline; color:blue" href="https://undocumentedmatlab.com/articles/customizing-uifigures-part-1" title="Customizing uifigures part 1" target="_blank" rel="noopener noreferrer">
+                                        Customizing uifigures, part 1
+                                    </a>.
+                                </p>
+
+                                <p>
+                                    For classic UI figures, the main challenge is often simply obtaining the correct figure handle, especially if the
+                                    application was not developed from scratch and the relevant figure handle was never stored explicitly during creation.
+                                    In such cases, one practical approach is to search for the window by name:
+                                </p>
+
+                                <code class="project-code-block">
+fig = findall(0, 'Name', 'MyApp');
+exportapp(fig(1), 'MyApp.pdf')
+                                </code>
+
+                                <p>
+                                    The first line searches for figures whose displayed window title matches the requested name. The second line exports
+                                    the selected figure directly to PDF using <code>exportapp</code>. In practice, the handle search may return multiple
+                                    figures, which is why selecting a specific entry such as <code>fig(1)</code> is often necessary. It is therefore
+                                    worth checking the size and contents of the returned variable before exporting.
+                                </p>
+
+                                <p>
+                                    This workflow is relatively straightforward once the handle has been identified. For UI figures, PDF export is
+                                    well-behaved and can serve as a simple way to capture the current state of an app window as a scalable artifact.
+                                </p>
+
+                                <p>
+                                    Chromium-based web windows are more complicated. These are internally managed through MATLAB's web window
+                                    infrastructure and are less prominently documented, which makes this a somewhat niche topic.
+                                    In that case, the relevant approach is based on the internal web window manager:
+                                </p>
+
+                                <code class="project-code-block">
+webWindows = matlab.internal.webwindowmanager.instance.findAllWebwindows();
+webWindow = webWindows(1);
+webWindow.printToPDF('MyApp.pdf')
+                                </code>
+
+                                <p>
+                                    Here, all currently active web windows in the MATLAB session are retrieved first. Then, as with the UI figure case,
+                                    the relevant window has to be selected manually from the returned list. Once the desired object is identified,
+                                    <code>printToPDF</code> can be used to export the Chromium-rendered content directly to a PDF file.
+                                </p>
+
+                                <p>
+                                    One practical complication is that the list may contain several unrelated internal windows, depending on what else
+                                    is open in the MATLAB session. That means the selection step is important, and in real workflows it is often helpful
+                                    to inspect the returned objects and identify the correct candidate before calling the export method.
+                                </p>
+
+                                <p>
+                                    An interesting side note is that MATLAB also exposes Chromium developer functionality for these web windows.
+                                    For instance, the DevTools for a given window can be opened programmatically:
+                                </p>
+
+                                <code class="project-code-block">
+webWindow.openDevTools
+                                </code>
+
+                                <figure>
+                                    <img src="resources/Dev tools web window.png" title="Dev tools web window"/>
+                                    <figcaption style="text-align: center !important;">Illustration A: Screenshot of the developer tools for web windows.</figcaption>
+                                </figure>
+
+                                <p>
+                                    This is surprisingly useful when trying to understand how a particular application window is rendered internally.
+                                    It also confirms quite directly that parts of the MATLAB GUI stack are effectively running as locally served web
+                                    applications inside embedded Chromium windows.
+                                </p>
+
+                                <p>
+                                    In the same spirit, the web window manager can also expose the local session URL associated with a given window.
+                                    These URLs typically point to a localhost or loopback address, for example:
+                                </p>
+
+                                <code class="project-code-block">
+https://127.0.0.1:31516/toolbox/systemcomposer/repository/project_app/web/index.html
+                                </code>
+
+                                <figure>
+                                    <img src="resources/Dev tools session.png" title="Dev tools web window"/>
+                                    <figcaption style="text-align: center !important;">Illustration B: Web session of a selected web window.</figcaption>
+                                </figure>
+
+                                <p>
+                                    This is a nice reminder of what is actually happening under the hood: the interface is not just a traditional desktop
+                                    widget hierarchy, but an HTML-based application served locally and rendered via CEF.
+                                </p>
+
+                                <p>
+                                    Overall, the main lesson from this topic is that exporting MATLAB windows as scalable graphics is not a single
+                                    universal operation anymore. It depends on whether the window is a classic UI figure or a Chromium-backed web
+                                    window. In any case, the resulting scalable screenshots are much better suited for publications or archived design
+                                    artifacts.
+                                </p>
+
+                            </td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
                 </div>
                 
                 <button class="accordion project-accordion">
