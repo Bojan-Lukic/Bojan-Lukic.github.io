@@ -36,6 +36,109 @@
                 <button class="accordion project-accordion">
                     <div class="accordion-meta-row">
                         <div class="accordion-tag project-tag completed">Completed</div>
+                        <div class="accordion-meta">Serverless / Edge Computing / GitHub API / Security</div>
+                    </div>
+                    <h3>Serverless Backend: GitHub PAT & Cloudflare Workers</h3>
+                    <div class="project-summary">
+                        Implemented a secure, serverless database solution using a private GitHub repository as the datastore, mediated by Cloudflare Workers and StatiCrypt encryption.
+                    </div>
+                </button>
+
+                <div class="panel project-panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="four">
+                                
+                                <p>
+                                    This is a project for all you static website enjoyers out there! 
+                                    The idea for this project was born from the need to add dynamic functionality to a static website without the overhead, cost, or security risks of maintaining a dedicated backend server and a traditional database (like SQL or MongoDB).
+                                </p>
+                                <p>
+                                    The solution leverages edge computing. I designed a system where a private GitHub repository acts as a flat-file database (storing JSON). A Cloudflare Worker, a serverless function running on Cloudflare's global network, acts as the safe <i>middleman</i>, handling authentication and processing data between the client's browser and the GitHub API.
+                                </p>
+
+                                <b>The Data Flow Architecture</b>
+                                <p>
+                                    The primary challenge was security: how can a client website write to a private GitHub repo without exposing a Personal Access Token (PAT) that has <i>write</i> permissions? The answer is never allowing the client to see the token.
+                                </p>
+
+                                <div class="project-diagram">
+                                    <h5>Illustration A: System Architecture (Logging Data)</h5>
+                                    <pre class="project-diagram-pre">
++-------------------+       Encrypted POST      +-------------------+
+| Client Browser    |-------------------------->| Cloudflare access |
+| (StatiCrypt Page) |    (JSON Session Data)    | (Worker Trigger)  |
++-------------------+                           +-------------------+
+                                                        |
+                    [Safe middleman handles auth]       |
+                                                        V
++-------------------+     Authenticated PUT     +-------------------+
+| GitHub Private    |<--------------------------| Cloudflare        |
+| Repo Datastore    |   (Includes Hidden PAT)   | Worker Function   |
+| (sessions.json)   |                           | [process & auth]  |
++-------------------+                           +-------------------+
+                                    </pre>
+                                </div>
+
+                                <p>As shown in Illustration A, when a user logs a session:</p>
+                                <ol style="padding-left: 20px;">
+                                    <li>The user authenticates via the StatiCrypt protected page. This ensures only authorized users access the form.</li>
+                                    <li>The browser sends the data via HTTP POST to a unique Cloudflare Worker endpoint.</li>
+                                    <li>The Worker function wakes up. It retrieves my PAT, which is securely stored within Cloudflare as an encrypted Environment Variable.</li>
+                                    <li>The Worker performs necessary data validation or formatting.</li>
+                                    <li>The Worker uses the Fetch API to communicate with the GitHub API, using the hidden PAT for authentication, to update the JSON file in the private repository.</li>
+                                </ol>
+                                
+                                <div class="project-diagram">
+                                    <h5>Illustration B: System Architecture (Fetching History)</h5>
+                                    <pre class="project-diagram-pre">
++-------------------+         HTTP GET          +-------------------+
+| Client Browser    |-------------------------->| Cloudflare access |
+| (Portfolio Site)  |    (Request History)      | (Worker Trigger)  |
++-------------------+                           +-------------------+
+                                                        |
+                                                        |
+                                                        V
++-------------------+     Authenticated GET     +-------------------+
+| GitHub Private    |<--------------------------| Cloudflare        |
+| Repo datastore    |   (Includes Hidden PAT)   | Worker Function   |
+| (sessions.json)   |                           | [fetch & serve]   |
++-------------------+                           +-------------------+
+                                    </pre>
+                                </div>
+
+                                <p>
+                                    Illustration B shows the flow for displaying information. The portfolio site requests the practice history through the Worker. The Worker fetches the private JSON file from GitHub using the hidden token, performs any required sorting, and serves it back to the portfolio site as a clean JSON response.
+                                </p>
+
+                                <b>Key Security Components</b>
+                                <p>
+                                    This architecture solves several critical security hurdles inherent in static site development:
+                                </p>
+                                <ul style="padding-left: 20px;">
+                                    <li><strong>GitHub Token Protection:</strong> By using Cloudflare Workers as a mediator, the PAT required to write to GitHub is never exposed to the client browser. It remains securely within the Cloudflare environment.</li>
+                                    <li><strong>StatiCrypt Protection:</strong> The submission form itself is encrypted using StatiCrypt. This adds a layer of authentication, ensuring that only users with the password can even see the form or trigger the Worker to add new data.</li>
+                                    <li><strong>Flat-File Database:</strong> Using JSON in a private repository is a high-availability, zero-cost, flat-file database solution perfectly suited for low-frequency, structured data logging.</li>
+                                </ul></br> 
+
+                                <p>
+                                    This approach demonstrates how edge computing can provide robust backend functionality to static sites, prioritizing security and cost-efficiency. 
+                                    If you are curious, I implemented this functionality for our Jazz band that I perform with regularly: 
+                                    <a style="display: inline; color:blue" href="https://www.theelevators.de" title="The Elevators" target="_blank" rel="noopener noreferrer">The Elevators</a>.</br>  
+                                    For obvious reasons, the demonstrator is only accessible via login, but feel free to explore the rest of our website ;-&#41;.
+                                </p>
+                                
+                            </td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div>
+
+                <button class="accordion project-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-tag project-tag completed">Completed</div>
                         <div class="accordion-meta">Avionics / Model-Based Development / Webinar</div>
                     </div>
                     <h3>Software Development and Integration in Safety-Critical Aerospace Systems</h3>
@@ -52,28 +155,29 @@
                             <td class="four">
 
                                 <p>
-                                    This entry is based on a webinar that I held together with MathWorks and SYSGO on the topic
+                                    At work, I am always looking for opportunities to collaborate with industry partners. Since my research 
+                                    is generally theoretical, such collaborations provide the opportunity to apply technologies to real life 
+                                    use cases and systems. This is why I held a webinar together with MathWorks and SYSGO on the topic
                                     <i>Software Development and Integration in Safety-Critical Aerospace Systems</i>.
                                     The webinar focuses on development and integration challenges in modern aerospace software systems,
                                     with particular attention to model-based approaches and the role of tooling in safety-critical contexts.
                                 </p>
 
                                 <p>
-                                    The work presented in the webinar is closely connected to a collaborative publication and reflects
+                                    The work presented in the webinar is based on a previously published collaborative effort between the 
+                                    German Aerospace Center (DLR), MathWorks, and SYSGO. The publication discusses 
                                     practical questions around structured software development, system integration, and validation in
                                     avionics environments. In that sense, the webinar served both as a technical presentation and as a
                                     way of communicating the broader ideas behind the underlying research to a wider engineering audience.
                                 </p>
 
                                 <p>
-                                    A related collaborative paper is available here:
+                                    The related paper is available here:
                                     <a style="display: inline; color:blue" href="https://doi.org/10.1109/DASC62030.2024.10749454" title="Related DASC paper" target="_blank" rel="noopener noreferrer">
-                                        2024 AIAA DATC/IEEE Digital Avionics Systems Conference paper
+                                        Systematic Approach to Model-Driven Development of Reconfigurable Avionics Systems
                                     </a>.
-                                </p>
-
-                                <p>
-                                    The webinar recording can be watched below:
+                                    </br>
+                                    The webinar recording is provided below:
                                 </p>
 
                                 <div class="video-container">
