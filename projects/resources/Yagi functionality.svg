@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="116 75 1112 339">
+  <title id="title">Minimal Yagi antenna LTE receive illustration with labels</title>
+  <desc id="desc">A minimal schematic showing a Yagi antenna pointed toward a cell tower, receiving LTE waves and feeding a 4G router, with a labeled higher-gain beam.</desc>
+
+  <defs>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f8df7" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#4f8df7" stop-opacity="0.24"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4f8df7"/>
+    </marker>
+  </defs>
+
+  <!-- Directional receive lobe -->
+  <path d="M560 214 L1058 120 L1058 400 L560 306 Z" fill="url(#beam)"/>
+  <path d="M560 240 Q775 232 1000 184" fill="none" stroke="#4f8df7" stroke-width="3" opacity="0.9"/>
+  <path d="M560 260 Q790 260 1038 260" fill="none" stroke="#4f8df7" stroke-width="4" opacity="0.95"/>
+  <path d="M560 280 Q775 288 1000 336" fill="none" stroke="#4f8df7" stroke-width="3" opacity="0.9"/>
+
+  <!-- Incoming LTE waves from tower toward antenna -->
+  <path d="M1058 170 C 995 200, 925 226, 850 246" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1076 260 C 1008 260, 940 260, 862 260" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1058 350 C 995 320, 925 294, 850 274" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <!-- Cell tower -->
+  <g transform="translate(1090 130)">
+    <path d="M40 0 L80 260 M120 0 L80 260" stroke="#2f3a46" stroke-width="5" stroke-linecap="round"/>
+    <path d="M56 62 L104 62 M48 118 L112 118 M40 176 L120 176 M32 236 L128 236" stroke="#2f3a46" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="80" cy="20" r="10" fill="#2f3a46"/>
+    <path d="M60 22 q20 -18 40 0" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <path d="M48 20 q32 -30 64 0" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <!-- Yagi antenna -->
+  <g transform="translate(430 160)">
+    <rect x="0" y="92" width="210" height="8" rx="4" fill="#2f3a46"/>
+    <line x1="20" y1="20" x2="20" y2="180" stroke="#2f3a46" stroke-width="7" stroke-linecap="round"/>
+    <line x1="72" y1="36" x2="72" y2="164" stroke="#2f3a46" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="72" cy="96" r="7" fill="#ffffff" stroke="#2f3a46" stroke-width="3"/>
+    <line x1="118" y1="48" x2="118" y2="152" stroke="#2f3a46" stroke-width="6" stroke-linecap="round"/>
+    <line x1="154" y1="56" x2="154" y2="144" stroke="#2f3a46" stroke-width="6" stroke-linecap="round"/>
+    <line x1="186" y1="64" x2="186" y2="136" stroke="#2f3a46" stroke-width="6" stroke-linecap="round"/>
+    <line x1="214" y1="72" x2="214" y2="128" stroke="#2f3a46" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Mount -->
+    <rect x="54" y="98" width="12" height="98" rx="6" fill="#6b7785"/>
+  </g>
+
+  <!-- Coax cable to router -->
+  <path d="M500 256 C 438 256, 394 268, 352 300 C 308 334, 258 344, 202 344" fill="none" stroke="#6b7785" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Router -->
+  <g transform="translate(120 304)">
+    <rect x="0" y="28" width="110" height="42" rx="10" fill="#ffffff" stroke="#2f3a46" stroke-width="4"/>
+    <line x1="26" y1="28" x2="18" y2="0" stroke="#2f3a46" stroke-width="4" stroke-linecap="round"/>
+    <line x1="84" y1="28" x2="92" y2="0" stroke="#2f3a46" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="26" cy="49" r="3.5" fill="#4f8df7"/>
+    <circle cx="42" cy="49" r="3.5" fill="#4f8df7" opacity="0.7"/>
+    <circle cx="58" cy="49" r="3.5" fill="#4f8df7" opacity="0.45"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="Arial, Helvetica, sans-serif" fill="#2f3a46">
+    <text x="118" y="408" font-size="22">4G router</text>
+    <text x="426" y="146" font-size="22">Yagi antenna</text>
+    <text x="1120" y="118" font-size="22">Cell tower</text>
+    <text x="807" y="96" font-size="22">Beam</text>
+  </g>
+</svg>

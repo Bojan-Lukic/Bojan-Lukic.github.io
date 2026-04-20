@@ -33,6 +33,194 @@
                     </div>
                 </div>
 
+                 <button class="accordion project-accordion">
+                    <div class="accordion-meta-row">
+                        <div class="accordion-tag project-tag completed">Completed</div>
+                        <div class="accordion-meta">Yagi Antenna / 4G Mobile Network / Signal Amplifier</div>
+                    </div>
+                    <h3>Directional Yagi Antenna for 4G Mobile Signal Gain in Home Networks</h3>
+                    <div class="project-summary">
+                        Built a simple signal amplifier using a yagi antenna for our remote vacation home located in the mountains.
+                    </div>
+                </button>
+
+                <div class="panel project-panel">
+                    <table style="width:100%">
+                        <tr><td><br></td></tr>
+                        <tr>
+                            <td class="one"></td>
+                            <td class="four">
+
+                                <p>
+                                    We have a vacation home in the mountains of Bosnia where my dad was raised. The location of the 
+                                    home is quite remote and deep in the mountains, at an altitude of roughly 700 m. Home networks in 
+                                    those places with cable connections are a rarity. Simply because there are virtually no cables 
+                                    running below the gravel roads through the mountains. Therefore, cable internet was never an 
+                                    option. But even mobile network coverage there is very low. The occassional phone calls work just 
+                                    fine. Getting a mobile internet signal, however, is a different story. I remember having to stand 
+                                    in very specific places, such as on the balcony, to get even one signal bar for stable internet 
+                                    calls. 
+                                </p>
+
+                                <p>
+                                    There are several reasons for the lacking mobile network coverage in remote places in Bosnia. For 
+                                    one, the network infrastructure is not nearly as mature as in other countries. The next cell tower 
+                                    could be several kilometres away. Additionally, being in mountainous regions can exacerbate the 
+                                    problem when hills cut the line of sight to these cell towers. At our remote vacation home, we are 
+                                    facing both of these problems. Therefore we have been searching for solutions to the lack of 
+                                    connectivity since a couple of years. 
+                                </p>
+
+                                <p>
+                                    Since mobile internet signals reach only certain spots of our home, we went straight to a satellite 
+                                    internet solution. For this, we looked for viable contracts from Germany to our place in Bosnia and 
+                                    found the provider 
+                                    <a style="display: inline; color:blue" href="https://filiago.de/" title="Filiago" target="_blank" rel="noopener noreferrer">Filiago</a>. 
+                                    Their service was good and even though we paid a hefty sum of 50 € for 10 GB of data per month, we 
+                                    finally had a stable internet connection for simple home use. 
+                                </p>
+
+                                <figure>
+                                    <img src="resources/Satellite antenna.jpg" title="View from our balcony with the satellite antenna"/>
+                                    <figcaption style="text-align: center !important;">Illustration A: View from our balcony with the satellite antenna installed.</figcaption>
+                                </figure> 
+
+                                <p>
+                                    The satellite modem was a Viasat Surfbeam 2 and it worked out of the box after installing the antenna, 
+                                    positioning it to Eutelsat 9° East, and connecting it. The latency of roughly 700 ms was expected but 
+                                    didn't bother us too much, as we have never had the requirement of real-time usage. 
+                                    After two years, though, we faced a couple of issues. First, shortly after the Ukraine-Russia war started, 
+                                    we lost internet connection abruptly. The provider contacted us and said that this is likely due to a 
+                                    Russian hacking incident. Interestingly enough, the whole modem was fried. It didn't turn on anymore, 
+                                    which, at that time, was quite concerning. I was wondering how you can break modems remotely with, what 
+                                    I can only assume, remote infiltration and placing of malicious payloads(?) to the modem. In any case, 
+                                    the provider sent us hardware replacements free of charge and everything worked fine after reinstalling 
+                                    the modem. However, after a couple of months the prices at Filiago increased by another 20 or 30 € per 
+                                    month for the same data package and we decided to end the contract.                                     
+                                </p>
+
+                                <p>
+                                    We were then looking for other solutions and the network class I had taken a couple of months earlier 
+                                    during my stay abroad at Tallinn University of Technology gave me an idea. In the class, we had worked 
+                                    with both directional and omnidirectional antennas for signal enhancements of Bluetooth, RFID, and other 
+                                    signals. Since network signals at our remote place are coming from single, distant directions, I was 
+                                    immediately thinking of using a directional antenna to amplify the signals that do come through to certain 
+                                    spots in our home. This, in combination with a simple 4G router would give us a simple and much cheaper 
+                                    solution. 
+                                </p>
+
+                                <p>
+                                    So I started my search for a simple directional antenna and the first thing that came to mind was a Yagi 
+                                    antenna. Ah yes, the good old Yagi antenna. High directional gain, simple construction, and it's dirt cheap. 
+                                    It seemed though that Yagi antennas specifically for 4G/LTE signals are quite nieche. At least I couldn't 
+                                    find many reliable results on the usual shopping sites. I tried my luck and bought following Yagi antenna 
+                                    with almost no reviews: 
+                                    <a style="display: inline; color:blue" href="https://www.amazon.de/dp/B09WD73H9R" title="Yagi antenna" target="_blank" rel="noopener noreferrer">Yagi antenna</a>.
+                                </p>
+
+                                <figure>
+                                    <img src="resources/Yagi antenna.jpg" title="Yagi antenna"/>
+                                    <figcaption style="text-align: center !important;">Illustration B: The Yagi antenna in the hands of my dad during setup.</figcaption>
+                                </figure> 
+
+                                <p>
+                                    In this context, I also did some research on the frequency bands for common mobile signal frequencies:                                     
+                                </p>
+
+                                <figure>
+                                    <img src="resources/Mobile frequencies.svg" title="Frequency bands for common mobile network technologies"/>
+                                    <figcaption style="text-align: center !important;">Illustration C: Frequency bands for common mobile network technologies.</figcaption>
+                                </figure> 
+
+                                <p>
+                                    I learned that technically, 4G and LTE use the exact same frequency spectrum. LTE (Long Term Evolution) 
+                                    is simply the technological standard that makes 4G possible. 4G was originally a strict speed standard 
+                                    defined by the ITU (International Telecommunication Union). LTE was developed as the technology path to 
+                                    eventually reach the 4G standard. Early LTE also fell short, but LTE-Advanced finally hit the true 4G 
+                                    mark. Today, the terms are used interchangeably.</br> 
+                                    I also figured that using lower frequency bands would make more sense in our scenario, as the network 
+                                    signal is generally low. As 5G is not really established in many parts of Bosnia yet, we didn't have to 
+                                    worry about any of those high frequency bands above 3 GHz. Ideally, we wanted to hit some bands below 
+                                    1 GHz, as those signals travel much farther and penetrate obstacles, like trees and hills, better than 
+                                    higher frequencies. We settled for a 
+                                    <a style="display: inline; color:blue" href="https://www.amazon.de/dp/B07MM1NDZR" title="4G router" target="_blank" rel="noopener noreferrer">TP-Link Archer MR200</a> as our 4G router. 
+                                    Setting the right frequency bands in the tp-link web interface was straightforward. 
+                                    I then bought an RG174 coaxial cable and some adapters for good measure to make sure that the cable going 
+                                    from the Yagi antenna to the router fits. Remember, driving one way from our place in Germany to our 
+                                    vacation home is roughly 1000 km. I wanted to avoid the search for adapters and cables locally in Bosnia 
+                                    at all costs, as it is generally very hard to find such specific hardware there. 
+                                    The sim card we bought from a local network provider for the 4G router was surprisingly cheap, with a 
+                                    couple dozen GB of data per month for roughly 10 €. What an improvement already to the satellite solution! 
+                                    But the important question was: Would it all work properly? 
+                                </p>
+
+                                <p>
+                                    We then set up the router with the sim card and replaced one of the standard antennas with the cable going 
+                                    to the Yagi antenna on the balcony: 
+                                </p>
+
+                                <figure>
+                                    <img src="resources/Router setup.jpg" title="Home router setup"/>
+                                    <figcaption style="text-align: center !important;">Illustration D: Home router with one standard antenna and the Yagi antenna.</figcaption>
+                                </figure> 
+
+                                <p>
+                                    I was contemplating for a short time using the satellite dish that was still installed from the previous 
+                                    satellite internet setup to craft a parabolic directional antenna. A directional antenna, much like a 
+                                    flashlight compared to a light bulb, concentrates the power supplied by the transmitter into a narrower 
+                                    space. With this, it increases the signal strength in a specific direction. This focus is what is meant 
+                                    by antenna gain or amplification: 
+                                </p>
+                                
+                                <figure>
+                                    <img src="resources/Yagi functionality.svg" title="Directional antenna functionality"/>
+                                    <figcaption style="text-align: center !important;">Illustration E: Functionality of a directional antenna for signal gain.</figcaption>
+                                </figure> 
+
+                                <p>
+                                    In theory, using the Yagi antenna in front of the parabolic satellite dish should yield a better signal 
+                                    coverage <b>under certain circumstances</b>:
+                                </p>
+                                
+                                <figure>
+                                    <img src="resources/Yagi parabolic functionality.svg" title="Directional antenna with parabolic antenna"/>
+                                    <figcaption style="text-align: center !important;">Illustration F: Functionality of a directional antenna in combination with a parabolic antenna.</figcaption>
+                                </figure> 
+
+                                <p>
+                                    Standard parabolic dishes are designed for C-band frequencies, which sit just above the S and L bands used 
+                                    by terrestrial LTE. For higher LTE bands (1800 MHz and up), the dish acts as a massive signal concentrator, 
+                                    but its effectiveness drops at lower frequencies where wavelengths are too large for the dish's physical 
+                                    diameter to reflect accurately. To make a Yagi work in this setup, it must be a compact, high-frequency 
+                                    model specifically positioned so its active element sits at the dish's exact focal point. This essentially 
+                                    turns the Yagi into a super-feeder. Under some circumstances, this setup also requires additional hardware, 
+                                    such as a diplexer. However, while a diplexer could theoretically combine this dish-boosted signal with a 
+                                    secondary antenna's input, more problems like phase alignment arise. Related: 
+                                    <a style="display: inline; color:blue" href="https://vikaskumar.org/2020/11/06/satellite-dish-antenna.html" title="Satellite dish antenna" target="_blank" rel="noopener noreferrer">RE-PURPOSE SATELLITE DISH TO CUSTOM DIRECTIONAL ANTENNA</a>. 
+                                    In the end, using a MIMO antenna to repurpose a satellite dish would be less of a hassle though and most 
+                                    likely more efficient as well. 
+                                </p>
+
+                                <p>
+                                    While I would have loved to repurpose the satellite dish previously used for satellite internet, I didn't 
+                                    want to and didn't have to take such drastic measures. Especially since we were operating in low frequency 
+                                    bands and the Yagi antenna should, with its highly directional properties, be enough to amplify the weak 
+                                    signal that we do receive. And indeed, with some fiddling, we achieved some good signal strength with the 
+                                    standalone Yagi setup! 
+                                    Tweaking some additional settings for the router, positioning the router itself properly, and fixing the 
+                                    Yagi antenna in place on the balcony gave us a stable enough connection to do our daily business without 
+                                    hassle. 
+                                </p>
+
+                                <p>
+
+                                </p>
+                            </td>
+                            <td class="one"></td>
+                        </tr>
+                    </table><br><br>
+                </div> 
+
                 <button class="accordion project-accordion">
                     <div class="accordion-meta-row">
                         <div class="accordion-tag project-tag completed">Completed</div>
@@ -174,8 +362,7 @@
                                 <p>
                                     The related paper is available here:
                                     <a style="display: inline; color:blue" href="https://doi.org/10.1109/DASC62030.2024.10749454" title="Related DASC paper" target="_blank" rel="noopener noreferrer">
-                                        Systematic Approach to Model-Driven Development of Reconfigurable Avionics Systems
-                                    </a>.
+                                    Systematic Approach to Model-Driven Development of Reconfigurable Avionics Systems</a>.
                                     </br>
                                     The webinar recording is provided below:
                                 </p>

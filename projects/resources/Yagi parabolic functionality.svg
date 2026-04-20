@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="116 97 1127 317">
+  <title id="title">LTE receive illustration with parabolic dish and Yagi feed</title>
+  <desc id="desc">A minimal schematic showing a parabolic dish behind a Yagi antenna. Straight incoming LTE signals from a nearby cell tower strike the parabolic dish, which focuses them toward the center of the Yagi antenna before the signal is routed to a 4G router.</desc>
+
+  <defs>
+    <linearGradient id="shortBeam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4f8df7" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#4f8df7" stop-opacity="0.02"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#4f8df7"/>
+    </marker>
+  </defs>
+
+  <!-- Short receive region around the Yagi instead of a long self-directed beam -->
+  <path d="M577 232 L817 206 L817 314 L577 288 Z" fill="url(#shortBeam)"/>
+  <path d="M577 244 Q677 240 793 224" fill="none" stroke="#4f8df7" stroke-width="3" opacity="0.7"/>
+  <path d="M577 260 Q689 260 807 260" fill="none" stroke="#4f8df7" stroke-width="3.5" opacity="0.78"/>
+  <path d="M577 276 Q677 280 793 296" fill="none" stroke="#4f8df7" stroke-width="3" opacity="0.7"/>
+
+  <!-- Straight incoming LTE signal paths traveling from the cell tower toward the parabolic dish -->
+
+  <!-- Focused reflections from dish toward the Yagi feed center -->
+
+  <!-- Cell tower -->
+  <g transform="translate(1105 130)">
+    <path d="M40 0 L80 260 M120 0 L80 260" stroke="#2f3a46" stroke-width="5" stroke-linecap="round"/>
+    <path d="M56 62 L104 62 M48 118 L112 118 M40 176 L120 176 M32 236 L128 236" stroke="#2f3a46" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="80" cy="20" r="10" fill="#2f3a46"/>
+    <path d="M60 22 q20 -18 40 0" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <path d="M48 20 q32 -30 64 0" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <!-- Focused reflections from dish toward the Yagi feed center (drawn behind antenna elements) -->
+  <path d="M424 146 L522 256" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)" opacity="0.95"/>
+  <path d="M392 260 C 436 260, 478 258, 522 256" fill="none" stroke="#4f8df7" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow)" opacity="0.98"/>
+  <path d="M424 374 L522 256" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)" opacity="0.95"/>
+
+  <!-- Parabolic dish -->
+  <g transform="translate(338 124)">
+    <path d="M86 22 Q 6 136 86 250" fill="none" stroke="#2f3a46" stroke-width="7" stroke-linecap="round"/>
+    <line x1="56" y1="136" x2="188" y2="136" stroke="#6b7785" stroke-width="5" stroke-linecap="round"/>
+    <line x1="56" y1="136" x2="20" y2="212" stroke="#6b7785" stroke-width="6" stroke-linecap="round"/>
+    <line x1="20" y1="212" x2="20" y2="280" stroke="#6b7785" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- Yagi feed at the focal area; kept visually the same but with reduced implied standalone directionality -->
+  <g transform="translate(450 160)">
+    <rect x="0" y="92" width="210" height="8" rx="4" fill="#2f3a46"/>
+    <line x1="20" y1="20" x2="20" y2="180" stroke="#2f3a46" stroke-width="7" stroke-linecap="round"/>
+    <line x1="72" y1="36" x2="72" y2="164" stroke="#2f3a46" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="72" cy="96" r="7" fill="#ffffff" stroke="#2f3a46" stroke-width="3"/>
+    <line x1="118" y1="48" x2="118" y2="152" stroke="#2f3a46" stroke-width="6" stroke-linecap="round"/>
+    <line x1="154" y1="56" x2="154" y2="144" stroke="#2f3a46" stroke-width="6" stroke-linecap="round"/>
+    <line x1="186" y1="64" x2="186" y2="136" stroke="#2f3a46" stroke-width="6" stroke-linecap="round"/>
+    <line x1="214" y1="72" x2="214" y2="128" stroke="#2f3a46" stroke-width="6" stroke-linecap="round"/>
+    <rect x="54" y="98" width="12" height="98" rx="6" fill="#6b7785"/>
+  </g>
+
+  <!-- Coax cable to router -->
+  <path d="M520 256 C 452 256, 404 268, 356 302 C 312 334, 262 344, 206 344" fill="none" stroke="#6b7785" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Router -->
+  <g transform="translate(120 304)">
+    <rect x="0" y="28" width="110" height="42" rx="10" fill="#ffffff" stroke="#2f3a46" stroke-width="4"/>
+    <line x1="26" y1="28" x2="18" y2="0" stroke="#2f3a46" stroke-width="4" stroke-linecap="round"/>
+    <line x1="84" y1="28" x2="92" y2="0" stroke="#2f3a46" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="26" cy="49" r="3.5" fill="#4f8df7"/>
+    <circle cx="42" cy="49" r="3.5" fill="#4f8df7" opacity="0.7"/>
+    <circle cx="58" cy="49" r="3.5" fill="#4f8df7" opacity="0.45"/>
+  </g>
+
+  <!-- Arrows drawn in front -->
+  <path d="M1056 188 L432 147" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1074 260 L392 260" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+  <path d="M1056 332 L432 373" fill="none" stroke="#4f8df7" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+  <!-- Labels -->
+  <g font-family="Arial, Helvetica, sans-serif" fill="#2f3a46">
+    <text x="118" y="408" font-size="22">4G router</text>
+    <text x="344" y="118" font-size="22">Parabolic dish</text>
+    <text x="486" y="184" font-size="22">Yagi antenna</text>
+    <text x="687" y="208" font-size="22">Beam</text>
+    <text x="1138" y="118" font-size="22">Cell tower</text>
+  </g>
+</svg>
